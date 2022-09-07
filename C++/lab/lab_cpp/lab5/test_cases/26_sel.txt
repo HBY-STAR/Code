@@ -1,0 +1,1001 @@
+commodity_name	discount
+6fZPu	0.6
+HyfGN	
+wMPod	0.5
+rMAG8	
+Vb3Zu	
+jysSW	0.7
+2UYuy	0.8
+DvlA7	
+kiFwL	
+r70XS	0.6
+C3TUa	
+orFRQ	
+3zpXN	0.5
+bntFf	
+t05UX	0.8
+HqYZf	
+T7Nnu	
+X4iw6	0.9
+gj1NC	0.6
+WBApK	
+OPrCA	
+ZjHQI	0.8
+lsKaT	0.6
+tUfyh	
+PRo0V	
+QMnBo	
+vObSq	
+ubjAk	0.5
+An4-y	
+2EsVz	
+eV-QY	
+KfsCm	0.9
+8kWiU	
+pk_Rw	0.7
+7GWYy	
+_MxXt	
+NoemU	
+JT9YS	
+6ilUs	0.9
+LPQ_J	
+yJVAT	
+EcBkf	
+y840A	
+g4B7i	
+3zpXN	0.6
+Ojqef	
+FmepJ	0.7
+GuDMV	0.7
+9Nxdm	
+ubjAk	
+EGd4T	
+eV-QY	0.7
+vx1AI	0.6
+d56lg	
+qix4B	0.7
+8dTfM	
+ERBc5	0.8
+Xyg08	
+iRuvS	0.5
+gtW9o	0.9
+htFzg	0.7
+HqYZf	0.9
+i7Qfv	0.6
+RWBrt	0.5
+omLDq	0.5
+sAleg	
+oiktp	
+tJ9pa	0.6
+1p9Ve	
+GPxpk	0.9
+uGCsb	0.8
+8qp2H	0.6
+zMV8y	
+JMDqu	0.6
+EnFKt	0.5
+JT9YS	0.9
+PNZki	0.7
+lu6wB	
+2yAJo	0.7
+C3TUa	0.7
+nt01d	0.6
+CdlSI	0.9
+2pudT	
+-x21v	
+d56lg	
+SzTiE	
+tFq9S	0.5
+h31Jn	
+Ye6_C	0.6
+CYQFV	
+YV0Wo	0.8
+xFQUA	0.7
+0vEno	0.6
+NlI9C	
+dOCpe	
+p0Jxa	
+j8Zgd	0.9
+QMnBo	
+GuDMV	0.9
+_HX9j	0.7
+tUlwe	0.5
+QhYVU	0.7
+Eeg-_	0.7
+FiLsl	
+TbFGr	
+xlLJY	0.6
+0pWIa	0.5
+-x21v	0.7
+SzTiE	0.5
+JGesM	
+sm4Qq	
+TbFGr	0.9
+QEsz4	
+mdkvD	
+p2Av1	0.7
+tUfyh	
+bXLTj	0.6
+yJVAT	
+xRDTU	
+t05UX	0.5
+p0Jxa	
+ad-kZ	0.5
+_iLdy	0.8
+CXq14	0.8
+u5fFw	0.7
+h1wzc	0.5
+GPxpk	0.5
+7GWYy	0.6
+NlI9C	
+9qutp	
+PZQEz	
+QEsz4	0.6
+FiLsl	0.5
+bntFf	
+c3gAk	0.5
+k94xc	0.9
+n5YIj	0.5
+efQiE	0.9
+zLl6_	
+wVck9	
+2qMub	
+PJBkw	
+omLDq	0.7
+6ilUs	0.6
+efQiE	
+mhgzD	0.5
+g4B7i	0.9
+YrR0n	0.5
+zMV8y	0.5
+LJPRB	0.5
+B1fGe	0.8
+sAleg	0.6
+OCbUQ	0.9
+PxuSh	0.5
+pnsFa	
+xRDTU	0.6
+8FcEu	0.8
+InpR_	0.9
+cnFz7	
+0M85U	
+e90fj	
+FyPI1	
+LlgRd	0.5
+oh8AM	
+jysSW	0.9
+l-pbF	
+SzTiE	0.6
+zpULS	0.9
+JTVUp	
+wQGl_	0.9
+8dTfM	
+BcbsP	0.9
+CKbhP	
+n5YIj	0.7
+Z4ILs	0.7
+TbFGr	
+7_ZXv	
+PZQEz	0.6
+09A57	
+tLwE8	
+8qp2H	
+pnsFa	0.8
+Mf7A4	
+ge8mq	0.9
+7cRo-	
+IdXg5	
+lb5gG	0.5
+d6flj	0.7
+C3TUa	
+xYuOF	
+lRBYJ	0.5
+eFY3B	
+vVt78	0.9
+xRDTU	
+CGDWA	0.9
+uGCsb	
+j8Zgd	
+Lq_y5	
+Bo6M-	
+Eeg-_	
+zm5f-	0.5
+jCnvt	0.6
+Ilixy	
+LpywO	0.8
+Z4ILs	
+E1d64	0.5
+yfbzU	
+PZQEz	0.5
+qix4B	0.9
+aDZ9Y	0.5
+3WkQs	
+cnFz7	0.7
+zQY8x	
+yO9HY	0.9
+GmECO	0.5
+9qutp	
+zApnu	0.6
+0vEno	0.8
+o7sLO	0.6
+QwgiJ	0.5
+h31Jn	0.9
+-ujbt	0.5
+JqlUL	
+iRuvS	0.8
+oBwAJ	0.8
+gtW9o	
+4qPsQ	0.6
+Mf7A4	
+uGCsb	0.6
+_iLdy	
+nRaZK	0.8
+ZyFSc	
+qix4B	0.9
+trQzK	0.8
+jex4N	0.5
+D5PFR	0.7
+b9sHu	
+gpzJv	
+yJVAT	0.5
+7dyRA	0.5
+oR3iI	0.6
+EnGrp	0.7
+y0a3M	
+uhW9F	0.6
+UYMnH	0.6
+HqYZf	
+vObSq	0.7
+hoalB	
+7SbJr	
+wMPod	
+3zpXN	0.7
+0pWIa	0.8
+7SbJr	0.9
+lLT1v	0.7
+CXq14	
+RLmIY	
+j8Zgd	0.9
+TKwht	0.6
+QG9o7	
+a3Ol4	0.7
+bXLTj	
+Y3rg1	0.8
+DRA42	0.6
+nTF6O	
+03FgP	0.7
+c3gAk	0.6
+pnsFa	0.9
+1EQbH	
+yJVAT	
+oBwAJ	
+n5YIj	
+FVJ9h	
+mO96Z	0.9
+NECFp	
+_SVf9	
+nlhTP	
+W74at	0.8
+2vLnq	
+H3AyU	0.8
+2UYuy	0.9
+mO96Z	
+fkFgn	
+LOKRN	0.7
+qQDth	0.7
+bT596	0.8
+MAmFv	0.9
+W74at	
+U-WHY	
+xlLJY	0.9
+InpR_	0.5
+BRoAm	0.8
+0vEno	0.8
+2yAJo	0.6
+7GWYy	0.5
+j-qzf	0.7
+6Ae_C	
+ZjHQI	
+OaDhq	0.8
+YTBVQ	
+Km2Fe	0.8
+14MuE	
+1p9Ve	0.7
+nRaZK	0.5
+t0P9j	0.8
+y5THn	
+w5zaV	
+bT596	0.6
+OlFdR	0.9
+zm5f-	0.5
+JxrW9	0.8
+i7ca_	0.5
+OCbUQ	0.8
+GPxpk	
+FVJ9h	0.7
+gSPoJ	
+-ZrQx	0.5
+-Ha2b	0.8
+LJ76i	
+gFrpD	
+pk_Rw	0.9
+UYMnH	
+W74at	
+mF3Bx	0.5
+QG9o7	0.5
+oBwAJ	0.6
+PxuSh	0.8
+k94xc	
+ZdOtE	0.6
+RL_sY	
+RLmIY	0.8
+SvQpt	
+c5plG	0.8
+SR92O	
+sDlIc	0.8
+8dTfM	0.5
+D0QAs	0.8
+MAmFv	0.7
+fCWQi	
+I-AMJ	
+Q1Bo3	0.8
+rMAG8	0.7
+sm4Qq	
+ZMxDE	
+cOg6k	
+oM9we	0.9
+PdlOD	
+JTlV3	0.5
+oh8AM	
+FVJ9h	0.6
+zpULS	
+BOMay	0.9
+9q8EK	0.7
+InpR_	
+QuysM	
+WOPFX	0.6
+czne9	0.8
+TKwht	
+J4jaz	0.6
+7LnSz	
+1EQbH	0.8
+-Ha2b	
+EnFKt	0.7
+QsXy4	
+Ih_uk	0.7
+5k0Z_	
+hWQ3m	
+rylMj	0.8
+7cRo-	
+e1BKi	0.7
+I9lPE	
+HLKnW	
+EGd4T	0.9
+Um6-P	
+as_TV	0.5
+GXCTh	
+fKSC7	0.9
+CGDWA	0.8
+p2Av1	
+RLmIY	0.9
+1Abv7	0.6
+LpywO	0.9
+eV-QY	
+-x21v	
+htFzg	0.8
+D5PFR	0.5
+Uz16R	
+d6flj	0.6
+v7xBI	
+7nKWY	0.7
+BbywI	
+xFQUA	0.8
+87JU3	
+oBwAJ	0.5
+gj1NC	
+yJVAT	
+v-5bu	
+hoalB	
+UYMnH	
+cX3Tq	0.5
+Cn3EV	0.9
+aivSQ	
+C3TUa	
+EcBkf	
+wVck9	0.6
+NZqeh	0.8
+FQW46	
+sDlIc	0.8
+wVck9	0.9
+2wAiE	0.6
+v-5bu	
+p2Av1	0.8
+nTF6O	
+I9lPE	0.8
+itcOZ	0.9
+FVJ9h	
+zLl6_	
+Y3rg1	0.8
+ChxM2	0.6
+DwrMv	0.9
+sm4QU	
+PvOAY	
+RL_sY	0.7
+3GHk5	0.9
+GPxpk	
+9Nxdm	0.8
+2UYuy	
+8Lh0G	0.8
+Adz3X	
+wyvsj	0.9
+gTnLP	
+EvPFJ	
+2wAiE	0.9
+nRaZK	0.9
+InpR_	
+6TUps	0.5
+nt01d	0.5
+Iir-m	
+gpzJv	0.5
+dM7nO	0.5
+dgf-u	0.5
+k1Muq	0.5
+QEOrY	
+YV0Wo	
+iJpX1	
+cX3Tq	0.6
+gj1NC	0.7
+InpR_	0.6
+tyzvS	0.8
+Eeg-_	
+BOMay	
+wFqjk	0.8
+f3MKN	0.6
+GuDMV	0.9
+LMqev	
+6Ae_C	0.5
+pNHx6	
+kHD8s	
+faEqG	0.9
+pV8iR	
+mhgzD	
+_ye5Q	0.9
+h1wzc	0.8
+LpywO	0.8
+QsXy4	
+7LnSz	0.8
+-XCdp	0.6
+p9GPk	0.9
+nUX85	
+vd7CU	0.7
+yfbzU	0.6
+y0a3M	0.9
+3zpXN	0.9
+7nKWY	0.9
+-Ha2b	
+0M85U	
+7cRo-	
+rylMj	0.5
+l-pbF	
+0M85U	0.8
+gpzJv	0.8
+PZQEz	0.5
+oMhrG	0.7
+mF3Bx	
+pnsFa	0.6
+sDlIc	0.6
+Qbr4R	
+wVck9	0.8
+JT9YS	
+hWQ3m	
+swU9r	
+nUX85	0.7
+q8Os7	
+tAGKY	0.9
+FDkJl	0.9
+xlLJY	0.6
+mO96Z	
+YV0Wo	0.9
+gSPoJ	0.5
+mhgzD	0.6
+ZyFSc	
+4l1hn	0.8
+KGNft	
+TbFGr	
+lLT1v	
+kiFwL	
+Unq9W	0.7
+RWBrt	
+GPxpk	
+YrR0n	
+s_4gl	0.8
+lLT1v	0.7
+v-5bu	
+MyadS	
+zQY8x	
+C3TUa	0.9
+oBH76	0.7
+cOg6k	
+TKwht	
+Qlp2F	0.9
+Uz16R	0.9
+FQW46	
+pk_Rw	
+rcaNu	
+xGV-h	0.8
+tUfyh	0.5
+-ujbt	0.8
+mn2Lo	
+1zsPx	0.5
+wQGl_	
+OaDhq	
+fegQM	
+b4pH8	0.9
+-x21v	0.6
+uciH_	
+PxuSh	
+-phzo	0.8
+FQW46	0.6
+rOg0H	
+k94xc	0.6
+O1QDS	0.5
+LlgRd	0.5
+PxuSh	0.6
+lRBYJ	
+MjyEc	0.8
+0d6Jk	
+n1pQs	
+7NoKd	
+xGV-h	
+5k0Z_	0.8
+ItBZQ	
+EnFKt	0.6
+2P4Bi	
+BbywI	
+PsCIV	0.8
+QEsz4	
+p9GPk	
+jCnvt	
+tmg-O	
+ZjHQI	0.8
+h1wzc	0.8
+yJVAT	0.7
+vx1AI	0.5
+lb5gG	
+jex4N	
+QEsz4	
+trQzK	0.5
+orFRQ	
+GTtyz	0.8
+JTlV3	
+oMhrG	0.9
+zMV8y	
+-ujbt	0.5
+DwrMv	
+SR92O	0.8
+Eeg-_	0.9
+87JU3	0.8
+iyqp4	0.8
+3zpXN	0.7
+rZ3E8	0.5
+FiLsl	
+i4Qoh	0.5
+tFq9S	
+tFq9S	
+bT596	
+OPrCA	0.6
+93Ebs	0.7
+3GHk5	0.5
+kiFwL	
+p0Jxa	0.9
+SEa1R	0.7
+E1d64	0.7
+LOKRN	
+NZqeh	0.5
+dZ4ip	
+WOJqs	
+-Acoy	
+WAqdM	
+PxuSh	0.5
+Ye6_C	
+gSPoJ	
+vWb4H	
+uhW9F	
+a3Ol4	0.9
+EpOR_	0.8
+5uyZj	0.6
+gM6mv	
+Q1Bo3	
+y0a3M	0.7
+_SVf9	0.7
+1Abv7	0.5
+yJVAT	
+RL_sY	
+swU9r	
+d56lg	
+n8CsV	
+msjF1	
+2io_y	
+Hoycw	0.7
+bntFf	0.7
+itcOZ	0.5
+ltLf0	
+Km2Fe	
+BRoAm	0.6
+8dTfM	0.7
+PrVkR	
+5N02W	
+rdRVM	
+B1fGe	
+m0tiO	
+hoalB	0.8
+Qbr4R	
+ZyFSc	
+2hQws	0.6
+0fxeE	0.8
+QG9o7	0.9
+CGDWA	
+dZ4ip	
+WvCA0	
+SvQpt	0.5
+jex4N	0.7
+KfDA3	0.5
+8dTfM	
+BOMay	
+oR3iI	
+zQY8x	0.8
+rcaNu	0.7
+0_c7s	0.8
+7GWYy	0.8
+uhW9F	0.5
+uhW9F	
+d56lg	0.7
+b4pH8	
+mI_O1	
+PdlOD	
+UxeDr	0.5
+I9lPE	
+0RWj6	
+W74at	
+eFY3B	
+H3AyU	0.6
+RLmIY	0.9
+RL_sY	0.7
+oR3iI	
+8_ZXa	
+k1Muq	
+jCnvt	
+0M85U	
+PrVkR	
+vWb4H	0.8
+K0DeU	
+QwgiJ	0.7
+r70XS	0.9
+bT596	
+Z7R0p	0.6
+8Lh0G	
+c3gAk	0.5
+-Ha2b	0.6
+CbqjT	
+uciH_	
+J4jaz	
+ipzBd	0.9
+p9GPk	
+g4B7i	0.9
+0M85U	0.6
+nt01d	0.8
+GmECO	
+UxeDr	0.6
+ZjHQI	
+LJ76i	0.6
+D5PFR	
+Mg-Ou	
+LMqev	0.6
+jCnvt	
+BbywI	
+wXMrf	
+rdRVM	0.8
+zApnu	0.5
+VMqWj	
+CKbhP	0.5
+lqAwo	0.7
+3WkQs	0.7
+ItBZQ	0.6
+WBApK	
+UYMnH	
+Ig_ix	0.7
+LJPRB	0.8
+m4U0Z	
+6fZPu	
+T7Nnu	0.6
+SvQpt	
+fCWQi	
+JTlV3	0.5
+tLwE8	
+IWM1o	0.8
+LMqev	
+mUX51	0.7
+GPxpk	
+tAGKY	0.6
+7_ZXv	
+xGrtR	0.9
+0d6Jk	
+OCbUQ	0.6
+PNZki	
+MYTyh	0.5
+jCnvt	
+EpOR_	0.6
+ItBZQ	
+1p9Ve	
+Jx0wT	
+gvUxI	
+ad-kZ	
+0RWj6	0.5
+9q8EK	
+rcaNu	0.6
+a3Ol4	0.8
+ZsoGI	0.7
+D0QAs	0.8
+hBltV	0.5
+nRaZK	0.6
+k1Muq	
+wMPod	
+swU9r	0.9
+yWVLC	0.6
+5N02W	0.6
+IqEVg	0.7
+efQiE	
+_MxXt	
+Adz3X	0.8
+Eeg-_	0.5
+m4U0Z	0.6
+kHD8s	0.5
+WFiPq	0.9
+w5zaV	
+jGYcQ	0.6
+I9lPE	
+soVgK	
+93Ebs	0.9
+5R9eA	
+2P4Bi	0.9
+Iu1JF	0.7
+w9-DJ	0.5
+-ujbt	0.6
+ZjHQI	
+mhgzD	0.9
+HqYZf	
+Wzk5T	0.5
+hoalB	0.7
+JT9YS	0.6
+68YA2	0.5
+rc6jI	0.6
+MyadS	0.8
+sAleg	0.7
+rylMj	0.5
+C3TUa	0.9
+v7xBI	
+ZjHQI	
+IWM1o	
+y5THn	0.9
+FVJ9h	0.5
+FVJ9h	0.5
+NECFp	
+0pWIa	0.6
+ge8mq	0.8
+uhW9F	0.7
+-Acoy	0.6
+SyuhH	
+k94xc	
+ngrPs	0.8
+KAW8T	0.7
+CYQFV	0.8
+oBwAJ	
+yJVAT	0.9
+7dyRA	0.6
+xz4yI	
+IqEVg	0.6
+k1Muq	
+hwOax	0.6
+1EQbH	0.6
+kW3ws	0.8
+tQaEO	
+f2-Lx	0.7
+SvQpt	0.9
+nlhTP	0.9
+EpOR_	0.5
+FiLsl	0.6
+CbqjT	0.9
+lu6wB	
+-phzo	
+k1Muq	
+RL_sY	0.7
+12gUt	
+6ilUs	0.7
+wXMrf	0.7
+nRaZK	0.8
+iyqp4	
+lu6wB	
+Y3rg1	
+nt01d	
+gHEXq	0.6
+kiFwL	0.8
+GuDMV	
+0vEno	
+r70XS	
+kVgv3	0.7
+gM6mv	
+sAleg	0.7
+5uyZj	0.8
+Hv2ho	
+NZqeh	
+WPLER	0.8
+IdXg5	
+lRBYJ	
+_HX9j	0.5
+d6flj	
+zm5f-	
+qr_ck	0.9
+vVt78	0.8
+faEqG	0.9
+0JZot	
+2XOUa	0.5
+fkFgn	
+12gUt	0.6
+6TUps	
+ltLf0	0.6
+mF3Bx	
+RJ3Km	
+PxuSh	0.8
+Jx0wT	
+OaDhq	0.8
+Iir-m	0.7
+An4-y	
+0fxeE	0.9
+SvQpt	0.8
+2V3MR	
+Wzk5T	
+gtW9o	0.5
+IWM1o	0.8
+F1h2U	
+uhW9F	0.8
+rZ3E8	
+gA-Uk	
+gA-Uk	0.5
+rylMj	
+PZQEz	0.9
+RJ3Km	
+Ih_uk	
+BOMay	0.7
+FmepJ	
+-phzo	0.9
+rDIFU	
+6Ae_C	0.8
+vWb4H	0.9
+0DXiU	
+QhYVU	
+CYQFV	0.8
+n1pQs	
+CKbhP	
+NoemU	
+2EsVz	0.5
+4tSPL	0.8
+YrR0n	
+wpqeD	0.8
+rc6jI	0.5
+qw6Ny	0.5
+HyfGN	
+h31Jn	
+8_ZXa	
+wXMrf	
+oM9we	0.8
+rDIFU	0.6
+RvwOh	0.9
+Eeg-_	
+2V3MR	0.6
+Z7R0p	0.5
+2vLnq	0.7
+Hoycw	0.8
+PZQEz	
+93Ebs	0.9
+oh8AM	
+3GHk5	0.8
+wFqjk	0.9
+wB4gn	0.7
+itcOZ	0.5
+j8Zgd	
+RJ3Km	0.9
+nt01d	0.9
+zApnu	0.7
+v7xBI	0.5
+5N02W	0.7
+Z7R0p	0.5
+QwgiJ	
+2yAJo	0.8
+sDlIc	0.8
+gM6mv	
+vWb4H	
+-cdQu	0.8
+BcbsP	
+oBwAJ	
+SvQpt	
+31ErV	0.5
+EvPFJ	
+p0Jxa	
+GuDMV	0.6
+UqNA7	
+p9GPk	
+2hQws	0.6
+qix4B	0.6
+h4AV-	0.5
+nTF6O	0.8
+xlLJY	
+xGrtR	
+0eus7	
+btqay	
+W74at	0.6
+xRDTU	0.6
+BfWRh	
+2EsVz	
+A19EY	0.5
+trQzK	
+SyuhH	0.9
+EcBkf	
+_iLdy	
+wXMrf	0.9
+efh9E	0.8
+1zsPx	
+YrR0n	
+Unq9W	0.7
+lqAwo	0.6
+swU9r	
+n1pQs	0.7
+37Q6y	0.9
+yWVLC	0.9
+0RWj6	0.6
+Ojqef	0.9
+RLmIY	
+UqNA7	0.7
+1zsPx	0.9
+iyqp4	0.5
+t0P9j	0.5
+EcBkf	0.6
+4tSPL	0.7
+oCEHh	
+gvUxI	0.9
+2XOUa	0.9
+y5THn	0.8
+_ye5Q	
+UqNA7	
+HLKnW	
+Iu1JF	0.9
+BWVZc	
+ipzBd	
+VCdTp	
+zm5f-	
+rDIFU	0.8
+5R9eA	0.7
+_SVf9	0.9
+oBwAJ	0.8
+btqay	0.5
+Qlp2F	0.6
+93Ebs	0.6
+iJpX1	0.9
+i7Qfv	
+cOg6k	0.8
+GuDMV	0.6
+0JZot	
+dZ4ip	0.6
+faEqG	0.5
+_HX9j	0.6
+xz4yI	
+nUX85	
+CYQFV	
+0RWj6	
+m7DZf	0.7
+vWb4H	
+Wzk5T	0.5
+-ujbt	0.9
+n1pQs	0.7
+-x21v	0.9
+k94xc	0.7
+SEa1R	0.8

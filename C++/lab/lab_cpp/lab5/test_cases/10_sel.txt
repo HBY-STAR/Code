@@ -1,0 +1,51 @@
+commodity_name	discount
+tgkPX	
+PtOCS	
+qAEHv	
+lpbeI	
+tgkPX	0.83
+hkIim	
+lpbeI	0.55
+hkIim	0.95
+YBlPX	
+lpbeI	0.66
+lpbeI	0.53
+YBlPX	0.52
+PtOCS	0.67
+lpbeI	0.9
+tgkPX	0.72
+hkIim	0.53
+PKGXz	0.57
+YBlPX	0.57
+YBlPX	
+qAEHv	
+YSQEe	
+YBlPX	
+nucWg	0.58
+NaKMP	0.85
+nucWg	
+NaKMP	
+PKGXz	
+PKGXz	
+NaKMP	
+tgkPX	
+lpbeI	
+PtOCS	0.63
+PKGXz	0.71
+qAEHv	0.65
+lpbeI	
+PKGXz	0.85
+YBlPX	0.54
+PKGXz	
+PtOCS	
+nucWg	
+YSQEe	0.76
+hkIim	0.61
+YBlPX	
+PKGXz	
+hkIim	0.85
+PtOCS	0.8
+PtOCS	
+lpbeI	0.72
+PKGXz	0.94
+tgkPX	

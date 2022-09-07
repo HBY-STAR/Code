@@ -1,0 +1,64 @@
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: C:/Users/21714/Desktop/build/GLFW_build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):D:/mingw64/bin/mingw32-make.exe -f Makefile cmTC_fc65f/fast && D:/mingw64/bin/mingw32-make.exe  -f CMakeFiles\cmTC_fc65f.dir\build.make CMakeFiles/cmTC_fc65f.dir/build
+mingw32-make.exe[1]: Entering directory 'C:/Users/21714/Desktop/build/GLFW_build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_fc65f.dir/src.c.obj
+D:\mingw64\bin\gcc.exe -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles\cmTC_fc65f.dir\src.c.obj -c C:\Users\21714\Desktop\build\GLFW_build\CMakeFiles\CMakeTmp\src.c
+Linking C executable cmTC_fc65f.exe
+D:\CMAKE\bin\cmake.exe -E cmake_link_script CMakeFiles\cmTC_fc65f.dir\link.txt --verbose=1
+D:\CMAKE\bin\cmake.exe -E rm -f CMakeFiles\cmTC_fc65f.dir/objects.a
+D:\mingw64\bin\ar.exe qc CMakeFiles\cmTC_fc65f.dir/objects.a @CMakeFiles\cmTC_fc65f.dir\objects1.rsp
+D:\mingw64\bin\gcc.exe -Wl,--whole-archive CMakeFiles\cmTC_fc65f.dir/objects.a -Wl,--no-whole-archive -o cmTC_fc65f.exe -Wl,--out-implib,libcmTC_fc65f.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_fc65f.dir\linklibs.rsp
+CMakeFiles\cmTC_fc65f.dir/objects.a(src.c.obj):src.c:(.text+0x35): undefined reference to `pthread_create'
+CMakeFiles\cmTC_fc65f.dir/objects.a(src.c.obj):src.c:(.text+0x41): undefined reference to `pthread_detach'
+CMakeFiles\cmTC_fc65f.dir/objects.a(src.c.obj):src.c:(.text+0x4d): undefined reference to `pthread_cancel'
+CMakeFiles\cmTC_fc65f.dir/objects.a(src.c.obj):src.c:(.text+0x5e): undefined reference to `pthread_join'
+CMakeFiles\cmTC_fc65f.dir/objects.a(src.c.obj):src.c:(.text+0x68): undefined reference to `pthread_exit'
+collect2.exe: error: ld returned 1 exit status
+mingw32-make.exe[1]: *** [CMakeFiles\cmTC_fc65f.dir\build.make:100: cmTC_fc65f.exe] Error 1
+mingw32-make.exe[1]: Leaving directory 'C:/Users/21714/Desktop/build/GLFW_build/CMakeFiles/CMakeTmp'
+mingw32-make.exe: *** [Makefile:126: cmTC_fc65f/fast] Error 2
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: C:/Users/21714/Desktop/build/GLFW_build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):D:/mingw64/bin/mingw32-make.exe -f Makefile cmTC_79493/fast && D:/mingw64/bin/mingw32-make.exe  -f CMakeFiles\cmTC_79493.dir\build.make CMakeFiles/cmTC_79493.dir/build
+mingw32-make.exe[1]: Entering directory 'C:/Users/21714/Desktop/build/GLFW_build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_79493.dir/CheckFunctionExists.c.obj
+D:\mingw64\bin\gcc.exe   -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles\cmTC_79493.dir\CheckFunctionExists.c.obj -c D:\CMAKE\share\cmake-3.22\Modules\CheckFunctionExists.c
+Linking C executable cmTC_79493.exe
+D:\CMAKE\bin\cmake.exe -E cmake_link_script CMakeFiles\cmTC_79493.dir\link.txt --verbose=1
+D:\CMAKE\bin\cmake.exe -E rm -f CMakeFiles\cmTC_79493.dir/objects.a
+D:\mingw64\bin\ar.exe qc CMakeFiles\cmTC_79493.dir/objects.a @CMakeFiles\cmTC_79493.dir\objects1.rsp
+D:\mingw64\bin\gcc.exe  -DCHECK_FUNCTION_EXISTS=pthread_create -Wl,--whole-archive CMakeFiles\cmTC_79493.dir/objects.a -Wl,--no-whole-archive -o cmTC_79493.exe -Wl,--out-implib,libcmTC_79493.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_79493.dir\linklibs.rsp
+D:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot find -lpthreads
+collect2.exe: error: ld returned 1 exit status
+mingw32-make.exe[1]: *** [CMakeFiles\cmTC_79493.dir\build.make:100: cmTC_79493.exe] Error 1
+mingw32-make.exe[1]: Leaving directory 'C:/Users/21714/Desktop/build/GLFW_build/CMakeFiles/CMakeTmp'
+mingw32-make.exe: *** [Makefile:126: cmTC_79493/fast] Error 2
+
+
+
