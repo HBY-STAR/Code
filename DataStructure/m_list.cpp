@@ -162,8 +162,8 @@ public:
 
   iterator begin()
   {
-    return {head->next};
-  } //这里用Node指针构造迭代器
+    return {head->next}; //这里用Node指针构造迭代器
+  } 
   const_iterator begin() const
   {
     return {head->next};
@@ -252,9 +252,21 @@ public:
 
   iterator erase(iterator itr)
   {
+    Node *p = itr.current;
+    iterator retVal{p->next};//用到了构造函数
+    p->prev->next = p->next;
+    p->next->prev=p->prev;
+    delete p;
+    theSize--;
+
+    return retVal;
   }
   iterator erase(iterator from, iterator to)
   {
+    for(iterator itr=from; itr !=to)
+      itr = erase(itr);
+
+    return to;
   }
 
 private:
