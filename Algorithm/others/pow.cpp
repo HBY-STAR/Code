@@ -1,3 +1,4 @@
+//幂运算
 long long pow(long long x, int n)
 {
     if(n == 0)

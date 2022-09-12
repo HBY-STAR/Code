@@ -1,3 +1,4 @@
+//欧几里得算法求最大公因数
 long long Euclid_gcd(long long m, long long n)
 {
     while(n != 0)
