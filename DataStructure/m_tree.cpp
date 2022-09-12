@@ -138,4 +138,60 @@ public:
             return t;
         return findMax(t->right);
     }
+
+    ~BinarySearchTree()
+    {
+        makeEmpty();
+    }
+    void makeEmpty()
+    {
+        makeEmpty(root);
+    }
+    void makeEmpty(BinaryNode *&t)
+    {
+        if (t != nullptr)
+        {
+            makeEmpty(t->left);
+            makeEmpty(t->right);
+            delete t;
+        }
+        t = nullptr;
+    }
+
+    BinarySearchTree(const BinarySearchTree &rhs) : root{nullptr}
+    {
+        root = clone(rhs.root);
+    }
+    BinaryNode *clone(BinaryNode *t) const
+    {
+        if (t == nullptr)
+            return nullptr;
+        else
+            return new BinaryNode{t->element, clone(t->left), clone(t->right)};
+    }
+};
+
+template <typename Comparable>
+class AvlTree
+{
+    struct AvlNode
+    {
+        Comparable element;
+        AvlNode *left;
+        AvlNode *right;
+        int height;
+
+        AvlNode(const Comparable &ele, AvlNode *lt, AvlNode *rt, int h = 0)
+            : element{ele}, left(lt), right{rt}, height{h} {}
+
+        AvlNode(Comparable &&ele, AvlNode *lt, AvlNode *rt, int h = 0)
+            : element{std::move(ele)}, left(lt), right{rt}, height{h} {}
+    };
+
+    static const int ALLOWED_IMBALANCE = 1;
+
+    int height(AvlNode *t)const
+    {
+        return t==nullptr?-1:t->height;
+    }
 };
