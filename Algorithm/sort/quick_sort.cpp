@@ -82,3 +82,30 @@ void insertsort(vector<Comparable> & a, int left, int right)
 时对其进行交换，然后继续不断向中间靠拢直到碰头）然后再
 分别对两组进行递归操作。
 */
+
+template<typename Comparable>
+void quickselect(vector<Comparable>&a,int left,int right,int k)
+{
+    if(left+10<=right)
+    {
+        const Comparable&pivot=median3(a,left,right);
+
+        int i=left,j=right-1;
+        for(;;)
+        {
+            while(a[++i]<pivot){}
+            while(pivot<a[--j]){}
+            if(i<j)
+                std::swap(a[i],a[j]);
+            else
+                break;
+        }
+        std::swap(a[i],a[right-1]);
+        if(k<=i)
+            quickselect(a,left,i-1,k);
+        else if(k>i+1)
+            quickselect(a,i+1,right,k);
+    }
+    else
+        insertsort(a,left,right);
+}
