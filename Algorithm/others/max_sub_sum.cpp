@@ -102,7 +102,7 @@ int maxSubSum4(const vector<int> &a)
 {
     int maxSum=0,thisSum=0;
 
-    for(int j=0;j<a.size();++l)
+    for(int j=0;j<a.size();++j)
     {
         thisSum += a[j];
 
