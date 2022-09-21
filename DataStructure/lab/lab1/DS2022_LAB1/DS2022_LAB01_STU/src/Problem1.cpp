@@ -30,10 +30,13 @@ Node *Problem1::rearrangeNodes(Node *head)
             }
             int mid = length / 2;
             p1 = head;
-            for (int i = 0; i < mid; i++)
+            for (int i = 1; i < mid; i++)
             {
                 p1 = p1->next;
             }
+            temp = p1->next;
+            p1->next = nullptr;
+            p1 = temp;
             p2 = p1->next;
             p1->next = nullptr;
             while (p2 != nullptr)
@@ -50,7 +53,10 @@ Node *Problem1::rearrangeNodes(Node *head)
                 temp = p1->next;
                 p1->next = p2;
                 temp_2 = p2->next;
-                p2->next = temp;
+                if (temp != nullptr)
+                {
+                    p2->next = temp;
+                }
                 p1 = temp;
                 p2 = temp_2;
             }

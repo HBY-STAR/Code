@@ -16,13 +16,13 @@ Node *LinkedListVectorConverter::toLinkedList(const std::vector<int> &v)
     else
     {
         head = new Node(v[0]);
-        head->next = temp;
+        temp = head;
         for (int i = 1; i < length; i++)
         {
-            temp = new Node(v[i]);
+            temp->next = new Node(v[i]);
             temp = temp->next;
         }
-        temp = nullptr;
+        temp->next = nullptr;
         return head;
     }
 }
@@ -34,9 +34,9 @@ std::vector<int> LinkedListVectorConverter::toVector(Node *head)
     int i = 0;
     while (temp != nullptr)
     {
-        v.insert(v.begin() + (i++), temp->data);
+        v.insert(v.begin() + i, temp->data);
+        i++;
         temp = temp->next;
     }
-
     return v;
 }

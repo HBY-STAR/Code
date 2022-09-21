@@ -70,19 +70,18 @@ PolynomialTerm *Problem2::add(PolynomialTerm *head1, PolynomialTerm *head2)
         PolynomialTerm *new_head, *temp, *temp1 = head1, *temp2 = head2;
         if (temp1->exponent == temp2->exponent) //
         {
-            new_head = temp1;
-            temp1->coefficient += temp2->coefficient;
+            new_head = new PolynomialTerm(temp1->coefficient + temp2->coefficient, temp1->exponent);
             temp1 = temp1->next;
             temp2 = temp2->next;
         }
-        else if (temp1->exponent > temp2->coefficient) //
+        else if (temp1->exponent > temp2->exponent) //
         {
-            new_head = temp1;
+            new_head = new PolynomialTerm(temp1->coefficient, temp1->exponent);
             temp1 = temp1->next;
         }
         else //
         {
-            new_head = temp2;
+            new_head = new PolynomialTerm(temp2->coefficient, temp2->exponent);
             temp2 = temp2->next;
         }
         temp = new_head;
@@ -90,19 +89,19 @@ PolynomialTerm *Problem2::add(PolynomialTerm *head1, PolynomialTerm *head2)
         {
             if (temp1->exponent == temp2->exponent) //
             {
-                temp->next = temp1;
-                temp1->coefficient += temp2->coefficient;
+                temp->next = new PolynomialTerm(temp1->coefficient + temp2->coefficient, temp1->exponent);
+
                 temp1 = temp1->next;
                 temp2 = temp2->next;
             }
-            else if (temp1->exponent > temp2->coefficient) //
+            else if (temp1->exponent > temp2->exponent) //
             {
-                temp->next = temp1;
+                temp->next = new PolynomialTerm(temp1->coefficient, temp1->exponent);
                 temp1 = temp1->next;
             }
             else //
             {
-                temp->next = temp2;
+                temp->next = new PolynomialTerm(temp2->coefficient, temp2->exponent);
                 temp2 = temp2->next;
             }
             temp = temp->next;
@@ -143,7 +142,7 @@ std::string Problem2::toString(PolynomialTerm *head)
             {
                 if (temp->exponent == 0) //指数为0
                 {
-                    if (temp == head) //在头节点
+                    if (str == "") //在头节点
                     {
                         temp_str = std::to_string(temp->coefficient);
                     }
@@ -154,7 +153,7 @@ std::string Problem2::toString(PolynomialTerm *head)
                 }
                 else if (temp->exponent == 1) //指数为1
                 {
-                    if (temp == head) //在头节点
+                    if (str == "") //在头节点
                     {
                         if (temp->coefficient == 1) //系数为1
                         {
@@ -179,7 +178,7 @@ std::string Problem2::toString(PolynomialTerm *head)
                 }
                 else //指数不为0或1
                 {
-                    if (temp == head) //在头节点
+                    if (str == "") //在头节点
                     {
                         if (temp->coefficient == 1) //系数为1
                         {
