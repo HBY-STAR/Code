@@ -4,8 +4,6 @@
 #include "Problem2.h"
 #include <string>
 
-using namespace std;
-
 PolynomialTerm *Problem2::addTerm(PolynomialTerm *head, int coefficient, int exponent)
 {
     PolynomialTerm *temp;
@@ -124,7 +122,7 @@ PolynomialTerm *Problem2::add(PolynomialTerm *head1, PolynomialTerm *head2)
 std::string Problem2::toString(PolynomialTerm *head)
 {
     int count = 0, temp_count = 0;
-    string str, temp_str;
+    std::string str, temp_str;
     PolynomialTerm *temp = head;
     if (head == nullptr) //链表为空
     {
@@ -134,7 +132,7 @@ std::string Problem2::toString(PolynomialTerm *head)
     {
         while (temp != nullptr)
         {
-            temp_count=0;
+            temp_count = 0;
 
             if (temp->coefficient == 0) //系数为0
             {
@@ -147,11 +145,11 @@ std::string Problem2::toString(PolynomialTerm *head)
                 {
                     if (temp == head) //在头节点
                     {
-                        temp_str = to_string(temp->coefficient);
+                        temp_str = std::to_string(temp->coefficient);
                     }
                     else //不在头结点
                     {
-                        temp_str = "+" + to_string(temp->coefficient);
+                        temp_str = "+" + std::to_string(temp->coefficient);
                     }
                 }
                 else if (temp->exponent == 1) //指数为1
@@ -164,7 +162,7 @@ std::string Problem2::toString(PolynomialTerm *head)
                         }
                         else //系数不为1
                         {
-                            temp_str = to_string(temp->coefficient) + "x";
+                            temp_str = std::to_string(temp->coefficient) + "x";
                         }
                     }
                     else //不在头节点
@@ -175,7 +173,7 @@ std::string Problem2::toString(PolynomialTerm *head)
                         }
                         else //系数不为1
                         {
-                            temp_str = "+" + to_string(temp->coefficient) + "x";
+                            temp_str = "+" + std::to_string(temp->coefficient) + "x";
                         }
                     }
                 }
@@ -185,22 +183,22 @@ std::string Problem2::toString(PolynomialTerm *head)
                     {
                         if (temp->coefficient == 1) //系数为1
                         {
-                            temp_str = "x^" + to_string(temp->exponent);
+                            temp_str = "x^" + std::to_string(temp->exponent);
                         }
                         else //系数不为1
                         {
-                            temp_str = to_string(temp->coefficient) + "x^" + to_string(temp->exponent);
+                            temp_str = std::to_string(temp->coefficient) + "x^" + std::to_string(temp->exponent);
                         }
                     }
                     else //不在头节点
                     {
                         if (temp->coefficient == 1) //系数为1
                         {
-                            temp_str = "+x^" + to_string(temp->exponent);
+                            temp_str = "+x^" + std::to_string(temp->exponent);
                         }
                         else //系数不为1
                         {
-                            temp_str = "+" + to_string(temp->coefficient) + "x^" + to_string(temp->exponent);
+                            temp_str = "+" + std::to_string(temp->coefficient) + "x^" + std::to_string(temp->exponent);
                         }
                     }
                 }
@@ -209,7 +207,7 @@ std::string Problem2::toString(PolynomialTerm *head)
             {
                 if (temp->exponent == 0) //指数为0
                 {
-                    temp_str = to_string(temp->coefficient);
+                    temp_str = std::to_string(temp->coefficient);
                 }
                 else if (temp->exponent == 1) //指数为1
                 {
@@ -219,23 +217,23 @@ std::string Problem2::toString(PolynomialTerm *head)
                     }
                     else //系数不为-1
                     {
-                        temp_str = to_string(temp->coefficient) + "x";
+                        temp_str = std::to_string(temp->coefficient) + "x";
                     }
                 }
                 else //指数不为0或1
                 {
                     if (temp->coefficient == -1) //系数为-1
                     {
-                        temp_str = "-x^" + to_string(temp->exponent);
+                        temp_str = "-x^" + std::to_string(temp->exponent);
                     }
                     else //系数不为-1
                     {
-                        temp_str = to_string(temp->coefficient) + "x^" + to_string(temp->exponent);
+                        temp_str = std::to_string(temp->coefficient) + "x^" + std::to_string(temp->exponent);
                     }
                 }
             }
             temp = temp->next;
-            str=str+temp_str;
+            str = str + temp_str;
         }
         return str;
     }

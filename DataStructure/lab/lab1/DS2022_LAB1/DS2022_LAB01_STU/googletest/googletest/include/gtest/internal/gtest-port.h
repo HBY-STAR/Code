@@ -260,6 +260,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <functional>
+#include <mutex>
 
 #include <cerrno>
 // #include <condition_variable>  // Guarded by GTEST_IS_THREADSAFE below
