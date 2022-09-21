@@ -1,2 +1,2 @@
-D:\mingw64\bin\ar.exe qc libDS2022_LAB01_TA.a CMakeFiles/DS2022_LAB01_TA.dir/src/Node.cpp.obj CMakeFiles/DS2022_LAB01_TA.dir/src/LinkedListVectorConverter.cpp.obj CMakeFiles/DS2022_LAB01_TA.dir/src/Problem1.cpp.obj CMakeFiles/DS2022_LAB01_TA.dir/src/PolynomialTerm.cpp.obj CMakeFiles/DS2022_LAB01_TA.dir/src/Problem2.cpp.obj
-D:\mingw64\bin\ranlib.exe libDS2022_LAB01_TA.a
+/usr/bin/ar qc libDS2022_LAB01_TA.a CMakeFiles/DS2022_LAB01_TA.dir/src/Node.cpp.o CMakeFiles/DS2022_LAB01_TA.dir/src/LinkedListVectorConverter.cpp.o CMakeFiles/DS2022_LAB01_TA.dir/src/Problem1.cpp.o CMakeFiles/DS2022_LAB01_TA.dir/src/PolynomialTerm.cpp.o CMakeFiles/DS2022_LAB01_TA.dir/src/Problem2.cpp.o
+/usr/bin/ranlib libDS2022_LAB01_TA.a

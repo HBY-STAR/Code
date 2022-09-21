@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "C:/Users/21714/Desktop/Code/DataStructure/lab/lab1/DS2022_LAB1/DS2022_LAB01_STU/googletest/googletest/src/gtest-all.cc" "googletest/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.obj" "gcc" "googletest/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.obj.d"
+  "/home/hby_ubuntu/桌面/Code/DataStructure/lab/lab1/DS2022_LAB1/DS2022_LAB01_STU/googletest/googletest/src/gtest-all.cc" "googletest/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o" "gcc" "googletest/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o.d"
   )
 
 # Targets to which this target links.

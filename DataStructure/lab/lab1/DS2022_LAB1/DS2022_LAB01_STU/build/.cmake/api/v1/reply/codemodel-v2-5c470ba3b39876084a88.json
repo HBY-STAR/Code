@@ -1,0 +1,202 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				},
+				{
+					"build" : "googletest",
+					"childIndexes" : 
+					[
+						2
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-googletest-Debug-5680492ebebea2dba35e.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "googletest"
+				},
+				{
+					"build" : "googletest/googlemock",
+					"childIndexes" : 
+					[
+						3
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-googletest.googlemock-Debug-1defe916b3bcc5e9134c.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 2,
+					"source" : "googletest/googlemock",
+					"targetIndexes" : 
+					[
+						2,
+						3
+					]
+				},
+				{
+					"build" : "googletest/googletest",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-googletest.googletest-Debug-98170b498d0e370efb9e.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 3,
+					"source" : "googletest/googletest",
+					"targetIndexes" : 
+					[
+						4,
+						5
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1
+					],
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "DS2022_LAB01_TA",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				},
+				{
+					"childIndexes" : 
+					[
+						2
+					],
+					"directoryIndexes" : 
+					[
+						1
+					],
+					"name" : "googletest-distribution",
+					"parentIndex" : 0
+				},
+				{
+					"childIndexes" : 
+					[
+						3
+					],
+					"directoryIndexes" : 
+					[
+						2
+					],
+					"name" : "gmock",
+					"parentIndex" : 1,
+					"targetIndexes" : 
+					[
+						2,
+						3
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						3
+					],
+					"name" : "gtest",
+					"parentIndex" : 2,
+					"targetIndexes" : 
+					[
+						4,
+						5
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "DS2022_LAB01_TA::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-DS2022_LAB01_TA-Debug-f3a026d32b8e0e120465.json",
+					"name" : "DS2022_LAB01_TA",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "DS2022_LAB01_TA_TEST::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-DS2022_LAB01_TA_TEST-Debug-13d12ed7278f6204c5c2.json",
+					"name" : "DS2022_LAB01_TA_TEST",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "gmock::@d68da25237a7ca2351af",
+					"jsonFile" : "target-gmock-Debug-a13e3e373b154481797f.json",
+					"name" : "gmock",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "gmock_main::@d68da25237a7ca2351af",
+					"jsonFile" : "target-gmock_main-Debug-420da45dd5ff861a8808.json",
+					"name" : "gmock_main",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "gtest::@f95b5c00bd49b3b4698d",
+					"jsonFile" : "target-gtest-Debug-177f29d1cb5349ed4c6c.json",
+					"name" : "gtest",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "gtest_main::@f95b5c00bd49b3b4698d",
+					"jsonFile" : "target-gtest_main-Debug-dbd5e932f5a570016bc7.json",
+					"name" : "gtest_main",
+					"projectIndex" : 3
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/hby_ubuntu/\u684c\u9762/Code/DataStructure/lab/lab1/DS2022_LAB1/DS2022_LAB01_STU/build",
+		"source" : "/home/hby_ubuntu/\u684c\u9762/Code/DataStructure/lab/lab1/DS2022_LAB1/DS2022_LAB01_STU"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

@@ -8,11 +8,11 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "C:/Users/21714/Desktop/Code/DataStructure/lab/lab1/DS2022_LAB1/DS2022_LAB01_STU/src/LinkedListVectorConverter.cpp" "CMakeFiles/DS2022_LAB01_TA.dir/src/LinkedListVectorConverter.cpp.obj" "gcc" "CMakeFiles/DS2022_LAB01_TA.dir/src/LinkedListVectorConverter.cpp.obj.d"
-  "C:/Users/21714/Desktop/Code/DataStructure/lab/lab1/DS2022_LAB1/DS2022_LAB01_STU/src/Node.cpp" "CMakeFiles/DS2022_LAB01_TA.dir/src/Node.cpp.obj" "gcc" "CMakeFiles/DS2022_LAB01_TA.dir/src/Node.cpp.obj.d"
-  "C:/Users/21714/Desktop/Code/DataStructure/lab/lab1/DS2022_LAB1/DS2022_LAB01_STU/src/PolynomialTerm.cpp" "CMakeFiles/DS2022_LAB01_TA.dir/src/PolynomialTerm.cpp.obj" "gcc" "CMakeFiles/DS2022_LAB01_TA.dir/src/PolynomialTerm.cpp.obj.d"
-  "C:/Users/21714/Desktop/Code/DataStructure/lab/lab1/DS2022_LAB1/DS2022_LAB01_STU/src/Problem1.cpp" "CMakeFiles/DS2022_LAB01_TA.dir/src/Problem1.cpp.obj" "gcc" "CMakeFiles/DS2022_LAB01_TA.dir/src/Problem1.cpp.obj.d"
-  "C:/Users/21714/Desktop/Code/DataStructure/lab/lab1/DS2022_LAB1/DS2022_LAB01_STU/src/Problem2.cpp" "CMakeFiles/DS2022_LAB01_TA.dir/src/Problem2.cpp.obj" "gcc" "CMakeFiles/DS2022_LAB01_TA.dir/src/Problem2.cpp.obj.d"
+  "/home/hby_ubuntu/桌面/Code/DataStructure/lab/lab1/DS2022_LAB1/DS2022_LAB01_STU/src/LinkedListVectorConverter.cpp" "CMakeFiles/DS2022_LAB01_TA.dir/src/LinkedListVectorConverter.cpp.o" "gcc" "CMakeFiles/DS2022_LAB01_TA.dir/src/LinkedListVectorConverter.cpp.o.d"
+  "/home/hby_ubuntu/桌面/Code/DataStructure/lab/lab1/DS2022_LAB1/DS2022_LAB01_STU/src/Node.cpp" "CMakeFiles/DS2022_LAB01_TA.dir/src/Node.cpp.o" "gcc" "CMakeFiles/DS2022_LAB01_TA.dir/src/Node.cpp.o.d"
+  "/home/hby_ubuntu/桌面/Code/DataStructure/lab/lab1/DS2022_LAB1/DS2022_LAB01_STU/src/PolynomialTerm.cpp" "CMakeFiles/DS2022_LAB01_TA.dir/src/PolynomialTerm.cpp.o" "gcc" "CMakeFiles/DS2022_LAB01_TA.dir/src/PolynomialTerm.cpp.o.d"
+  "/home/hby_ubuntu/桌面/Code/DataStructure/lab/lab1/DS2022_LAB1/DS2022_LAB01_STU/src/Problem1.cpp" "CMakeFiles/DS2022_LAB01_TA.dir/src/Problem1.cpp.o" "gcc" "CMakeFiles/DS2022_LAB01_TA.dir/src/Problem1.cpp.o.d"
+  "/home/hby_ubuntu/桌面/Code/DataStructure/lab/lab1/DS2022_LAB1/DS2022_LAB01_STU/src/Problem2.cpp" "CMakeFiles/DS2022_LAB01_TA.dir/src/Problem2.cpp.o" "gcc" "CMakeFiles/DS2022_LAB01_TA.dir/src/Problem2.cpp.o.d"
   )
 
 # Targets to which this target links.

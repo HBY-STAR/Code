@@ -4,7 +4,6 @@
 #include "LinkedListVectorConverter.h"
 #include "Node.h"
 
-
 Node *LinkedListVectorConverter::toLinkedList(const std::vector<int> &v)
 {
     Node *head = nullptr;
@@ -35,7 +34,7 @@ std::vector<int> LinkedListVectorConverter::toVector(Node *head)
     int i = 0;
     while (temp != nullptr)
     {
-        v[i++] = temp->data;
+        v.insert(v.begin() + (i++), temp->data);
         temp = temp->next;
     }
 

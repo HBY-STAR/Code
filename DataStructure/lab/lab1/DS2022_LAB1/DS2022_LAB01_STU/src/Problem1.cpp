@@ -6,23 +6,35 @@
 
 Node *Problem1::rearrangeNodes(Node *head)
 {
-    if (head == nullptr)//链表为空
+    if (head == nullptr) //链表为空
     {
         return nullptr;
     }
     else
     {
-        Node *new_head;
-        Node *p1, *p2, *temp; // p1为前指针，p2为后指针
+        Node *p1, *p2, *temp, *temp_2; // p1为前指针，p2为后指针
         p1 = head;
         p2 = head->next;
-        if (p2 == nullptr)//链表只有一个节点
+        if (p2 == nullptr) //链表只有一个节点
         {
-            new_head = head;
-            return new_head;
+            return head;
         }
-        else//链表至少有两个节点
+        else //链表至少有两个节点
         {
+            // zhaochuzhongjianjiedian  kaoqianyige
+            int length = 0;
+            while (p1 != nullptr)
+            {
+                length++;
+                p1 = p1->next;
+            }
+            int mid = length / 2;
+            p1 = head;
+            for (int i = 0; i < mid; i++)
+            {
+                p1 = p1->next;
+            }
+            p2 = p1->next;
             p1->next = nullptr;
             while (p2 != nullptr)
             {
@@ -31,8 +43,18 @@ Node *Problem1::rearrangeNodes(Node *head)
                 p1 = p2;
                 p2 = temp;
             }
-            new_head = p1;
-            return new_head;
+            p2 = p1;
+            p1 = head;
+            while (p1 != nullptr && p2 != nullptr)
+            {
+                temp = p1->next;
+                p1->next = p2;
+                temp_2 = p2->next;
+                p2->next = temp;
+                p1 = temp;
+                p2 = temp_2;
+            }
+            return head;
         }
     }
 }
