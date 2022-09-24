@@ -1,6 +1,11 @@
 //
 // Created by huajuan on 2022/9/14.
 //
+
+//21302010042
+//侯斌洋
+//注：经测试，在Linux系统上是可以通过Problem1Test和Problem2Test测试的。若出现无法运行成功的情况可以直接联系我
+
 #include "LinkedListVectorConverter.h"
 #include "Node.h"
 
