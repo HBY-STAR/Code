@@ -61,56 +61,59 @@ PolynomialTerm *Problem2::addTerm(PolynomialTerm *head, int coefficient, int exp
 
 PolynomialTerm *Problem2::add(PolynomialTerm *head1, PolynomialTerm *head2)
 {
-    if (head1 == nullptr) //
+    if (head1 == nullptr) //若head1位空
         return head2;
-    else if (head2 == nullptr) //
+    else if (head2 == nullptr) //若head2为空
         return head1;
-    else //
+    else //若两条链都不为空
     {
         PolynomialTerm *new_head, *temp, *temp1 = head1, *temp2 = head2;
-        if (temp1->exponent == temp2->exponent) //
+        if (temp1->exponent == temp2->exponent) //若两条链的头节点指数相同
         {
             new_head = new PolynomialTerm(temp1->coefficient + temp2->coefficient, temp1->exponent);
             temp1 = temp1->next;
             temp2 = temp2->next;
         }
-        else if (temp1->exponent > temp2->exponent) //
+        else if (temp1->exponent > temp2->exponent) //若head1的头节点大于head2
         {
             new_head = new PolynomialTerm(temp1->coefficient, temp1->exponent);
             temp1 = temp1->next;
         }
-        else //
+        else //若head2的头节点大于head1
         {
             new_head = new PolynomialTerm(temp2->coefficient, temp2->exponent);
             temp2 = temp2->next;
         }
         temp = new_head;
-        while (temp1 != nullptr && temp2 != nullptr) //
+        while (temp1 != nullptr && temp2 != nullptr) //处理完头节点后开始循环进行
         {
-            if (temp1->exponent == temp2->exponent) //
+            if (temp1->exponent == temp2->exponent) //若temp1节点指数大于temp2
             {
                 temp->next = new PolynomialTerm(temp1->coefficient + temp2->coefficient, temp1->exponent);
 
                 temp1 = temp1->next;
                 temp2 = temp2->next;
             }
-            else if (temp1->exponent > temp2->exponent) //
+            else if (temp1->exponent > temp2->exponent) //若temp1节点指数小于temp2
             {
                 temp->next = new PolynomialTerm(temp1->coefficient, temp1->exponent);
                 temp1 = temp1->next;
             }
-            else //
+            else //若temp1节点指数等于temp2
             {
                 temp->next = new PolynomialTerm(temp2->coefficient, temp2->exponent);
                 temp2 = temp2->next;
             }
             temp = temp->next;
         }
-        if (temp1 == nullptr) //
+
+        //之后处理剩余节点
+        if (temp1 == nullptr) // head1空了，接上head2的节点
         {
             temp->next = temp2;
         }
-        else if (temp2 == nullptr) //
+        else if (temp2 == nullptr) // head2空了，接上head1的节点
+
         {
             temp->next = temp1;
         }

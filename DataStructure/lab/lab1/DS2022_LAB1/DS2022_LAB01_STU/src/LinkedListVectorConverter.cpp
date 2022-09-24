@@ -6,14 +6,14 @@
 
 Node *LinkedListVectorConverter::toLinkedList(const std::vector<int> &v)
 {
-    Node *head = nullptr;
+    Node *head = nullptr; //头节点
     Node *temp = nullptr;
-    int length = v.size();
-    if (length == 0)
+    int length = v.size(); //获取链表长度
+    if (length == 0)       //若链表为空
     {
         return head;
     }
-    else
+    else //若链表不为空
     {
         head = new Node(v[0]);
         temp = head;
@@ -34,7 +34,7 @@ std::vector<int> LinkedListVectorConverter::toVector(Node *head)
     int i = 0;
     while (temp != nullptr)
     {
-        v.insert(v.begin() + i, temp->data);
+        v.insert(v.begin() + i, temp->data); //在vector中插入
         i++;
         temp = temp->next;
     }
