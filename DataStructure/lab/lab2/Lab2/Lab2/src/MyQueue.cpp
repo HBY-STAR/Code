@@ -1,20 +1,23 @@
 //
 // Created by yixin on 2022/9/25.
 //
-template<typename T> class MyQueue {
+template <typename T>
+class MyQueue
+{
 private:
     const unsigned int CAPACITY;
     int front{};
     int rear{};
     bool full{};
-    T* data;
+    T *data;
 
 public:
     /**
      * @brief Inits an empty queue with a given max capacity.
      * @param capacity: max capacity
      * */
-    explicit MyQueue(int capacity) : CAPACITY(capacity) {
+    explicit MyQueue(int capacity) : CAPACITY(capacity)
+    {
         this->front = 0;
         this->rear = 0;
         this->full = (capacity == 0);
@@ -26,10 +29,45 @@ public:
      * @return true: on success;
      *         false: when exceeds capacity.
      * */
-    bool enqueue(T item) {
-        // TODO
-
-        return false;
+    bool enqueue(T item)
+    {
+        if(CAPACITY==0)
+        {
+            return false;
+        }
+        else if(CAPACITY==1)
+        {
+            if(rear==-1)
+            {
+                return false;
+            }
+            else
+            {
+                data[0]=T;
+                rear=-1;
+            }
+        }
+        else if(CAPACITY==2)
+        {
+            if()
+        }
+        else
+        {
+            int next = (rear + 1) % CAPACITY;
+            if (front == 0 && rear == 0)
+            {
+                data[0] = T;
+                rear = 1;
+                return true;
+            }
+            else if (front == 0 && rear == 1)
+            {
+                data[1] = T;
+            }
+            else
+            {
+            }
+        }
     }
 
     /**
@@ -37,7 +75,8 @@ public:
      * @return item: when queue is not empty;
      *         0: when queue is empty.
      * */
-    T dequeue() {
+    T dequeue()
+    {
         // TODO
 
         return 0;
@@ -48,7 +87,8 @@ public:
      * @return item: when queue is not empty;
      *         0: when queue is empty.
      * */
-    T getHead() {
+    T getHead()
+    {
         // TODO
 
         return 0;
@@ -57,7 +97,8 @@ public:
     /**
      * @brief Returns current size of the queue.
      * */
-    int getSize() {
+    int getSize()
+    {
         // TODO
 
         return 0;
@@ -66,7 +107,8 @@ public:
     /**
      * @brief Returns whether the queue is empty.
      * */
-    bool isEmpty() {
+    bool isEmpty()
+    {
         // TODO
 
         return false;
@@ -75,10 +117,10 @@ public:
     /**
      * @brief Returns whether the queue is full.
      * */
-    bool isFull() {
+    bool isFull()
+    {
         // TODO
 
         return false;
     }
-
 };
