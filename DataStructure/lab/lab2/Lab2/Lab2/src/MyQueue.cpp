@@ -31,41 +31,69 @@ public:
      * */
     bool enqueue(T item)
     {
-        if(CAPACITY==0)
+        if (CAPACITY == 0)
         {
             return false;
         }
-        else if(CAPACITY==1)
+        else if (CAPACITY == 1)
         {
-            if(rear==-1)
+            if (front == -1)
             {
                 return false;
             }
             else
             {
-                data[0]=T;
-                rear=-1;
-            }
-        }
-        else if(CAPACITY==2)
-        {
-            if()
-        }
-        else
-        {
-            int next = (rear + 1) % CAPACITY;
-            if (front == 0 && rear == 0)
-            {
                 data[0] = T;
-                rear = 1;
+                front = -1;
                 return true;
             }
-            else if (front == 0 && rear == 1)
+        }
+        else if (CAPACITY == 2)
+        {
+            if (front == -1)
             {
-                data[1] = T;
+                if (rear == -1)
+                {
+                    return false;
+                }
+                else
+                {
+                    data[1] = T;
+                    rear = -1;
+                    return true;
+                }
             }
             else
             {
+                data[0] = T;
+                front = -1;
+                return true;
+            }
+        }
+        else
+        {
+            if (front == rear && full == false) //当队列为空
+            {
+                data[front] = T;
+                rear = 1;
+                return true;
+            }
+            else //当队列中至少有一个元素
+            {
+                if (full == true)
+                {
+                    return false;
+                }
+                else
+                {
+                    data[rear] = T;
+                    rear = (rear + 1) % CAPACITY;
+                    if (rear == front)
+                    {
+                        full == true;
+                    }
+                    return true;
+                }
             }
         }
     }
@@ -77,9 +105,59 @@ public:
      * */
     T dequeue()
     {
-        // TODO
-
-        return 0;
+        if (CAPACITY == 0)
+        {
+            return 0;
+        }
+        else if (CAPACITY == 1)
+        {
+            if (front == -1)
+            {
+                front = 0;
+                return data[0];
+            }
+            else
+            {
+                return 0;
+            }
+        }
+        else if (CAPACITY == 2)
+        {
+            if (rear == -1)
+            {
+                rear = 0;
+                return data[1];
+            }
+            else
+            {
+                if (front == -1)
+                {
+                    front = 0;
+                    return data[0];
+                }
+                else
+                {
+                    return 0;
+                }
+            }
+        }
+        else
+        {
+            if (front == rear && full == false) //当队列为空
+            {
+                return 0;
+            }
+            else //当队列不为空
+            {
+                if (full == true)
+                {
+                    full = false;
+                }
+                int temp = front;
+                front = (front + 1) % CAPACITY;
+                return data[temp];
+            }
+        }
     }
 
     /**
@@ -89,9 +167,14 @@ public:
      * */
     T getHead()
     {
-        // TODO
-
-        return 0;
+        if (front == rear && full == false)
+        {
+            return 0;
+        }
+        else
+        {
+            return data[front];
+        }
     }
 
     /**
@@ -99,9 +182,25 @@ public:
      * */
     int getSize()
     {
-        // TODO
-
-        return 0;
+        if (front == rear)
+        {
+            if (full == true)
+            {
+                return CAPACITY;
+            }
+            else
+            {
+                return 0;
+            }
+        }
+        else if (front < rear)
+        {
+            return rear - front;
+        }
+        else
+        {
+            return CAPACITY - front + rear;
+        }
     }
 
     /**
@@ -109,7 +208,14 @@ public:
      * */
     bool isEmpty()
     {
-        // TODO
+        if (front == rear && full == false)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
 
         return false;
     }
@@ -119,8 +225,6 @@ public:
      * */
     bool isFull()
     {
-        // TODO
-
-        return false;
+        return full;
     }
 };
