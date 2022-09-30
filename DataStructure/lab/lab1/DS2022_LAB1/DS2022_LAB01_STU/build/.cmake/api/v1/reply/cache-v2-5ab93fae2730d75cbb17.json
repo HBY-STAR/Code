@@ -27,7 +27,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/usr/bin/addr2line"
+			"value" : "D:/mingw64/bin/addr2line.exe"
 		},
 		{
 			"name" : "CMAKE_AR",
@@ -43,7 +43,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/usr/bin/ar"
+			"value" : "D:/mingw64/bin/ar.exe"
 		},
 		{
 			"name" : "CMAKE_BUILD_TYPE",
@@ -67,7 +67,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/home/hby_ubuntu/\u684c\u9762/Code/DataStructure/lab/lab1/DS2022_LAB1/DS2022_LAB01_STU/build"
+			"value" : "c:/Users/21714/Desktop/Code/DataStructure/lab/lab1/DS2022_LAB1/DS2022_LAB01_STU/build"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -103,7 +103,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "1"
+			"value" : "22022201"
 		},
 		{
 			"name" : "CMAKE_COLOR_MAKEFILE",
@@ -131,7 +131,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/usr/bin/cmake"
+			"value" : "D:/Microsoft Visual Studio/IDE   2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/bin/cmake.exe"
 		},
 		{
 			"name" : "CMAKE_CPACK_COMMAND",
@@ -143,7 +143,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/usr/bin/cpack"
+			"value" : "D:/Microsoft Visual Studio/IDE   2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/bin/cpack.exe"
 		},
 		{
 			"name" : "CMAKE_CTEST_COMMAND",
@@ -155,7 +155,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/usr/bin/ctest"
+			"value" : "D:/Microsoft Visual Studio/IDE   2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/bin/ctest.exe"
 		},
 		{
 			"name" : "CMAKE_CXX_COMPILER",
@@ -167,11 +167,11 @@
 				},
 				{
 					"name" : "HELPSTRING",
-					"value" : "No help, variable specified on the command line."
+					"value" : "CXX compiler"
 				}
 			],
-			"type" : "FILEPATH",
-			"value" : "/usr/bin/g++"
+			"type" : "STRING",
+			"value" : "D:/mingw64/bin/g++.exe"
 		},
 		{
 			"name" : "CMAKE_CXX_COMPILER_AR",
@@ -187,7 +187,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/usr/bin/gcc-ar-11"
+			"value" : "D:/mingw64/bin/gcc-ar.exe"
 		},
 		{
 			"name" : "CMAKE_CXX_COMPILER_RANLIB",
@@ -203,7 +203,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/usr/bin/gcc-ranlib-11"
+			"value" : "D:/mingw64/bin/gcc-ranlib.exe"
 		},
 		{
 			"name" : "CMAKE_CXX_FLAGS",
@@ -286,6 +286,22 @@
 			"value" : "-O2 -g -DNDEBUG"
 		},
 		{
+			"name" : "CMAKE_CXX_STANDARD_LIBRARIES",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Libraries linked by default with all C++ applications."
+				}
+			],
+			"type" : "STRING",
+			"value" : "-lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32"
+		},
+		{
 			"name" : "CMAKE_C_COMPILER",
 			"properties" : 
 			[
@@ -295,11 +311,11 @@
 				},
 				{
 					"name" : "HELPSTRING",
-					"value" : "No help, variable specified on the command line."
+					"value" : "C compiler"
 				}
 			],
-			"type" : "FILEPATH",
-			"value" : "/usr/bin/gcc"
+			"type" : "STRING",
+			"value" : "D:/mingw64/bin/gcc.exe"
 		},
 		{
 			"name" : "CMAKE_C_COMPILER_AR",
@@ -315,7 +331,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/usr/bin/gcc-ar-11"
+			"value" : "D:/mingw64/bin/gcc-ar.exe"
 		},
 		{
 			"name" : "CMAKE_C_COMPILER_RANLIB",
@@ -331,7 +347,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/usr/bin/gcc-ranlib-11"
+			"value" : "D:/mingw64/bin/gcc-ranlib.exe"
 		},
 		{
 			"name" : "CMAKE_C_FLAGS",
@@ -414,6 +430,22 @@
 			"value" : "-O2 -g -DNDEBUG"
 		},
 		{
+			"name" : "CMAKE_C_STANDARD_LIBRARIES",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Libraries linked by default with all C applications."
+				}
+			],
+			"type" : "STRING",
+			"value" : "-lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32"
+		},
+		{
 			"name" : "CMAKE_DLLTOOL",
 			"properties" : 
 			[
@@ -427,7 +459,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "CMAKE_DLLTOOL-NOTFOUND"
+			"value" : "D:/mingw64/bin/dlltool.exe"
 		},
 		{
 			"name" : "CMAKE_EXECUTABLE_FORMAT",
@@ -439,7 +471,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "ELF"
+			"value" : "Unknown"
 		},
 		{
 			"name" : "CMAKE_EXE_LINKER_FLAGS",
@@ -555,7 +587,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "Unix Makefiles"
+			"value" : "MinGW Makefiles"
 		},
 		{
 			"name" : "CMAKE_GENERATOR_INSTANCE",
@@ -594,28 +626,16 @@
 			"value" : ""
 		},
 		{
-			"name" : "CMAKE_HAVE_LIBC_PTHREAD",
+			"name" : "CMAKE_GNUtoMS",
 			"properties" : 
 			[
 				{
 					"name" : "HELPSTRING",
-					"value" : "Test CMAKE_HAVE_LIBC_PTHREAD"
+					"value" : "Convert GNU import libraries to MS format (requires Visual Studio)"
 				}
 			],
-			"type" : "INTERNAL",
-			"value" : "1"
-		},
-		{
-			"name" : "CMAKE_HAVE_PTHREAD_H",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Have include pthread.h"
-				}
-			],
-			"type" : "INTERNAL",
-			"value" : "1"
+			"type" : "BOOL",
+			"value" : "OFF"
 		},
 		{
 			"name" : "CMAKE_HOME_DIRECTORY",
@@ -627,7 +647,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/home/hby_ubuntu/\u684c\u9762/Code/DataStructure/lab/lab1/DS2022_LAB1/DS2022_LAB01_STU"
+			"value" : "C:/Users/21714/Desktop/Code/DataStructure/lab/lab1/DS2022_LAB1/DS2022_LAB01_STU"
 		},
 		{
 			"name" : "CMAKE_INSTALL_BINDIR",
@@ -831,7 +851,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "/usr/local"
+			"value" : "C:/Program Files (x86)/DS2022_LAB01_TA"
 		},
 		{
 			"name" : "CMAKE_INSTALL_RUNSTATEDIR",
@@ -882,18 +902,6 @@
 			"value" : "com"
 		},
 		{
-			"name" : "CMAKE_INSTALL_SO_NO_EXE",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Install .so files without execute permission."
-				}
-			],
-			"type" : "INTERNAL",
-			"value" : "1"
-		},
-		{
 			"name" : "CMAKE_INSTALL_SYSCONFDIR",
 			"properties" : 
 			[
@@ -923,7 +931,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/usr/bin/ld"
+			"value" : "D:/mingw64/bin/ld.exe"
 		},
 		{
 			"name" : "CMAKE_MAKE_PROGRAM",
@@ -939,7 +947,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/usr/bin/gmake"
+			"value" : "D:/mingw64/bin/mingw32-make.exe"
 		},
 		{
 			"name" : "CMAKE_MODULE_LINKER_FLAGS",
@@ -1035,7 +1043,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/usr/bin/nm"
+			"value" : "D:/mingw64/bin/nm.exe"
 		},
 		{
 			"name" : "CMAKE_NUMBER_OF_MAKEFILES",
@@ -1063,7 +1071,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/usr/bin/objcopy"
+			"value" : "D:/mingw64/bin/objcopy.exe"
 		},
 		{
 			"name" : "CMAKE_OBJDUMP",
@@ -1079,7 +1087,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/usr/bin/objdump"
+			"value" : "D:/mingw64/bin/objdump.exe"
 		},
 		{
 			"name" : "CMAKE_PLATFORM_INFO_INITIALIZED",
@@ -1203,7 +1211,115 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/usr/bin/ranlib"
+			"value" : "D:/mingw64/bin/ranlib.exe"
+		},
+		{
+			"name" : "CMAKE_RC_COMPILER",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "RC compiler"
+				}
+			],
+			"type" : "FILEPATH",
+			"value" : "D:/mingw64/bin/windres.exe"
+		},
+		{
+			"name" : "CMAKE_RC_COMPILER_WORKS",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : ""
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "1"
+		},
+		{
+			"name" : "CMAKE_RC_FLAGS",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Flags for Windows Resource Compiler during all build types."
+				}
+			],
+			"type" : "STRING",
+			"value" : ""
+		},
+		{
+			"name" : "CMAKE_RC_FLAGS_DEBUG",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Flags for Windows Resource Compiler during DEBUG builds."
+				}
+			],
+			"type" : "STRING",
+			"value" : ""
+		},
+		{
+			"name" : "CMAKE_RC_FLAGS_MINSIZEREL",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Flags for Windows Resource Compiler during MINSIZEREL builds."
+				}
+			],
+			"type" : "STRING",
+			"value" : ""
+		},
+		{
+			"name" : "CMAKE_RC_FLAGS_RELEASE",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Flags for Windows Resource Compiler during RELEASE builds."
+				}
+			],
+			"type" : "STRING",
+			"value" : ""
+		},
+		{
+			"name" : "CMAKE_RC_FLAGS_RELWITHDEBINFO",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Flags for Windows Resource Compiler during RELWITHDEBINFO builds."
+				}
+			],
+			"type" : "STRING",
+			"value" : ""
 		},
 		{
 			"name" : "CMAKE_READELF",
@@ -1219,7 +1335,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/usr/bin/readelf"
+			"value" : "D:/mingw64/bin/readelf.exe"
 		},
 		{
 			"name" : "CMAKE_ROOT",
@@ -1231,7 +1347,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/usr/share/cmake-3.22"
+			"value" : "D:/Microsoft Visual Studio/IDE   2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.22"
 		},
 		{
 			"name" : "CMAKE_SHARED_LINKER_FLAGS",
@@ -1439,19 +1555,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/usr/bin/strip"
-		},
-		{
-			"name" : "CMAKE_UNAME",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "uname command"
-				}
-			],
-			"type" : "INTERNAL",
-			"value" : "/usr/bin/uname"
+			"value" : "D:/mingw64/bin/strip.exe"
 		},
 		{
 			"name" : "CMAKE_VERBOSE_MAKEFILE",
@@ -1479,7 +1583,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/hby_ubuntu/\u684c\u9762/Code/DataStructure/lab/lab1/DS2022_LAB1/DS2022_LAB01_STU/build"
+			"value" : "C:/Users/21714/Desktop/Code/DataStructure/lab/lab1/DS2022_LAB1/DS2022_LAB01_STU/build"
 		},
 		{
 			"name" : "DS2022_LAB01_TA_IS_TOP_LEVEL",
@@ -1503,7 +1607,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/hby_ubuntu/\u684c\u9762/Code/DataStructure/lab/lab1/DS2022_LAB1/DS2022_LAB01_STU"
+			"value" : "C:/Users/21714/Desktop/Code/DataStructure/lab/lab1/DS2022_LAB1/DS2022_LAB01_STU"
 		},
 		{
 			"name" : "FIND_PACKAGE_MESSAGE_DETAILS_Python",
@@ -1515,19 +1619,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "[/usr/bin/python3.10][cfound components: Interpreter ][v3.10.4()]"
-		},
-		{
-			"name" : "FIND_PACKAGE_MESSAGE_DETAILS_Threads",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Details about finding Threads"
-				}
-			],
-			"type" : "INTERNAL",
-			"value" : "[TRUE][v()]"
+			"value" : "[C:/Python3.10.1/python.exe][cfound components: Interpreter ][v3.10.1()]"
 		},
 		{
 			"name" : "INSTALL_GTEST",
@@ -1551,7 +1643,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/usr/local"
+			"value" : "C:/Program Files (x86)/DS2022_LAB01_TA"
 		},
 		{
 			"name" : "_Python_EXECUTABLE",
@@ -1563,7 +1655,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/usr/bin/python3.10"
+			"value" : "C:/Python3.10.1/python.exe"
 		},
 		{
 			"name" : "_Python_INTERPRETER_PROPERTIES",
@@ -1575,7 +1667,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "Python;3;10;4;64;;cpython-310-x86_64-linux-gnu;/usr/lib/python3.10;/usr/lib/python3.10;/usr/local/lib/python3.10/dist-packages;/usr/local/lib/python3.10/dist-packages"
+			"value" : "Python;3;10;1;64;;cp310-win_amd64;C:\\Python3.10.1\\Lib;C:\\Python3.10.1\\Lib;C:\\Python3.10.1\\Lib\\site-packages;C:\\Python3.10.1\\Lib\\site-packages"
 		},
 		{
 			"name" : "_Python_INTERPRETER_SIGNATURE",
@@ -1587,7 +1679,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "61380851b1f49cd20124cec6c9ca8095"
+			"value" : "c50d1ceae50404b0f933e13b01c81b85"
 		},
 		{
 			"name" : "cmake_package_name",
@@ -1611,7 +1703,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/home/hby_ubuntu/\u684c\u9762/Code/DataStructure/lab/lab1/DS2022_LAB1/DS2022_LAB01_STU/build/googletest/googletest/generated"
+			"value" : "C:/Users/21714/Desktop/Code/DataStructure/lab/lab1/DS2022_LAB1/DS2022_LAB01_STU/build/googletest/googletest/generated"
 		},
 		{
 			"name" : "gmock_BINARY_DIR",
@@ -1623,7 +1715,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/hby_ubuntu/\u684c\u9762/Code/DataStructure/lab/lab1/DS2022_LAB1/DS2022_LAB01_STU/build/googletest/googlemock"
+			"value" : "C:/Users/21714/Desktop/Code/DataStructure/lab/lab1/DS2022_LAB1/DS2022_LAB01_STU/build/googletest/googlemock"
 		},
 		{
 			"name" : "gmock_IS_TOP_LEVEL",
@@ -1659,7 +1751,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/hby_ubuntu/\u684c\u9762/Code/DataStructure/lab/lab1/DS2022_LAB1/DS2022_LAB01_STU/googletest/googlemock"
+			"value" : "C:/Users/21714/Desktop/Code/DataStructure/lab/lab1/DS2022_LAB1/DS2022_LAB01_STU/googletest/googlemock"
 		},
 		{
 			"name" : "gmock_build_tests",
@@ -1699,7 +1791,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/hby_ubuntu/\u684c\u9762/Code/DataStructure/lab/lab1/DS2022_LAB1/DS2022_LAB01_STU/build/googletest"
+			"value" : "C:/Users/21714/Desktop/Code/DataStructure/lab/lab1/DS2022_LAB1/DS2022_LAB01_STU/build/googletest"
 		},
 		{
 			"name" : "googletest-distribution_IS_TOP_LEVEL",
@@ -1723,7 +1815,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/hby_ubuntu/\u684c\u9762/Code/DataStructure/lab/lab1/DS2022_LAB1/DS2022_LAB01_STU/googletest"
+			"value" : "C:/Users/21714/Desktop/Code/DataStructure/lab/lab1/DS2022_LAB1/DS2022_LAB01_STU/googletest"
 		},
 		{
 			"name" : "gtest_BINARY_DIR",
@@ -1735,7 +1827,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/hby_ubuntu/\u684c\u9762/Code/DataStructure/lab/lab1/DS2022_LAB1/DS2022_LAB01_STU/build/googletest/googletest"
+			"value" : "C:/Users/21714/Desktop/Code/DataStructure/lab/lab1/DS2022_LAB1/DS2022_LAB01_STU/build/googletest/googletest"
 		},
 		{
 			"name" : "gtest_IS_TOP_LEVEL",
@@ -1759,7 +1851,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/hby_ubuntu/\u684c\u9762/Code/DataStructure/lab/lab1/DS2022_LAB1/DS2022_LAB01_STU/googletest/googletest"
+			"value" : "C:/Users/21714/Desktop/Code/DataStructure/lab/lab1/DS2022_LAB1/DS2022_LAB01_STU/googletest/googletest"
 		},
 		{
 			"name" : "gtest_build_samples",

@@ -2,7 +2,10 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "DS2022_LAB01_TA_TEST"
+			"path" : "DS2022_LAB01_TA_TEST.exe"
+		},
+		{
+			"path" : "DS2022_LAB01_TA_TEST.pdb"
 		}
 	],
 	"backtrace" : 1,
@@ -56,23 +59,26 @@
 			[
 				{
 					"fragment" : "-g"
+				},
+				{
+					"fragment" : "-std=gnu++17"
 				}
 			],
 			"includes" : 
 			[
 				{
 					"backtrace" : 3,
-					"path" : "/home/hby_ubuntu/\u684c\u9762/Code/DataStructure/lab/lab1/DS2022_LAB1/DS2022_LAB01_STU/include"
+					"path" : "C:/Users/21714/Desktop/Code/DataStructure/lab/lab1/DS2022_LAB1/DS2022_LAB01_STU/include"
 				},
 				{
 					"backtrace" : 4,
 					"isSystem" : true,
-					"path" : "/home/hby_ubuntu/\u684c\u9762/Code/DataStructure/lab/lab1/DS2022_LAB1/DS2022_LAB01_STU/googletest/googletest/include"
+					"path" : "C:/Users/21714/Desktop/Code/DataStructure/lab/lab1/DS2022_LAB1/DS2022_LAB01_STU/googletest/googletest/include"
 				},
 				{
 					"backtrace" : 2,
 					"isSystem" : true,
-					"path" : "/home/hby_ubuntu/\u684c\u9762/Code/DataStructure/lab/lab1/DS2022_LAB1/DS2022_LAB01_STU/googletest/googletest"
+					"path" : "C:/Users/21714/Desktop/Code/DataStructure/lab/lab1/DS2022_LAB1/DS2022_LAB01_STU/googletest/googletest"
 				}
 			],
 			"language" : "CXX",
@@ -99,11 +105,11 @@
 		},
 		{
 			"backtrace" : 2,
-			"id" : "gtest::@f95b5c00bd49b3b4698d"
+			"id" : "gtest_main::@f95b5c00bd49b3b4698d"
 		},
 		{
 			"backtrace" : 2,
-			"id" : "gtest_main::@f95b5c00bd49b3b4698d"
+			"id" : "gtest::@f95b5c00bd49b3b4698d"
 		}
 	],
 	"id" : "DS2022_LAB01_TA_TEST::@6890427a1f51a3e7e1df",
@@ -116,7 +122,7 @@
 				"role" : "flags"
 			},
 			{
-				"fragment" : "-rdynamic",
+				"fragment" : "",
 				"role" : "flags"
 			},
 			{
@@ -126,24 +132,28 @@
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "lib/libgtest.a",
+				"fragment" : "lib\\libgtest.a",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "lib/libgtest_main.a",
+				"fragment" : "lib\\libgtest_main.a",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "lib/libgtest.a",
+				"fragment" : "lib\\libgtest.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32",
 				"role" : "libraries"
 			}
 		],
 		"language" : "CXX"
 	},
 	"name" : "DS2022_LAB01_TA_TEST",
-	"nameOnDisk" : "DS2022_LAB01_TA_TEST",
+	"nameOnDisk" : "DS2022_LAB01_TA_TEST.exe",
 	"paths" : 
 	{
 		"build" : ".",

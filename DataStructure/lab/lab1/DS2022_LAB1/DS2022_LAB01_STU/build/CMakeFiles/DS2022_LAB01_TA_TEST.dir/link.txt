@@ -1,1 +1,3 @@
-/usr/bin/g++ -g -rdynamic CMakeFiles/DS2022_LAB01_TA_TEST.dir/tests/src/Problem1Test.cpp.o CMakeFiles/DS2022_LAB01_TA_TEST.dir/tests/src/Problem2Test.cpp.o -o DS2022_LAB01_TA_TEST  libDS2022_LAB01_TA.a lib/libgtest.a lib/libgtest_main.a lib/libgtest.a 
+"D:\Microsoft Visual Studio\IDE   2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E rm -f CMakeFiles\DS2022_LAB01_TA_TEST.dir/objects.a
+D:\mingw64\bin\ar.exe qc CMakeFiles\DS2022_LAB01_TA_TEST.dir/objects.a @CMakeFiles\DS2022_LAB01_TA_TEST.dir\objects1.rsp
+D:\mingw64\bin\g++.exe -g -Wl,--whole-archive CMakeFiles\DS2022_LAB01_TA_TEST.dir/objects.a -Wl,--no-whole-archive -o DS2022_LAB01_TA_TEST.exe -Wl,--out-implib,libDS2022_LAB01_TA_TEST.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\DS2022_LAB01_TA_TEST.dir\linklibs.rsp

@@ -3,7 +3,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "lib/libgmock.a"
+			"path" : "lib/libgmock_main.a"
 		}
 	],
 	"backtrace" : 3,
@@ -32,7 +32,7 @@
 			{
 				"command" : 2,
 				"file" : 1,
-				"line" : 97,
+				"line" : 100,
 				"parent" : 0
 			},
 			{
@@ -62,7 +62,7 @@
 			{
 				"command" : 5,
 				"file" : 1,
-				"line" : 98,
+				"line" : 101,
 				"parent" : 0
 			},
 			{
@@ -82,28 +82,30 @@
 					"fragment" : "-g"
 				},
 				{
-					"fragment" : "-Wall -Wshadow -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers"
+					"fragment" : "-Wall -Wshadow -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=0 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers"
 				}
 			],
 			"includes" : 
 			[
 				{
 					"backtrace" : 7,
-					"path" : "/home/hby_ubuntu/\u684c\u9762/Code/DataStructure/lab/lab1/DS2022_LAB1/DS2022_LAB01_STU/googletest/googlemock/include"
-				},
-				{
-					"backtrace" : 7,
-					"path" : "/home/hby_ubuntu/\u684c\u9762/Code/DataStructure/lab/lab1/DS2022_LAB1/DS2022_LAB01_STU/googletest/googlemock"
+					"isSystem" : true,
+					"path" : "C:/Users/21714/Desktop/Code/DataStructure/lab/lab1/DS2022_LAB1/DS2022_LAB01_STU/googletest/googlemock/include"
 				},
 				{
 					"backtrace" : 7,
 					"isSystem" : true,
-					"path" : "/home/hby_ubuntu/\u684c\u9762/Code/DataStructure/lab/lab1/DS2022_LAB1/DS2022_LAB01_STU/googletest/googletest/include"
+					"path" : "C:/Users/21714/Desktop/Code/DataStructure/lab/lab1/DS2022_LAB1/DS2022_LAB01_STU/googletest/googlemock"
 				},
 				{
 					"backtrace" : 7,
 					"isSystem" : true,
-					"path" : "/home/hby_ubuntu/\u684c\u9762/Code/DataStructure/lab/lab1/DS2022_LAB1/DS2022_LAB01_STU/googletest/googletest"
+					"path" : "C:/Users/21714/Desktop/Code/DataStructure/lab/lab1/DS2022_LAB1/DS2022_LAB01_STU/googletest/googletest/include"
+				},
+				{
+					"backtrace" : 7,
+					"isSystem" : true,
+					"path" : "C:/Users/21714/Desktop/Code/DataStructure/lab/lab1/DS2022_LAB1/DS2022_LAB01_STU/googletest/googletest"
 				}
 			],
 			"language" : "CXX",
@@ -117,10 +119,14 @@
 	[
 		{
 			"backtrace" : 6,
+			"id" : "gmock::@d68da25237a7ca2351af"
+		},
+		{
+			"backtrace" : 6,
 			"id" : "gtest::@f95b5c00bd49b3b4698d"
 		}
 	],
-	"id" : "gmock::@d68da25237a7ca2351af",
+	"id" : "gmock_main::@d68da25237a7ca2351af",
 	"install" : 
 	{
 		"destinations" : 
@@ -132,11 +138,11 @@
 		],
 		"prefix" : 
 		{
-			"path" : "/usr/local"
+			"path" : "C:/Program Files (x86)/DS2022_LAB01_TA"
 		}
 	},
-	"name" : "gmock",
-	"nameOnDisk" : "libgmock.a",
+	"name" : "gmock_main",
+	"nameOnDisk" : "libgmock_main.a",
 	"paths" : 
 	{
 		"build" : "googletest/googlemock",
@@ -157,7 +163,7 @@
 		{
 			"backtrace" : 3,
 			"compileGroupIndex" : 0,
-			"path" : "googletest/googlemock/src/gmock-all.cc",
+			"path" : "googletest/googlemock/src/gmock_main.cc",
 			"sourceGroupIndex" : 0
 		}
 	],

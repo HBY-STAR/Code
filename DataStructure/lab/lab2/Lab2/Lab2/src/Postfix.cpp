@@ -11,7 +11,18 @@ using namespace std;
  * @return Postfix
  * */
 static string postfix(string infix) {
-    // TODO
+    int i=0;
+    string ret;
+    while(infix[i]!='\0')
+    {
+        if(infix[i]=='*'||infix[i]=='/')
+        {
+            
+        }
+
+
+        i++;
+    }
 
     return "";
 }
