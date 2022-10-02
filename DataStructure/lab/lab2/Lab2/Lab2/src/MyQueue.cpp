@@ -43,7 +43,7 @@ public:
             }
             else
             {
-                data[0] = T;
+                data[0] = item;
                 front = -1;
                 return true;
             }
@@ -58,14 +58,14 @@ public:
                 }
                 else
                 {
-                    data[1] = T;
+                    data[1] = item;
                     rear = -1;
                     return true;
                 }
             }
             else
             {
-                data[0] = T;
+                data[0] = item;
                 front = -1;
                 return true;
             }
@@ -74,7 +74,7 @@ public:
         {
             if (front == rear && full == false) //当队列为空
             {
-                data[front] = T;
+                data[front] = item;
                 rear = 1;
                 return true;
             }
@@ -86,11 +86,11 @@ public:
                 }
                 else
                 {
-                    data[rear] = T;
+                    data[rear] = item;
                     rear = (rear + 1) % CAPACITY;
                     if (rear == front)
                     {
-                        full == true;
+                        full = true;
                     }
                     return true;
                 }

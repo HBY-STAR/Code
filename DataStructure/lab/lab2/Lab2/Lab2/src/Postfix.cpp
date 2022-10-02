@@ -57,5 +57,11 @@ static string postfix(string infix)
         }
         i++;
     }
+    while (ops.peek() != nullptr)
+    {
+        temp = ops.pop();
+        ret += temp->val;
+        delete temp;
+    }
     return ret;
 }

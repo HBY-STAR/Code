@@ -1,0 +1,1 @@
+/usr/bin/g++ -g CMakeFiles/gtest01.dir/tests/MyStackTest.cpp.o CMakeFiles/gtest01.dir/tests/MyQueueTest.cpp.o CMakeFiles/gtest01.dir/tests/PostfixTest.cpp.o CMakeFiles/gtest01.dir/src/MyQueue.cpp.o CMakeFiles/gtest01.dir/src/MyStack.cpp.o CMakeFiles/gtest01.dir/src/Postfix.cpp.o CMakeFiles/gtest01.dir/src/main.cpp.o -o gtest01  lib/libgtest.a lib/libgtest_main.a lib/libgtest.a 
