@@ -182,24 +182,60 @@ public:
      * */
     int getSize()
     {
-        if (front == rear)
+        if (CAPACITY == 0)
         {
-            if (full == true)
+            return 0;
+        }
+        else if (CAPACITY == 1)
+        {
+            if (front == -1)
             {
-                return CAPACITY;
+                return 1;
             }
             else
             {
                 return 0;
             }
         }
-        else if (front < rear)
+        else if (CAPACITY == 2)
         {
-            return rear - front;
+            if (front == -1)
+            {
+                if (rear == -1)
+                {
+                    return 2;
+                }
+                else
+                {
+                    return 1;
+                }
+            }
+            else
+            {
+                return 0;
+            }
         }
         else
         {
-            return CAPACITY - front + rear;
+            if (front == rear)
+            {
+                if (full == true)
+                {
+                    return CAPACITY;
+                }
+                else
+                {
+                    return 0;
+                }
+            }
+            else if (front < rear)
+            {
+                return rear - front;
+            }
+            else
+            {
+                return CAPACITY - front + rear;
+            }
         }
     }
 

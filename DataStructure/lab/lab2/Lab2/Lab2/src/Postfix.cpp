@@ -30,6 +30,8 @@ static string postfix(string infix)
                 temp = ops.pop();
                 ret += temp->val;
                 delete temp;
+                temp = new Node<char>(infix[i]);
+                ops.push(temp);
             }
         }
         else if (infix[i] == '+' || infix[i] == '-')
