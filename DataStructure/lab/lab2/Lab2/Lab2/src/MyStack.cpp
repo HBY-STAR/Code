@@ -42,7 +42,7 @@ public:
      * */
     bool push(Node<T> *node)
     {
-        if (top == nullptr)
+        if (top == nullptr) //若栈为空
         {
             node->prev = nullptr;
             node->next = nullptr;
@@ -50,11 +50,11 @@ public:
             curSize++;
             return true;
         }
-        else if (curSize == CAPACITY)
+        else if (curSize == CAPACITY) //若栈满了
         {
             return false;
         }
-        else
+        else //若栈未满
         {
             node->prev = top;
             node->next = nullptr;
@@ -71,11 +71,11 @@ public:
      * */
     Node<T> *pop()
     {
-        if (top == nullptr)
+        if (top == nullptr) //若栈为空
         {
             return nullptr;
         }
-        else
+        else //若栈不为空
         {
             Node<T> *temp = top;
             top = top->prev;

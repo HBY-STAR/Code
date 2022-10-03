@@ -31,11 +31,12 @@ public:
      * */
     bool enqueue(T item)
     {
-        if (CAPACITY == 0)
+        //注：容量为0,1,2的情况均需要单独考虑
+        if (CAPACITY == 0) //容量为0
         {
             return false;
         }
-        else if (CAPACITY == 1)
+        else if (CAPACITY == 1) //容量为1
         {
             if (front == -1)
             {
@@ -48,7 +49,7 @@ public:
                 return true;
             }
         }
-        else if (CAPACITY == 2)
+        else if (CAPACITY == 2) //容量为2
         {
             if (front == -1)
             {
@@ -70,25 +71,25 @@ public:
                 return true;
             }
         }
-        else
+        else //容量大于2
         {
             if (front == rear && full == false) //当队列为空
             {
-                data[front] = item;
+                data[front] = item; //在开始处插入
                 rear = 1;
                 return true;
             }
             else //当队列中至少有一个元素
             {
-                if (full == true)
+                if (full == true) //队列满了无法插入返回false
                 {
                     return false;
                 }
-                else
+                else //队列未满插入
                 {
-                    data[rear] = item;
-                    rear = (rear + 1) % CAPACITY;
-                    if (rear == front)
+                    data[rear] = item;            //在rear处插入
+                    rear = (rear + 1) % CAPACITY; //找rear的下一个位置
+                    if (rear == front)            //对插入后队列是否为满的判定
                     {
                         full = true;
                     }
@@ -105,11 +106,12 @@ public:
      * */
     T dequeue()
     {
-        if (CAPACITY == 0)
+        //注：容量为0,1,2的情况均需要单独考虑
+        if (CAPACITY == 0) //容量为0
         {
             return 0;
         }
-        else if (CAPACITY == 1)
+        else if (CAPACITY == 1) //容量为1
         {
             if (front == -1)
             {
@@ -121,7 +123,7 @@ public:
                 return 0;
             }
         }
-        else if (CAPACITY == 2)
+        else if (CAPACITY == 2) //容量为2
         {
             if (rear == -1)
             {
@@ -141,20 +143,20 @@ public:
                 }
             }
         }
-        else
+        else //容量大于2
         {
-            if (front == rear && full == false) //当队列为空
+            if (front == rear && full == false) //当队列为空，返回0
             {
                 return 0;
             }
             else //当队列不为空
             {
-                if (full == true)
+                if (full == true) //若队列满了则设置队列未满
                 {
                     full = false;
                 }
-                int temp = front;
-                front = (front + 1) % CAPACITY;
+                int temp = front;               //保存front的值
+                front = (front + 1) % CAPACITY; //找front的下一个位置
                 return data[temp];
             }
         }
@@ -167,11 +169,11 @@ public:
      * */
     T getHead()
     {
-        if (front == rear && full == false)
+        if (front == rear && full == false) //若队列为空
         {
             return 0;
         }
-        else
+        else //若队列不为空
         {
             return data[front];
         }
@@ -182,11 +184,12 @@ public:
      * */
     int getSize()
     {
-        if (CAPACITY == 0)
+        //注：容量为0,1,2的情况均需要单独考虑
+        if (CAPACITY == 0) //容量为0
         {
             return 0;
         }
-        else if (CAPACITY == 1)
+        else if (CAPACITY == 1) //容量为1
         {
             if (front == -1)
             {
@@ -197,7 +200,7 @@ public:
                 return 0;
             }
         }
-        else if (CAPACITY == 2)
+        else if (CAPACITY == 2) //容量为2
         {
             if (front == -1)
             {
@@ -215,9 +218,9 @@ public:
                 return 0;
             }
         }
-        else
+        else //容量大于2
         {
-            if (front == rear)
+            if (front == rear) //先考虑front与rear重合的情况
             {
                 if (full == true)
                 {
@@ -228,11 +231,11 @@ public:
                     return 0;
                 }
             }
-            else if (front < rear)
+            else if (front < rear) //若front小于rear
             {
                 return rear - front;
             }
-            else
+            else //若front大于rear
             {
                 return CAPACITY - front + rear;
             }
@@ -244,11 +247,11 @@ public:
      * */
     bool isEmpty()
     {
-        if (front == rear && full == false)
+        if (front == rear && full == false) //若队列为空
         {
             return true;
         }
-        else
+        else //若队列不为空
         {
             return false;
         }
