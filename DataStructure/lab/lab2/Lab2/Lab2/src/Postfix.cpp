@@ -1,6 +1,10 @@
 //
 // Created by yixin on 2022/9/25.
 //
+
+//注：文件在本地Linux系统上均可成功编译并通过测试案例以及我自己添加的测试案例
+//若无法编译或不能通过测试请联系我
+
 #include <iostream>
 #include "MyStack.cpp"
 
