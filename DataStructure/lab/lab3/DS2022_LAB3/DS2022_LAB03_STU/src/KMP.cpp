@@ -29,8 +29,6 @@ int KMP::strStr(const string &haystack, const string &needle)
     }
     else
         return -1;
-
-    // TODO
 }
 
 std::vector<int> KMP::getNextArr(const string &needle)
@@ -43,7 +41,7 @@ std::vector<int> KMP::getNextArr(const string &needle)
                        //因为接下来将要测的第一个值为needle[1]，故j应从0开始。
                        //这里的i=-1是因为刚开始测试时i应该与j错开且比j小
 
-    while (j < length)
+    while (j < length-1)
     {
         if (i == -1 || needle[i] == needle[j]) //这里在前面的测试i==-1防止访问越界，同时也为对于下标j的最大字符串的查找的结束。
         {                                      //这里i为前缀最大相等字符串的下一个字符下标，j为后缀最大相等字符串的下一个字符下标

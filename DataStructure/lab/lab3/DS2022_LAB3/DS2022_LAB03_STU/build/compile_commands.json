@@ -1,0 +1,42 @@
+[
+{
+  "directory": "C:/Users/21714/Desktop/Code/DataStructure/lab/lab3/DS2022_LAB3/DS2022_LAB03_STU/build",
+  "command": "D:\\mingw64\\bin\\g++.exe  @CMakeFiles/DS2022_LAB03_STU.dir/includes_CXX.rsp -g -o CMakeFiles\\DS2022_LAB03_STU.dir\\src\\KMP.cpp.obj -c C:\\Users\\21714\\Desktop\\Code\\DataStructure\\lab\\lab3\\DS2022_LAB3\\DS2022_LAB03_STU\\src\\KMP.cpp",
+  "file": "C:/Users/21714/Desktop/Code/DataStructure/lab/lab3/DS2022_LAB3/DS2022_LAB03_STU/src/KMP.cpp"
+},
+{
+  "directory": "C:/Users/21714/Desktop/Code/DataStructure/lab/lab3/DS2022_LAB3/DS2022_LAB03_STU/build",
+  "command": "D:\\mingw64\\bin\\g++.exe  @CMakeFiles/DS2022_LAB03_STU.dir/includes_CXX.rsp -g -o CMakeFiles\\DS2022_LAB03_STU.dir\\src\\SpecialMatrixOps.cpp.obj -c C:\\Users\\21714\\Desktop\\Code\\DataStructure\\lab\\lab3\\DS2022_LAB3\\DS2022_LAB03_STU\\src\\SpecialMatrixOps.cpp",
+  "file": "C:/Users/21714/Desktop/Code/DataStructure/lab/lab3/DS2022_LAB3/DS2022_LAB03_STU/src/SpecialMatrixOps.cpp"
+},
+{
+  "directory": "C:/Users/21714/Desktop/Code/DataStructure/lab/lab3/DS2022_LAB3/DS2022_LAB03_STU/build",
+  "command": "D:\\mingw64\\bin\\g++.exe  @CMakeFiles/DS2022_LAB03_STU_TEST.dir/includes_CXX.rsp -g -o CMakeFiles\\DS2022_LAB03_STU_TEST.dir\\tests\\KMPTest.cpp.obj -c C:\\Users\\21714\\Desktop\\Code\\DataStructure\\lab\\lab3\\DS2022_LAB3\\DS2022_LAB03_STU\\tests\\KMPTest.cpp",
+  "file": "C:/Users/21714/Desktop/Code/DataStructure/lab/lab3/DS2022_LAB3/DS2022_LAB03_STU/tests/KMPTest.cpp"
+},
+{
+  "directory": "C:/Users/21714/Desktop/Code/DataStructure/lab/lab3/DS2022_LAB3/DS2022_LAB03_STU/build",
+  "command": "D:\\mingw64\\bin\\g++.exe  @CMakeFiles/DS2022_LAB03_STU_TEST.dir/includes_CXX.rsp -g -o CMakeFiles\\DS2022_LAB03_STU_TEST.dir\\tests\\SpecialMatrixOpsTest.cpp.obj -c C:\\Users\\21714\\Desktop\\Code\\DataStructure\\lab\\lab3\\DS2022_LAB3\\DS2022_LAB03_STU\\tests\\SpecialMatrixOpsTest.cpp",
+  "file": "C:/Users/21714/Desktop/Code/DataStructure/lab/lab3/DS2022_LAB3/DS2022_LAB03_STU/tests/SpecialMatrixOpsTest.cpp"
+},
+{
+  "directory": "C:/Users/21714/Desktop/Code/DataStructure/lab/lab3/DS2022_LAB3/DS2022_LAB03_STU/build/googletest/googlemock",
+  "command": "D:\\mingw64\\bin\\g++.exe  @CMakeFiles/gmock.dir/includes_CXX.rsp -g -Wall -Wshadow -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=0 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -o CMakeFiles\\gmock.dir\\src\\gmock-all.cc.obj -c C:\\Users\\21714\\Desktop\\Code\\DataStructure\\lab\\lab3\\DS2022_LAB3\\DS2022_LAB03_STU\\googletest\\googlemock\\src\\gmock-all.cc",
+  "file": "C:/Users/21714/Desktop/Code/DataStructure/lab/lab3/DS2022_LAB3/DS2022_LAB03_STU/googletest/googlemock/src/gmock-all.cc"
+},
+{
+  "directory": "C:/Users/21714/Desktop/Code/DataStructure/lab/lab3/DS2022_LAB3/DS2022_LAB03_STU/build/googletest/googlemock",
+  "command": "D:\\mingw64\\bin\\g++.exe  @CMakeFiles/gmock_main.dir/includes_CXX.rsp -g -Wall -Wshadow -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=0 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -o CMakeFiles\\gmock_main.dir\\src\\gmock_main.cc.obj -c C:\\Users\\21714\\Desktop\\Code\\DataStructure\\lab\\lab3\\DS2022_LAB3\\DS2022_LAB03_STU\\googletest\\googlemock\\src\\gmock_main.cc",
+  "file": "C:/Users/21714/Desktop/Code/DataStructure/lab/lab3/DS2022_LAB3/DS2022_LAB03_STU/googletest/googlemock/src/gmock_main.cc"
+},
+{
+  "directory": "C:/Users/21714/Desktop/Code/DataStructure/lab/lab3/DS2022_LAB3/DS2022_LAB03_STU/build/googletest/googletest",
+  "command": "D:\\mingw64\\bin\\g++.exe  @CMakeFiles/gtest.dir/includes_CXX.rsp -g -Wall -Wshadow -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=0 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -o CMakeFiles\\gtest.dir\\src\\gtest-all.cc.obj -c C:\\Users\\21714\\Desktop\\Code\\DataStructure\\lab\\lab3\\DS2022_LAB3\\DS2022_LAB03_STU\\googletest\\googletest\\src\\gtest-all.cc",
+  "file": "C:/Users/21714/Desktop/Code/DataStructure/lab/lab3/DS2022_LAB3/DS2022_LAB03_STU/googletest/googletest/src/gtest-all.cc"
+},
+{
+  "directory": "C:/Users/21714/Desktop/Code/DataStructure/lab/lab3/DS2022_LAB3/DS2022_LAB03_STU/build/googletest/googletest",
+  "command": "D:\\mingw64\\bin\\g++.exe  @CMakeFiles/gtest_main.dir/includes_CXX.rsp -g -Wall -Wshadow -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=0 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -o CMakeFiles\\gtest_main.dir\\src\\gtest_main.cc.obj -c C:\\Users\\21714\\Desktop\\Code\\DataStructure\\lab\\lab3\\DS2022_LAB3\\DS2022_LAB03_STU\\googletest\\googletest\\src\\gtest_main.cc",
+  "file": "C:/Users/21714/Desktop/Code/DataStructure/lab/lab3/DS2022_LAB3/DS2022_LAB03_STU/googletest/googletest/src/gtest_main.cc"
+}
+]
