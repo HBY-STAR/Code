@@ -112,11 +112,11 @@
 	[
 		{
 			"backtrace" : 2,
-			"id" : "gtest_main::@5ee56e3c9fa18388fbcc"
+			"id" : "gtest::@5ee56e3c9fa18388fbcc"
 		},
 		{
 			"backtrace" : 2,
-			"id" : "gtest::@5ee56e3c9fa18388fbcc"
+			"id" : "gtest_main::@5ee56e3c9fa18388fbcc"
 		}
 	],
 	"id" : "gtest01::@6890427a1f51a3e7e1df",
