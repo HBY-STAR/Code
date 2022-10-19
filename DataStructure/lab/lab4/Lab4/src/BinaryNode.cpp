@@ -1,4 +1,6 @@
-template<typename T> class BinaryNode {
+template <typename T>
+class BinaryNode
+{
 private:
     T val;
     BinaryNode<T> *left;
@@ -8,7 +10,8 @@ public:
     /**
      * @brief Creates a binary node as a leaf node.
      * */
-    explicit BinaryNode(T val) {
+    explicit BinaryNode(T val)
+    {
         this->val = val;
         this->left = nullptr;
         this->right = nullptr;
@@ -17,21 +20,25 @@ public:
     /**
      * @brief Creates a binary node with a left child and a right child (nullable).
      * */
-    BinaryNode(T val, BinaryNode<T> *lNode, BinaryNode<T> *rNode) {
+    BinaryNode(T val, BinaryNode<T> *lNode, BinaryNode<T> *rNode)
+    {
         this->val = val;
         this->left = lNode;
         this->right = rNode;
     }
 
-    T getVal() const {
+    T getVal() const
+    {
         return val;
     }
 
-    BinaryNode<T> *getLeft() const {
+    BinaryNode<T> *getLeft() const
+    {
         return left;
     }
 
-    BinaryNode<T> *getRight() const {
+    BinaryNode<T> *getRight() const
+    {
         return right;
     }
 };
