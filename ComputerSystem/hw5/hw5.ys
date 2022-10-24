@@ -1,0 +1,67 @@
+# Excecution begins at address 0
+        .pos 0
+        irmovq stack, %rsp
+        call main
+        halt
+
+# Array of 5 elements
+        .align 8
+data:
+        .quad 0x3
+        .quad 0x2
+        .quad 0x1
+        .quad 0x4
+        .quad 0x5
+
+main:
+        irmovq data,%rdi
+        irmovq $5,%rsi
+        call bubble_p
+        ret
+
+#void bubble_p(long *data, long count)
+#data in %rdi, count in %rsi
+bubble_p:
+        irmovq $8,%r8
+        irmovq $1,%r9
+        irmovq $32,%r10   
+        rrmovq %rdi,%r12  
+        addq %r10,%r12    #set p2
+        andq %r10,%r10    #set test1 cc
+        jmp test1
+loop1:
+        rrmovq %rdi,%r11  #set p1
+        rrmovq %r12,%r13 
+        subq %r11,%r13    #set test2 cc
+        andq %r13,%r13
+        jmp test2
+
+loop2:
+        mrmovq (%r11),%rax #*p1
+        rrmovq %r11,%rcx #save p1
+        addq %r8,%r11    #p1++
+        mrmovq (%r11),%rdx #*(p1+1)
+        subq %rax,%rdx  #set test3 cc
+        jmp test3
+if:
+        addq %rax,%rdx
+        rmmovq %rax,(%r11)
+        rmmovq %rdx,(%rcx)
+        subq %r8,%r13 #set test2.cc
+        jmp test2
+test3:
+        jl if
+        subq %r8,%r13 #set test2.cc
+test2:
+        jne loop2
+        subq %r8,%r12  #p2--
+        subq %r8,%r10  #set test1 cc
+test1:
+        jne loop1
+        ret
+
+#Stack starts here and grows to lower addresses
+        .pos 0x200
+stack:
+        
+        

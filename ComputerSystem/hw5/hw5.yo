@@ -1,0 +1,67 @@
+                            | # Excecution begins at address 0
+0x000:                      |         .pos 0
+0x000: 30f40002000000000000 |         irmovq stack, %rsp
+0x00a: 804000000000000000   |         call main
+0x013: 00                   |         halt
+                            | 
+                            | # Array of 5 elements
+0x018:                      |         .align 8
+0x018:                      | data:
+0x018: 0300000000000000     |         .quad 0x3
+0x020: 0200000000000000     |         .quad 0x2
+0x028: 0100000000000000     |         .quad 0x1
+0x030: 0400000000000000     |         .quad 0x4
+0x038: 0500000000000000     |         .quad 0x5
+                            | 
+0x040:                      | main:
+0x040: 30f71800000000000000 |         irmovq data,%rdi
+0x04a: 30f60500000000000000 |         irmovq $5,%rsi
+0x054: 805e00000000000000   |         call bubble_p
+0x05d: 90                   |         ret
+                            | 
+                            | #void bubble_p(long *data, long count)
+                            | #data in %rdi, count in %rsi
+0x05e:                      | bubble_p:
+0x05e: 30f80800000000000000 |         irmovq $8,%r8
+0x068: 30f90100000000000000 |         irmovq $1,%r9
+0x072: 30fa2000000000000000 |         irmovq $32,%r10   
+0x07c: 207c                 |         rrmovq %rdi,%r12  
+0x07e: 60ac                 |         addq %r10,%r12    #set p2
+0x080: 62aa                 |         andq %r10,%r10    #set test1 cc
+0x082: 70f800000000000000   |         jmp test1
+0x08b:                      | loop1:
+0x08b: 207b                 |         rrmovq %rdi,%r11  #set p1
+0x08d: 20cd                 |         rrmovq %r12,%r13 
+0x08f: 61bd                 |         subq %r11,%r13    #set test2 cc
+0x091: 62dd                 |         andq %r13,%r13
+0x093: 70eb00000000000000   |         jmp test2
+                            | 
+0x09c:                      | loop2:
+0x09c: 500b0000000000000000 |         mrmovq (%r11),%rax #*p1
+0x0a6: 20b1                 |         rrmovq %r11,%rcx #save p1
+0x0a8: 608b                 |         addq %r8,%r11    #p1++
+0x0aa: 502b0000000000000000 |         mrmovq (%r11),%rdx #*(p1+1)
+0x0b4: 6102                 |         subq %rax,%rdx  #set test3 cc
+0x0b6: 70e000000000000000   |         jmp test3
+0x0bf:                      | if:
+0x0bf: 6002                 |         addq %rax,%rdx
+0x0c1: 400b0000000000000000 |         rmmovq %rax,(%r11)
+0x0cb: 40210000000000000000 |         rmmovq %rdx,(%rcx)
+0x0d5: 618d                 |         subq %r8,%r13 #set test2.cc
+0x0d7: 70eb00000000000000   |         jmp test2
+0x0e0:                      | test3:
+0x0e0: 72bf00000000000000   |         jl if
+0x0e9: 618d                 |         subq %r8,%r13 #set test2.cc
+0x0eb:                      | test2:
+0x0eb: 749c00000000000000   |         jne loop2
+0x0f4: 618c                 |         subq %r8,%r12  #p2--
+0x0f6: 618a                 |         subq %r8,%r10  #set test1 cc
+0x0f8:                      | test1:
+0x0f8: 748b00000000000000   |         jne loop1
+0x101: 90                   |         ret
+                            | 
+                            | #Stack starts here and grows to lower addresses
+0x200:                      |         .pos 0x200
+0x200:                      | stack:
+                            |         
+                            |         

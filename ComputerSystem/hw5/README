@@ -1,0 +1,8 @@
+/*
+The C-pointer version is in hw5.c
+
+The Y86-64 version is in hw5.ys and hw5.yo
+
+Remark: All files have been tested on a local linux system, please
+contact me if there is any problem.
+*/
