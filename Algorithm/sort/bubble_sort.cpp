@@ -29,7 +29,7 @@ void bubblesort(vector<Comparable> & a)
             break;
         sortBorder = lastSwapPosition;
     }
-}
+};
 
 /*
 冒泡排序每一趟只能确定将一个数归位。即第一趟只能确定将末位上的数归位，

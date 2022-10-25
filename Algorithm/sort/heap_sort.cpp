@@ -19,7 +19,6 @@ inline int leftChild(int i)
     return 2*i + 1;
 }
 
-template<typename, Comparable>
 void percDown(vector<Comparable> & a, int i, int n)
 {
     int child;
@@ -36,4 +35,4 @@ void percDown(vector<Comparable> & a, int i, int n)
             break;
     }
     a[i] = std::move(temp);
-}
+};

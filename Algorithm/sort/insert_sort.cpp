@@ -14,7 +14,7 @@ void insertsort(vector<Comparable> & a)
             a[j] = std::move(a[j-1]);
         a[j] = std::move(temp);
     }
-}
+};
 
 /*
 插入排序利用了从0到p-1位置上的元素是已经排过序的特性，然后只需要
