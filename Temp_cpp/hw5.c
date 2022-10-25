@@ -1,4 +1,4 @@
-#include <iostream>
+#include <stdio.h>
 
 // Bubble sort: Pointer version
 void bubble_p(long *data, long count)
