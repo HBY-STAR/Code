@@ -10,6 +10,7 @@
 
 typedef int VertexType;
 const int MaxVerNum = 1000;
+using namespace std;
 
 class UGraph
 {
@@ -37,10 +38,10 @@ private:
         ~VerNode()
         {
             ArcNode *temp1 = edge;
-            ArcNode *temp2 = nullptr;
+            ArcNode *temp2;
             while (temp1 != nullptr)
             {
-                temp2 = temp1;
+                temp2 = temp1->next;
                 delete temp1;
                 temp1 = temp2;
             }
@@ -52,6 +53,9 @@ private:
 
 public:
     explicit UGraph(int nodeCnt);
+    UGraph(const UGraph &rhs);
+    ~UGraph(){};
+    void dfs_inside(int node, vector<int> &result, bool visited[MaxVerNum]) const;
 
 public:
     [[nodiscard]] int nodeCnt() const;
