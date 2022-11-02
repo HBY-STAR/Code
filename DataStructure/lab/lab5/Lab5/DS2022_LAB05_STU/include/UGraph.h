@@ -8,7 +8,48 @@
 #include <vector>
 #include <unordered_set>
 
-class UGraph {
+typedef int VertexType;
+const int MaxVerNum = 1000;
+
+class UGraph
+{
+private:
+    struct ArcNode
+    {
+        int adjver;
+        ArcNode *next;
+
+        ArcNode(int Adjver, ArcNode *Next)
+            : adjver{Adjver}, next{Next} {}
+        ArcNode()
+            : adjver{0}, next{nullptr} {}
+        ~ArcNode() {}
+    };
+    typedef struct VerNode
+    {
+        VertexType vdate;
+        ArcNode *edge;
+
+        VerNode(VertexType &Vdate, ArcNode *Edge)
+            : vdate{Vdate}, edge{Edge} {}
+        VerNode()
+            : vdate{0}, edge{nullptr} {}
+        ~VerNode()
+        {
+            ArcNode *temp1 = edge;
+            ArcNode *temp2 = nullptr;
+            while (temp1 != nullptr)
+            {
+                temp2 = temp1;
+                delete temp1;
+                temp1 = temp2;
+            }
+        }
+    } VerNode, AdjList[MaxVerNum];
+
+    AdjList vertexs;
+    int vernum, arcnum;
+
 public:
     explicit UGraph(int nodeCnt);
 
@@ -26,4 +67,4 @@ public:
     [[nodiscard]] std::vector<int> dfs(int start) const;
 };
 
-#endif //DS2022_LAB05_STU_UGRAPH_H
+#endif // DS2022_LAB05_STU_UGRAPH_H
