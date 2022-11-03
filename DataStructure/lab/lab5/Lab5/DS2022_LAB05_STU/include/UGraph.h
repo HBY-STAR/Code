@@ -14,7 +14,7 @@ using namespace std;
 
 class UGraph
 {
-private:
+public:
     struct ArcNode
     {
         int adjver;
@@ -48,13 +48,14 @@ private:
         }
     } VerNode, AdjList[MaxVerNum];
 
+private:
     AdjList vertexs;
     int vernum, arcnum;
 
 public:
     explicit UGraph(int nodeCnt);
     UGraph(const UGraph &rhs);
-    ~UGraph(){};
+    ~UGraph();
     void dfs_inside(int node, vector<int> &result, bool visited[MaxVerNum]) const;
 
 public:

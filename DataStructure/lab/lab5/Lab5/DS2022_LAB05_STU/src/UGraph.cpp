@@ -13,6 +13,11 @@ UGraph::UGraph(int nodeCnt = 0)
     vernum = nodeCnt;
 }
 
+UGraph::~UGraph()
+{
+    ;
+}
+
 UGraph::UGraph(const UGraph &rhs)
 {
     vernum = rhs.vernum;

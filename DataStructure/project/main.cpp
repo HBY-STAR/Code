@@ -1,2 +1,7 @@
 #include<iostream>
-#inclu
+#include<fstream>
+
+int main()
+{
+    return 0;
+}
