@@ -2,23 +2,24 @@
 
 HuffmanTree::HuffmanTree()
 {
-    root=nullptr;
-    LeafNum=0;
+    root = nullptr;
+    LeafNum = 0;
 }
-HuffmanTree::HuffmanTree(priority_queue<Node> &queue)
+HuffmanTree::HuffmanTree(priority_queue<Node, vector<Node>, greater<Node>> &queue)
 {
 }
-HuffmanTree::~HuffManTree()
+HuffmanTree::~HuffmanTree()
 {
+    ;
 }
 HuffmanTree::HuffmanTree(const HuffmanTree &rhs)
 {
 }
-HuffmanTree::HuffmanTree &operator=(const HuffmanTree &rhs)
+HuffmanTree &HuffmanTree::operator=(const HuffmanTree &rhs)
 {
 }
 
-priority_queue<Node> &GetChFreq(const string &file_name)
+priority_queue<Node, vector<Node>, greater<Node>> &GetChFreq(const string &file_name)
 {
     ifstream input;
     input.open(file_name);

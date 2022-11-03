@@ -9,7 +9,7 @@ Node::Node()
 Node::Node(unsigned char c, long n)
 {
     ch = c;
-    num = n
+    num = n;
 }
 
 Node::~Node()
@@ -23,7 +23,7 @@ Node::Node(const Node &rhs)
     num = rhs.ch;
 }
 
-Node::Node &operator=(const Node &rhs)
+Node & Node::operator=(const Node &rhs)
 {
     if (this == &rhs)
     {

@@ -11,7 +11,7 @@ using namespace std;
 
 class HuffmanTree
 {
-private:
+public:
     struct HuffmanNode
     {
         unsigned char ch;
@@ -25,13 +25,14 @@ private:
         HuffmanNode(unsigned char Ch, long Num, bool Isleaf, HuffmanNode *lnode, HuffmanNode *rnode)
             : ch{Ch}, num{Num}, isleaf{false}, Lnode{lnode}, Rnode{rnode} {}
     };
+private:
     HuffmanNode *root;
     int LeafNum;
 
 public:
     HuffmanTree();
-    HuffmanTree(priority_queue<Node> &queue);
-    ~HuffManTree();
+    HuffmanTree(priority_queue<Node, vector<Node>, greater<Node>> &queue);
+    ~HuffmanTree();
     HuffmanTree(const HuffmanTree &rhs);
     HuffmanTree &operator=(const HuffmanTree &rhs);
     priority_queue<Node> &GetChFreq(const string &file_name);
