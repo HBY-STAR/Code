@@ -1,0 +1,16 @@
+# ninja log v5
+2	118	6893456304568557	CMakeFiles/gtest01.dir/src/BinaryNode.cpp.obj	3682e45373fea0ec
+15	300	6893456306368562	CMakeFiles/gtest01.dir/src/BinaryTree.cpp.obj	6518b53f0d1c0130
+58	1013	6893456313478573	lib/googletest-release-1.12.1/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.obj	87b03d7aa3500b7
+8	1156	6893456314848574	CMakeFiles/gtest01.dir/tests/BinaryTreeTest.cpp.obj	33d9b93332b57a1c
+47	1188	6893456315228571	lib/googletest-release-1.12.1/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.obj	f1e0edbb9f2d5ff
+34	1710	6893456320458578	lib/googletest-release-1.12.1/googlemock/CMakeFiles/gmock_main.dir/src/gmock-all.cc.obj	4d54522e929b690f
+20	1723	6893456320598574	lib/googletest-release-1.12.1/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.obj	6fa3b0d3c6e4b36e
+28	2245	6893456325778579	lib/googletest-release-1.12.1/googlemock/CMakeFiles/gmock.dir/__/googletest/src/gtest-all.cc.obj	350ead13be05d504
+40	2252	6893456325848583	lib/googletest-release-1.12.1/googlemock/CMakeFiles/gmock_main.dir/__/googletest/src/gtest-all.cc.obj	4d9940caa54f9348
+52	2364	6893456326978580	lib/googletest-release-1.12.1/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.obj	824372d302d041e6
+2252	2400	6893456327298582	lib/gmock_main.lib	f48e7d8008c12259
+2246	2400	6893456327298582	lib/gmock.lib	264625e6d5858933
+2365	2444	6893456327778576	lib/gtest.lib	7c5bbcbc4251877
+2444	2497	6893456328338580	lib/gtest_main.lib	353c9dce0185cbfa
+2497	3180	6893456335058592	gtest01.exe	8d30f41cec239f8d

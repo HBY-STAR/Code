@@ -1,6 +1,13 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\lib",
+    "\\lib\\googletest-release-1.12.1",
+    "\\lib\\googletest-release-1.12.1\\googletest",
+    "\\lib\\googletest-release-1.12.1\\googletest\\src",
+    "\\src",
+    "\\tests"
   ],
+  "SelectedNode": "\\lib\\googletest-release-1.12.1\\googletest\\src\\gtest_main.cc",
   "PreviewInSolutionExplorer": false
 }
