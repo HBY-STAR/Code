@@ -1,5 +1,5 @@
-#ifndef NODE_H
-#define NODE_H
+#ifndef HUFFMANNODE_H
+#define HUFFMANNODE_H
 
 const int MaxCharNum = 256;
 
