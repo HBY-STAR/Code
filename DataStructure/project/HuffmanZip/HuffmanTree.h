@@ -15,7 +15,7 @@ struct HuffmanCode
     unsigned char ch;
     string code;
     HuffmanCode()
-        : ch{0}, code{""} {}
+        : ch{0}, code{} {}
     HuffmanCode(unsigned char Ch, string Code)
         : ch{Ch}, code{Code} {}
 };
@@ -34,7 +34,6 @@ public:
     HuffmanTree &operator=(const HuffmanTree &rhs);
     void PostOrderDel(HuffmanNode *node);
     HuffmanNode *PostOrderCopy(const HuffmanNode *rhs_node);
-    priority_queue<HuffmanNode> GetChFreq(const string &file_name);
     void PostOrderTravel(HuffmanNode *node, vector<HuffmanCode> &result);
     vector<HuffmanCode> GetHuffmanCode();
 };
