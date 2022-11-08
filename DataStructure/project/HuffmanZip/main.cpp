@@ -1,5 +1,10 @@
-#include<iostream>
-#include<fstream>
+#include <iostream>
+#include <fstream>
+#include "HuffmanNode.h"
+#include "HuffmanTree.h"
+#include "Function.h"
+
+using namespace std;
 
 int main()
 {
