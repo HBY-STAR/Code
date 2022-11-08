@@ -4,10 +4,21 @@
 #include <string>
 #include <queue>
 #include <vector>
+#include <stack>
 #include <fstream>
 #include "HuffmanNode.h"
 
 using namespace std;
+
+struct HuffmanCode
+{
+    unsigned char ch;
+    string code;
+    HuffmanCode()
+        : ch{0}, code{""} {}
+    HuffmanCode(unsigned char Ch, string Code)
+        : ch{Ch}, code{Code} {}
+};
 
 class HuffmanTree
 {
@@ -24,7 +35,8 @@ public:
     void PostOrderDel(HuffmanNode *node);
     HuffmanNode *PostOrderCopy(const HuffmanNode *rhs_node);
     priority_queue<HuffmanNode> GetChFreq(const string &file_name);
-    void GetHuffmanCode();
+    void PostOrderTravel(HuffmanNode *node, vector<HuffmanCode> &result);
+    vector<HuffmanCode> GetHuffmanCode();
 };
 
 #endif

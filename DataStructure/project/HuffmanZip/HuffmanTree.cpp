@@ -102,3 +102,28 @@ priority_queue<HuffmanNode, vector<HuffmanNode>, greater<HuffmanNode>> GetChFreq
     }
     return p_queue;
 }
+
+void HuffmanTree::PostOrderTravel(HuffmanNode *node, vector<HuffmanCode> &result)
+{
+    static string s;
+    if (node != nullptr)
+    {
+        s.push_back('0');
+        PostOrderDel(node->Lnode);
+        s.pop_back();
+        s.push_back('1');
+        PostOrderDel(node->Rnode);
+        s.pop_back();
+        if (node->Isleaf)
+        {
+            result[node->ch] = HuffmanCode(node->ch, s);
+        }
+    }
+}
+
+vector<HuffmanCode> HuffmanTree::GetHuffmanCode()
+{
+    vector<HuffmanCode> result(MaxCharNum);
+    PostOrderTravel(root, result);
+    return result;
+}
