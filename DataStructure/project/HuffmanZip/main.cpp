@@ -2,7 +2,7 @@
 #include <fstream>
 #include "HuffmanNode.h"
 #include "HuffmanTree.h"
-#include "Function.h"
+#include "Functions.h"
 
 using namespace std;
 

@@ -17,12 +17,13 @@ private:
 
 public:
     HuffmanTree();
-    HuffmanTree(priority_queue<Node, vector<Node>, greater<Node>> &queue);
+    HuffmanTree(priority_queue<HuffmanNode, vector<HuffmanNode>, greater<HuffmanNode>> &queue);
     ~HuffmanTree();
     HuffmanTree(const HuffmanTree &rhs);
     HuffmanTree &operator=(const HuffmanTree &rhs);
-    void PostOrderDel();
-    priority_queue<Node> &GetChFreq(const string &file_name);
+    void PostOrderDel(HuffmanNode *node);
+    HuffmanNode *PostOrderCopy(const HuffmanNode *rhs_node);
+    priority_queue<HuffmanNode> GetChFreq(const string &file_name);
     void GetHuffmanCode();
 };
 

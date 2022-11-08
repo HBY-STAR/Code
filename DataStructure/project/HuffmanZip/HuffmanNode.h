@@ -15,11 +15,11 @@ struct HuffmanNode
         : ch{0}, num{0}, Isleaf{false}, Lnode{nullptr}, Rnode{nullptr} {}
     HuffmanNode(unsigned char Ch, long Num, bool isleaf, HuffmanNode *lnode, HuffmanNode *rnode)
         : ch{Ch}, num{Num}, Isleaf{isleaf}, Lnode{lnode}, Rnode{rnode} {}
-    bool operator==(const HuffmanNode &rhs);
-    bool operator>=(const HuffmanNode &rhs);
-    bool operator<=(const HuffmanNode &rhs);
-    bool operator>(const HuffmanNode &rhs);
-    bool operator<(const HuffmanNode &rhs);
+    bool operator==(const HuffmanNode &rhs) const;
+    bool operator>=(const HuffmanNode &rhs) const;
+    bool operator<=(const HuffmanNode &rhs) const;
+    bool operator>(const HuffmanNode &rhs) const;
+    bool operator<(const HuffmanNode &rhs) const;
 };
 
 #endif

@@ -12,7 +12,7 @@ HuffmanTree::HuffmanTree(priority_queue<HuffmanNode, vector<HuffmanNode>, greate
     {
         root = nullptr;
     }
-    else if (Leaf == 1)
+    else if (LeafNum == 1)
     {
         root = new HuffmanNode(queue.top());
         queue.pop();
@@ -43,15 +43,9 @@ HuffmanTree::HuffmanTree(const HuffmanTree &rhs)
 }
 HuffmanTree &HuffmanTree::operator=(const HuffmanTree &rhs)
 {
-    if (rhs == this)
-    {
-        return this;
-    }
-    else
-    {
-        LeafNum = rhs.LeafNum;
-        PostOrderCopy(rhs.root);
-    }
+    LeafNum = rhs.LeafNum;
+    root = PostOrderCopy(rhs.root);
+    return *this;
 }
 
 void HuffmanTree::PostOrderDel(HuffmanNode *node)
@@ -68,17 +62,18 @@ HuffmanNode *HuffmanTree::PostOrderCopy(const HuffmanNode *rhs_node)
 {
     if (rhs_node != nullptr)
     {
-        HuffmanNode *temp, temp1, temp2;
+        HuffmanNode *temp, *temp1, *temp2;
         temp1 = PostOrderCopy(rhs_node->Lnode);
         temp2 = PostOrderCopy(rhs_node->Rnode);
         temp = new HuffmanNode(rhs_node->ch, rhs_node->num, rhs_node->Isleaf, temp1, temp2);
+        return temp;
     }
     else
     {
         return nullptr;
     }
 }
-priority_queue<HuffmanNode, vector<HuffmanNode>, greater<HuffmanNode>> &GetChFreq(const string &file_name)
+priority_queue<HuffmanNode, vector<HuffmanNode>, greater<HuffmanNode>> GetChFreq(const string &file_name)
 {
     ifstream input;
     input.open(file_name);
@@ -97,7 +92,7 @@ priority_queue<HuffmanNode, vector<HuffmanNode>, greater<HuffmanNode>> &GetChFre
     {
         if (array[i] != 0)
         {
-            temp.ch = unsigned char(i);
+            temp.ch = i;
             temp.num = array[i];
             temp.Isleaf = true;
             temp.Lnode = nullptr;
