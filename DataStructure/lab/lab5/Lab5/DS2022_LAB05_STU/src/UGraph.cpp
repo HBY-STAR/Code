@@ -8,7 +8,7 @@
 
 using namespace std;
 
-UGraph::UGraph(int nodeCnt = 0)
+UGraph::UGraph(int nodeCnt  )
 {
     vernum = nodeCnt;
 }
