@@ -8,6 +8,7 @@ using namespace std;
 
 int main()
 {
-    FileCompress("test.txt","test.hby");
+    FileCompress("test.txt", "test.hby");
+    FileUncompress("test.hby");
     return 0;
 }

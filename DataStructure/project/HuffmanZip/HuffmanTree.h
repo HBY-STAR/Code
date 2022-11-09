@@ -36,6 +36,7 @@ public:
     HuffmanNode *PostOrderCopy(const HuffmanNode *rhs_node);
     void PostOrderTravel(HuffmanNode *node, vector<HuffmanCode> &result);
     vector<HuffmanCode> GetHuffmanCode();
+    HuffmanNode *GetRoot() { return root; };
 };
 
 #endif
