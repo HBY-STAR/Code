@@ -154,7 +154,7 @@ void FileUncompress(const string &zip_name)
         while (!input.eof())
         {
             input >> bit_ch;
-            while (bit_count != 8)
+            while (bit_count < 8)
             {
                 while (!(find_leaf->Isleaf))
                 {
