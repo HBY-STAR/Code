@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cstdlib>
+#include <filesystem>
 #include "Functions.h"
 #include "HuffmanNode.h"
 #include "HuffmanTree.h"
@@ -57,6 +58,15 @@ void FileCompress(const string &file_name, const string &zip_name)
     HuffmanTree tree = HuffmanTree(queue);
     vector<HuffmanCode> huffman_code(MaxCharNum);
     huffman_code = tree.GetHuffmanCode();
+    /*
+    for (int i = 0; i < MaxCharNum; i++)
+    {
+        if (huffman_code[i].code.size() != 0)
+        {
+            cout << huffman_code[i].ch << '\t' << ":" << huffman_code[i].code << endl;
+        }
+    }
+    */
 
     // string post_fix = file_name.substr(file_name.rfind('.'));
     long str_bytes = file_name.size();
@@ -214,4 +224,13 @@ void FileUncompress(const string &zip_name)
         cout << zip_name << " is not the right file." << endl;
         system("pause");
     }
+}
+
+void FolderCompress(const string &folder_name, const string &zip_name)
+{
+    filesystem::path root_directory = folder_name;
+    
+}
+void FolderUncompress(const string &zip_name)
+{
 }
