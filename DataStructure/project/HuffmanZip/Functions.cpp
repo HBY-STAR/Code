@@ -8,10 +8,10 @@
 namespace fs = std::filesystem;
 using namespace std;
 
-priority_queue<HuffmanNode, vector<HuffmanNode>, greater<HuffmanNode>> GetChFreq(const string &file_name, long *file_size)
+priority_queue<HuffmanNode, vector<HuffmanNode>, greater<HuffmanNode>> GetChFreq(const fs::path &file_path, long *file_size)
 {
     ifstream input;
-    input.open(file_name, ios::in | ios::binary);
+    input.open(file_path, ios::in | ios::binary);
 
     long array[MaxCharNum] = {0};
     long size = 0;
@@ -46,15 +46,15 @@ priority_queue<HuffmanNode, vector<HuffmanNode>, greater<HuffmanNode>> GetChFreq
     return p_queue;
 }
 
-void FileCompress(const string &file_name, const string &zip_name)
+void FileCompress(const fs::path &file_path, const fs::path &zip_path)
 {
     ifstream input;
     ofstream output;
-    input.open(file_name, ios::in | ios::binary);
-    output.open(zip_name, ios::out | ios::binary);
+    input.open(file_path, ios::in | ios::binary);
+    output.open(zip_path, ios::out | ios::binary);
     long file_size = 0;
 
-    priority_queue<HuffmanNode, vector<HuffmanNode>, greater<HuffmanNode>> queue = GetChFreq(file_name, &file_size);
+    priority_queue<HuffmanNode, vector<HuffmanNode>, greater<HuffmanNode>> queue = GetChFreq(file_path, &file_size);
     priority_queue<HuffmanNode, vector<HuffmanNode>, greater<HuffmanNode>> save_code = queue;
     HuffmanTree tree = HuffmanTree(queue);
     vector<HuffmanCode> huffman_code(MaxCharNum);
@@ -70,10 +70,11 @@ void FileCompress(const string &file_name, const string &zip_name)
     */
 
     // string post_fix = file_name.substr(file_name.rfind('.'));
-    long str_bytes = file_name.size();
+    string file_str_name = file_path.filename().string();
+    long str_bytes = file_str_name.size();
     output.write((char *)&file_size, sizeof(file_size));
     output.write((char *)&str_bytes, sizeof(str_bytes));
-    output << file_name;
+    output << file_str_name;
     HuffmanNode tempnode;
     long code_bytes = save_code.size();
     output.write((char *)&code_bytes, sizeof(code_bytes));
@@ -120,15 +121,16 @@ void FileCompress(const string &file_name, const string &zip_name)
     output.close();
 }
 
-void FileUncompress(const string &zip_name)
+void FileUncompress(const fs::path &zip_path, const fs::path &folder_path)
 {
     ifstream input;
     ofstream output;
 
-    string post_fix = zip_name.substr(zip_name.rfind('.'));
+    string zip_str_name = zip_path.filename().string();
+    string post_fix = zip_str_name.substr(zip_str_name.rfind('.'));
     if (post_fix == ".hby")
     {
-        input.open(zip_name, ios::in | ios::binary);
+        input.open(zip_path, ios::in | ios::binary);
         long file_size = 0;
         string file_name;
         unsigned char file_ch = 0;
@@ -141,7 +143,9 @@ void FileUncompress(const string &zip_name)
             ;
             file_name += file_ch;
         }
-        output.open("(1)" + file_name, ios::out | ios::binary);
+        file_name = "(1)" + file_name;
+        fs::path file_path = folder_path / file_name;
+        output.open(file_path, ios::out | ios::binary);
 
         long code_bytes;
         unsigned char ch = 0;
@@ -222,25 +226,23 @@ void FileUncompress(const string &zip_name)
     }
     else
     {
-        cout << zip_name << " is not the right file." << endl;
+        cout << zip_path << " is not the right file." << endl;
         system("pause");
     }
 }
 
-void FolderCompress(const string &folder_name, const string &zip_name)
+void FolderCompress(const fs::path &folder_name, const fs::path &zip_name)
 {
-    fs::path root_directory = folder_name;
-    fs::path zip_directort = zip_name;
-    if (!fs::exists(root_directory))
+    if (!fs::exists(folder_name))
     {
-        cout << "There is no folder: " << root_directory.string() << endl;
+        cout << "There is no folder: " << folder_name.string() << endl;
         system("pause");
     }
-    if (!fs::exists(zip_directort))
+    if (!fs::exists(zip_name))
     {
-        fs::create_directory(zip_directort);
+        fs::create_directory(zip_name);
     }
-    for (const fs::directory_entry &entry : fs::directory_iterator(root_directory))
+    for (const fs::directory_entry &entry : fs::directory_iterator(folder_name))
     {
         if (entry.is_block_file())
         {
@@ -248,28 +250,31 @@ void FolderCompress(const string &folder_name, const string &zip_name)
         }
         else if (entry.is_regular_file())
         {
-            fs::path dst = entry.path().filename().replace_extension("hby");
-            FileCompress(entry.path().string(), dst.string());
+            fs::path dst = folder_name / entry.path().filename().replace_extension("hby");
+            // cout << dst.string() << endl;
+            FileCompress(entry.path(), dst);
         }
         else if (entry.is_directory())
         {
-            FolderCompress(entry.path().string(), entry.path().string() + ".hby1");
+            fs::path dst = folder_name / entry.path().filename().replace_extension("hby1");
+            FolderCompress(entry.path(), dst);
         }
     }
-    for (const fs::directory_entry &entry : fs::directory_iterator(root_directory))
+    for (const fs::directory_entry &entry : fs::directory_iterator(folder_name))
     {
         if (entry.is_block_file())
         {
-            fs::path toPath(zip_directort / entry.path().filename());
+            fs::path toPath(zip_name / entry.path().filename());
             fs::copy(entry.path(), toPath);
         }
-        else if (entry.is_regular_file() && (entry.path().extension() == "hby" || entry.path().extension() == "hby1"))
+        else if (entry.is_regular_file() && (entry.path().extension() == ".hby" || entry.path().extension() == ".hby1"))
         {
-            fs::path toPath(zip_directort / entry.path().filename());
+            fs::path toPath(zip_name / entry.path().filename());
+            cout << toPath.string() << endl;
             fs::rename(entry.path(), toPath);
         }
     }
 }
-void FolderUncompress(const string &zip_name)
+void FolderUncompress(const fs::path &zip_name)
 {
 }
