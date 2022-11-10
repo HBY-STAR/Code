@@ -236,7 +236,7 @@ void FolderCompress(const fs::path &folder_path, const fs::path &zip_path)
 {
     if (!fs::exists(folder_path))
     {
-        cout << "There is no folder: " << folder_path.string() << endl;
+        cout << "There is no folder in path: " << folder_path.string() << endl;
         system("pause");
     }
     if (!fs::exists(zip_path))
@@ -284,4 +284,50 @@ void FolderCompress(const fs::path &folder_path, const fs::path &zip_path)
 }
 void FolderUncompress(const fs::path &zip_path, const fs::path &folder_path)
 {
+    if (!fs::exists(zip_path))
+    {
+        cout << "There is no right file in path: " << folder_path.string() << endl;
+        system("pause");
+    }
+    if (!fs::exists(folder_path))
+    {
+        fs::create_directory(folder_path);
+    }
+    for (const fs::directory_entry &entry : fs::directory_iterator(zip_path))
+    {
+        if (entry.is_block_file())
+        {
+            continue;
+        }
+        else if (entry.is_regular_file() && entry.path().extension() == ".hby")
+        {
+            // cout << dst.string() << endl;
+            FileUncompress(entry.path(), zip_path);
+        }
+        else if (entry.is_directory() && entry.path().extension() == ".hby1")
+        {
+            fs::path dst = zip_path / entry.path().filename().replace_extension("");
+            FolderUncompress(entry.path(), dst);
+        }
+    }
+    for (const fs::directory_entry &entry : fs::directory_iterator(zip_path))
+    {
+        if (entry.is_block_file())
+        {
+            fs::path toPath(folder_path / entry.path().filename());
+            fs::copy(entry.path(), toPath);
+        }
+        else if (entry.is_regular_file() && entry.path().extension() != ".hby")
+        {
+            fs::path toPath(folder_path / entry.path().filename());
+            cout << toPath.string() << endl;
+            fs::rename(entry.path(), toPath);
+        }
+        else if (entry.is_directory() && entry.path().extension() != ".hby1")
+        {
+            fs::path toPath(folder_path / entry.path().filename());
+            cout << toPath.string() << endl;
+            fs::rename(entry.path(), toPath);
+        }
+    }
 }
