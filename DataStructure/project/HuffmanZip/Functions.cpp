@@ -5,6 +5,7 @@
 #include "HuffmanNode.h"
 #include "HuffmanTree.h"
 
+namespace fs = std::filesystem;
 using namespace std;
 
 priority_queue<HuffmanNode, vector<HuffmanNode>, greater<HuffmanNode>> GetChFreq(const string &file_name, long *file_size)
@@ -228,8 +229,46 @@ void FileUncompress(const string &zip_name)
 
 void FolderCompress(const string &folder_name, const string &zip_name)
 {
-    filesystem::path root_directory = folder_name;
-    
+    fs::path root_directory = folder_name;
+    fs::path zip_directort = zip_name;
+    if (!fs::exists(root_directory))
+    {
+        cout << "There is no folder: " << root_directory.string() << endl;
+        system("pause");
+    }
+    if (!fs::exists(zip_directort))
+    {
+        fs::create_directory(zip_directort);
+    }
+    for (const fs::directory_entry &entry : fs::directory_iterator(root_directory))
+    {
+        if (entry.is_block_file())
+        {
+            continue;
+        }
+        else if (entry.is_regular_file())
+        {
+            fs::path dst = entry.path().filename().replace_extension("hby");
+            FileCompress(entry.path().string(), dst.string());
+        }
+        else if (entry.is_directory())
+        {
+            FolderCompress(entry.path().string(), entry.path().string() + ".hby1");
+        }
+    }
+    for (const fs::directory_entry &entry : fs::directory_iterator(root_directory))
+    {
+        if (entry.is_block_file())
+        {
+            fs::path toPath(zip_directort / entry.path().filename());
+            fs::copy(entry.path(), toPath);
+        }
+        else if (entry.is_regular_file() && (entry.path().extension() == "hby" || entry.path().extension() == "hby1"))
+        {
+            fs::path toPath(zip_directort / entry.path().filename());
+            fs::rename(entry.path(), toPath);
+        }
+    }
 }
 void FolderUncompress(const string &zip_name)
 {

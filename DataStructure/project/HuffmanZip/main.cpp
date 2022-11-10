@@ -10,5 +10,6 @@ int main()
 {
     FileCompress("miku.jfif", "miku.hby");
     FileUncompress("miku.hby");
+    FolderCompress("test", "test1.hby");
     return 0;
 }
