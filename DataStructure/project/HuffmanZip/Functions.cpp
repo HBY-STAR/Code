@@ -268,7 +268,13 @@ void FolderCompress(const fs::path &folder_path, const fs::path &zip_path)
             fs::path toPath(zip_path / entry.path().filename());
             fs::copy(entry.path(), toPath);
         }
-        else if (entry.is_regular_file() && (entry.path().extension() == ".hby" || entry.path().extension() == ".hby1"))
+        else if (entry.is_regular_file() && entry.path().extension() == ".hby")
+        {
+            fs::path toPath(zip_path / entry.path().filename());
+            cout << toPath.string() << endl;
+            fs::rename(entry.path(), toPath);
+        }
+        else if (entry.is_directory() && entry.path().extension() == ".hby1")
         {
             fs::path toPath(zip_path / entry.path().filename());
             cout << toPath.string() << endl;
@@ -276,6 +282,6 @@ void FolderCompress(const fs::path &folder_path, const fs::path &zip_path)
         }
     }
 }
-void FolderUncompress(const fs::path &zip_path,const fs::path&folder_path)
+void FolderUncompress(const fs::path &zip_path, const fs::path &folder_path)
 {
 }
