@@ -12,6 +12,6 @@ GetChFreq(const fs::path &file_path, long *file_size);
 void FileCompress(const fs::path&file_path, const fs::path &zip_path);
 void FileUncompress(const fs::path &zip_path,const fs::path&folder_path);
 void FolderCompress(const fs::path &folder_path, const fs::path &zip_path);
-void FolderUncompress();
+void FolderUncompress(const fs::path &zip_path,const fs::path&folder_path);
 
 #endif

@@ -8,7 +8,8 @@
 namespace fs = std::filesystem;
 using namespace std;
 
-priority_queue<HuffmanNode, vector<HuffmanNode>, greater<HuffmanNode>> GetChFreq(const fs::path &file_path, long *file_size)
+priority_queue<HuffmanNode, vector<HuffmanNode>, greater<HuffmanNode>>
+GetChFreq(const fs::path &file_path, long *file_size)
 {
     ifstream input;
     input.open(file_path, ios::in | ios::binary);
@@ -231,18 +232,18 @@ void FileUncompress(const fs::path &zip_path, const fs::path &folder_path)
     }
 }
 
-void FolderCompress(const fs::path &folder_name, const fs::path &zip_name)
+void FolderCompress(const fs::path &folder_path, const fs::path &zip_path)
 {
-    if (!fs::exists(folder_name))
+    if (!fs::exists(folder_path))
     {
-        cout << "There is no folder: " << folder_name.string() << endl;
+        cout << "There is no folder: " << folder_path.string() << endl;
         system("pause");
     }
-    if (!fs::exists(zip_name))
+    if (!fs::exists(zip_path))
     {
-        fs::create_directory(zip_name);
+        fs::create_directory(zip_path);
     }
-    for (const fs::directory_entry &entry : fs::directory_iterator(folder_name))
+    for (const fs::directory_entry &entry : fs::directory_iterator(folder_path))
     {
         if (entry.is_block_file())
         {
@@ -250,31 +251,31 @@ void FolderCompress(const fs::path &folder_name, const fs::path &zip_name)
         }
         else if (entry.is_regular_file())
         {
-            fs::path dst = folder_name / entry.path().filename().replace_extension("hby");
+            fs::path dst = folder_path / entry.path().filename().replace_extension("hby");
             // cout << dst.string() << endl;
             FileCompress(entry.path(), dst);
         }
         else if (entry.is_directory())
         {
-            fs::path dst = folder_name / entry.path().filename().replace_extension("hby1");
+            fs::path dst = folder_path / entry.path().filename().replace_extension("hby1");
             FolderCompress(entry.path(), dst);
         }
     }
-    for (const fs::directory_entry &entry : fs::directory_iterator(folder_name))
+    for (const fs::directory_entry &entry : fs::directory_iterator(folder_path))
     {
         if (entry.is_block_file())
         {
-            fs::path toPath(zip_name / entry.path().filename());
+            fs::path toPath(zip_path / entry.path().filename());
             fs::copy(entry.path(), toPath);
         }
         else if (entry.is_regular_file() && (entry.path().extension() == ".hby" || entry.path().extension() == ".hby1"))
         {
-            fs::path toPath(zip_name / entry.path().filename());
+            fs::path toPath(zip_path / entry.path().filename());
             cout << toPath.string() << endl;
             fs::rename(entry.path(), toPath);
         }
     }
 }
-void FolderUncompress(const fs::path &zip_name)
+void FolderUncompress(const fs::path &zip_path,const fs::path&folder_path)
 {
 }
