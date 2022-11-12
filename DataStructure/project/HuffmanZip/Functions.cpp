@@ -1,6 +1,7 @@
 #include <iostream>
 #include <cstdlib>
 #include <filesystem>
+
 #include "Functions.h"
 #include "HuffmanNode.h"
 #include "HuffmanTree.h"
@@ -330,4 +331,76 @@ void FolderUncompress(const fs::path &zip_path, const fs::path &folder_path)
             fs::rename(entry.path(), toPath);
         }
     }
+}
+
+void initEditBox(sys_edit *editBox, int x, int y, int width, int height)
+{
+    editBox->create(true);
+    editBox->size(width, height);
+    editBox->setbgcolor(EGERGB(0xff, 0xff, 0xff));
+    editBox->setcolor(EGERGB(0x00, 0x00, 0x00));
+    editBox->setfont(20, 0, "黑体");
+    editBox->move(x, y);
+    editBox->setmaxlen(100); //设置允许输入的字符数
+    editBox->visible(true);
+}
+
+void loadImages(PIMAGE *images, int num)
+{
+    string image_half_path = "image/rect";
+    string image_path;
+    for (int i = 0; i < num; i++)
+    {
+        images[i] = newimage();
+        image_path = image_half_path + to_string(i) + ".png";
+        const char *path = image_path.data();
+        getimage(images[i], path);
+    }
+}
+
+void releaseImages(PIMAGE *images, int num)
+{
+    for (int i = 0; i < num; i++)
+    {
+        delimage(images[i]);
+    }
+}
+
+void drawMainInterface(PIMAGE *images)
+{
+    setfont(30, 0, "隶书", 0, 0, 6, false, false, false, DEFAULT_CHARSET, OUT_DEFAULT_PRECIS, CLIP_DEFAULT_PRECIS, ANTIALIASED_QUALITY, DEFAULT_PITCH);
+    setcolor(EGERGB(0x00, 0x00, 0x00));
+
+    outtextxy(30, 30, "本程序基于哈夫曼编码实现对于单个文件以及");
+    outtextxy(30, 70, "文件夹的压缩与解压缩，压缩包后缀为.hby。");
+    setfont(18, 0, "微软雅黑", 0, 0, FW_DONTCARE, false, false, false, DEFAULT_CHARSET, OUT_DEFAULT_PRECIS, CLIP_DEFAULT_PRECIS, ANTIALIASED_QUALITY, DEFAULT_PITCH);
+    outtextxy(30, 120, "https://github.com/HBY-STAR/Code/tree/master/DataStructure/project/HuffmanZip");
+
+    putimage_withalpha(NULL, images[0], 70, 210);
+    putimage_withalpha(NULL, images[1], 370, 210);
+    putimage_withalpha(NULL, images[2], 70, 330);
+    putimage_withalpha(NULL, images[3], 370, 330);
+}
+
+void drawFileCompressInterface(PIMAGE *images)
+{
+    putimage_withalpha(NULL, images[4], 500, 20);
+    putimage_withalpha(NULL, images[5], 40, 380);
+    setfont(30, 0, "方正启功行楷 简", 0, 0, 6, false, false, false, DEFAULT_CHARSET, OUT_DEFAULT_PRECIS, CLIP_DEFAULT_PRECIS, ANTIALIASED_QUALITY, DEFAULT_PITCH);
+    outtextxy(30, 20, "文件压缩:");
+    outtextxy(70, 60, "请输入要压缩的文件路径");
+    outtextxy(70, 210, "请输入存储压缩包的文件夹路径");
+    setfont(20, 0, "等线", 0, 0, 6, false, false, false, DEFAULT_CHARSET, OUT_DEFAULT_PRECIS, CLIP_DEFAULT_PRECIS, ANTIALIASED_QUALITY, DEFAULT_PITCH);
+    outtextxy(180, 360, "程序状态:(read only)");
+}
+void drawFolderCompressInterface(PIMAGE *images)
+{
+    putimage_withalpha(NULL, images[4], 500, 20);
+    putimage_withalpha(NULL, images[5], 40, 380);
+    setfont(30, 0, "方正启功行楷 简", 0, 0, 6, false, false, false, DEFAULT_CHARSET, OUT_DEFAULT_PRECIS, CLIP_DEFAULT_PRECIS, ANTIALIASED_QUALITY, DEFAULT_PITCH);
+    outtextxy(30, 20, "文件夹压缩:");
+    outtextxy(70, 60, "请输入要压缩的文件夹路径");
+    outtextxy(70, 210, "请输入存储压缩包的文件夹路径");
+    setfont(20, 0, "等线", 0, 0, 6, false, false, false, DEFAULT_CHARSET, OUT_DEFAULT_PRECIS, CLIP_DEFAULT_PRECIS, ANTIALIASED_QUALITY, DEFAULT_PITCH);
+    outtextxy(180, 360, "程序状态:(read only)");
 }
