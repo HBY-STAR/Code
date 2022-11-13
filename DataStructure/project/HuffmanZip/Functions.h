@@ -22,5 +22,7 @@ void releaseImages(PIMAGE*images,int num);
 void drawMainInterface(PIMAGE *images);
 void drawFileCompressInterface(PIMAGE*images);
 void drawFolderCompressInterface(PIMAGE*images);
+void drawUncompressInterface(PIMAGE*images);
+void drawPreviewInterface(PIMAGE*images);
 
 #endif

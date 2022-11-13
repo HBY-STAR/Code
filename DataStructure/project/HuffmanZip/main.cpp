@@ -56,7 +56,7 @@ int main()
                 wchar_t strBuffer1[100] = L"";
                 wchar_t strBuffer2[100] = L"";
                 editBox1.gettext(buffSize, strBuffer1);
-                editBox1.gettext(buffSize, strBuffer2);
+                editBox2.gettext(buffSize, strBuffer2);
                 wstring state_str = L"";
 
                 for (; is_run(); delay_fps(60))
@@ -123,7 +123,7 @@ int main()
                 wchar_t strBuffer1[100] = L"";
                 wchar_t strBuffer2[100] = L"";
                 editBox1.gettext(buffSize, strBuffer1);
-                editBox1.gettext(buffSize, strBuffer2);
+                editBox2.gettext(buffSize, strBuffer2);
                 wstring state_str = L"";
 
                 for (; is_run(); delay_fps(60))
@@ -176,10 +176,129 @@ int main()
             //压缩包预览
             else if (msg.x > init_x - 250 && msg.x < init_x - 50 && msg.y > init_y + 90 && msg.y < init_y + 158)
             {
+                while (msg.is_up() == false)
+                {
+                    msg = getmouse();
+                }
+                sys_edit editBox1, editBox2, editBox3;
+                initEditBox(&editBox1, 100, 100, 450, 100);
+                initEditBox(&editBox2, 100, 250, 450, 100);
+                initEditBox(&editBox3, 180, 390, 370, 60);
+                editBox3.setreadonly(true);
+                editBox2.setreadonly(true);
+
+                const int buffSize = 100;
+                wchar_t strBuffer1[100] = L"";
+                editBox1.gettext(buffSize, strBuffer1);
+                wstring state_str = L"";
+
+                for (; is_run(); delay_fps(60))
+                {
+                    const wchar_t *state = state_str.data();
+                    editBox3.settext(state);
+
+                    cleardevice();
+                    drawPreviewInterface(images);
+
+                    while (mousemsg())
+                    {
+                        msg = getmouse();
+                    }
+                    if (msg.is_down())
+                    {
+                        if (msg.x > 500 && msg.x < 620 && msg.y > 20 && msg.y < 81)
+                        {
+                            while (msg.is_up() == false)
+                            {
+                                msg = getmouse();
+                            }
+                            flushkey();
+                            break;
+                        }
+                        else if (msg.x > 40 && msg.x < 160 && msg.y > 380 && msg.y < 444)
+                        {
+                            while (msg.is_up() == false)
+                            {
+                                msg = getmouse();
+                            }
+                            wstring zip_path_str = strBuffer1;
+                            while (zip_path_str.find('\\') != zip_path_str.npos)
+                            {
+                                zip_path_str = zip_path_str.replace(zip_path_str.find('\\'), 1, 1, '/');
+                            }
+                            fs::path zip_path = zip_path_str;
+                            FileCompress(zip_path, zip_path);
+                            wstring state_str = L"预览图绘制完成！";
+                        }
+                    }
+                }
             }
             //解压缩
             else if (msg.x > init_x + 50 && msg.x < init_x + 250 && msg.y > init_y + 90 && msg.y < init_y + 158)
             {
+                while (msg.is_up() == false)
+                {
+                    msg = getmouse();
+                }
+                sys_edit editBox1, editBox2, editBox3;
+                initEditBox(&editBox1, 100, 100, 450, 100);
+                initEditBox(&editBox2, 100, 250, 450, 100);
+                initEditBox(&editBox3, 180, 390, 370, 60);
+                editBox3.setreadonly(true);
+
+                const int buffSize = 100;
+                wchar_t strBuffer1[100] = L"";
+                wchar_t strBuffer2[100] = L"";
+                editBox1.gettext(buffSize, strBuffer1);
+                editBox1.gettext(buffSize, strBuffer2);
+                wstring state_str = L"";
+
+                for (; is_run(); delay_fps(60))
+                {
+                    const wchar_t *state = state_str.data();
+                    editBox3.settext(state);
+
+                    cleardevice();
+                    drawUncompressInterface(images);
+
+                    while (mousemsg())
+                    {
+                        msg = getmouse();
+                    }
+                    if (msg.is_down())
+                    {
+                        if (msg.x > 500 && msg.x < 620 && msg.y > 20 && msg.y < 81)
+                        {
+                            while (msg.is_up() == false)
+                            {
+                                msg = getmouse();
+                            }
+                            flushkey();
+                            break;
+                        }
+                        else if (msg.x > 40 && msg.x < 160 && msg.y > 380 && msg.y < 444)
+                        {
+                            while (msg.is_up() == false)
+                            {
+                                msg = getmouse();
+                            }
+                            wstring zip_path_str = strBuffer1;
+                            wstring folder_path_str = strBuffer2;
+                            while (folder_path_str.find('\\') != folder_path_str.npos)
+                            {
+                                folder_path_str = folder_path_str.replace(folder_path_str.find('\\'), 1, 1, '/');
+                            }
+                            while (zip_path_str.find('\\') != zip_path_str.npos)
+                            {
+                                zip_path_str = zip_path_str.replace(zip_path_str.find('\\'), 1, 1, '/');
+                            }
+                            fs::path folder_path = folder_path_str;
+                            fs::path zip_path = zip_path_str;
+                            FolderUncompress(zip_path, folder_path);
+                            wstring state_str = L"解压缩完成！";
+                        }
+                    }
+                }
             }
             else
             {

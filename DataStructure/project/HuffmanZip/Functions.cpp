@@ -404,3 +404,27 @@ void drawFolderCompressInterface(PIMAGE *images)
     setfont(20, 0, "等线", 0, 0, 6, false, false, false, DEFAULT_CHARSET, OUT_DEFAULT_PRECIS, CLIP_DEFAULT_PRECIS, ANTIALIASED_QUALITY, DEFAULT_PITCH);
     outtextxy(180, 360, "程序状态:(read only)");
 }
+
+void drawUncompressInterface(PIMAGE *images)
+{
+    putimage_withalpha(NULL, images[4], 500, 20);
+    putimage_withalpha(NULL, images[6], 40, 380);
+    setfont(30, 0, "方正启功行楷 简", 0, 0, 6, false, false, false, DEFAULT_CHARSET, OUT_DEFAULT_PRECIS, CLIP_DEFAULT_PRECIS, ANTIALIASED_QUALITY, DEFAULT_PITCH);
+    outtextxy(30, 20, "解压缩:");
+    outtextxy(70, 60, "请输入压缩包的路径");
+    outtextxy(70, 210, "请输入存储解压文件的文件夹路径");
+    setfont(20, 0, "等线", 0, 0, 6, false, false, false, DEFAULT_CHARSET, OUT_DEFAULT_PRECIS, CLIP_DEFAULT_PRECIS, ANTIALIASED_QUALITY, DEFAULT_PITCH);
+    outtextxy(180, 360, "程序状态:(read only)");
+}
+
+void drawPreviewInterface(PIMAGE *images)
+{
+    putimage_withalpha(NULL, images[4], 500, 20);
+    putimage_withalpha(NULL, images[7], 40, 380);
+    setfont(30, 0, "方正启功行楷 简", 0, 0, 6, false, false, false, DEFAULT_CHARSET, OUT_DEFAULT_PRECIS, CLIP_DEFAULT_PRECIS, ANTIALIASED_QUALITY, DEFAULT_PITCH);
+    outtextxy(30, 20, "压缩包预览:");
+    outtextxy(70, 60, "请输入压缩包的路径");
+    outtextxy(70, 210, "压缩包结构如下：(read only)");
+    setfont(20, 0, "等线", 0, 0, 6, false, false, false, DEFAULT_CHARSET, OUT_DEFAULT_PRECIS, CLIP_DEFAULT_PRECIS, ANTIALIASED_QUALITY, DEFAULT_PITCH);
+    outtextxy(180, 360, "程序状态:(read only)");
+}
