@@ -55,14 +55,14 @@ int main()
                 const int buffSize = 100;
                 wchar_t strBuffer1[100] = L"";
                 wchar_t strBuffer2[100] = L"";
-                editBox1.gettext(buffSize, strBuffer1);
-                editBox2.gettext(buffSize, strBuffer2);
                 wstring state_str = L"";
 
                 for (; is_run(); delay_fps(60))
                 {
                     const wchar_t *state = state_str.data();
                     editBox3.settext(state);
+                    editBox1.gettext(buffSize, strBuffer1);
+                    editBox2.gettext(buffSize, strBuffer2);
 
                     cleardevice();
                     drawFileCompressInterface(images);
@@ -101,7 +101,7 @@ int main()
                             fs::path file_path = file_path_str;
                             fs::path zip_path = zip_path_str;
                             FileCompress(file_path, zip_path);
-                            wstring state_str = L"压缩完成！";
+                            state_str = L"压缩完成！";
                         }
                     }
                 }
@@ -168,7 +168,7 @@ int main()
                             fs::path folder_path = folder_path_str;
                             fs::path zip_path = zip_path_str;
                             FolderCompress(folder_path, zip_path);
-                            wstring state_str = L"压缩完成！";
+                            state_str = L"压缩完成！";
                         }
                     }
                 }
@@ -228,7 +228,7 @@ int main()
                             }
                             fs::path zip_path = zip_path_str;
                             FileCompress(zip_path, zip_path);
-                            wstring state_str = L"预览图绘制完成！";
+                            state_str = L"预览图绘制完成！";
                         }
                     }
                 }
@@ -295,7 +295,7 @@ int main()
                             fs::path folder_path = folder_path_str;
                             fs::path zip_path = zip_path_str;
                             FolderUncompress(zip_path, folder_path);
-                            wstring state_str = L"解压缩完成！";
+                            state_str = L"解压缩完成！";
                         }
                     }
                 }
@@ -306,7 +306,6 @@ int main()
             }
         }
     }
-
     releaseImages(images, 8);
     closegraph();
 
