@@ -18,6 +18,9 @@ void inFolderCompressTravelDir(const fs::path &folder_path, const ofstream &outp
 void inFolderCompressFile(const fs::path &folder_path, const ofstream &output);
 void inFolderCompressDir(const fs::path &folder_path, const ofstream &output);
 void FolderCompress(const fs::path &folder_path, const fs::path &zip_path);
+void inFolderUncompressTravelDir(const ifstream &input, const fs::path &folder_path);
+void inFolderUncompressFile(const ifstream &input, const fs::path &file_path);
+void inFolderUncompressDir(const ifstream &input, const fs::path &folder_path);
 void FolderUncompress(const fs::path &zip_path, const fs::path &folder_path);
 void initEditBox(sys_edit *editBox, int x, int y, int width, int height);
 void loadImages(PIMAGE *images, int num);

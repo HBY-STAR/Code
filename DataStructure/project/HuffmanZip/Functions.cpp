@@ -233,11 +233,12 @@ void FileUncompress(const fs::path &zip_path, const fs::path &folder_path)
     }
 }
 
-void inFolderCompressTravelDir(const fs::path &folder_path, const ofstream &output)
+void inFolderCompressTravelDir(const fs::path &folder_path, ofstream &output)
 {
     static int file_str_bytes = 0;
     static string tempstr = "";
     static int folder_tag = 0;
+    static int right = -1;
 
     folder_tag = 1;
     tempstr = folder_path.filename().string();
@@ -245,13 +246,12 @@ void inFolderCompressTravelDir(const fs::path &folder_path, const ofstream &outp
     output.write((char *)&folder_tag, sizeof(file_str_bytes));
     output.write((char *)&file_str_bytes, sizeof(file_str_bytes));
     output << tempstr;
-    output << '[';
 
     for (const fs::directory_entry &entry : fs::directory_iterator(folder_path))
     {
         if (entry.is_directory())
         {
-            inFolderTravelDir(entry.path(), output);
+            inFolderCompressTravelDir(entry.path(), output);
         }
         else
         {
@@ -263,10 +263,10 @@ void inFolderCompressTravelDir(const fs::path &folder_path, const ofstream &outp
             output << tempstr;
         }
     }
-    output << '[';
+    output.write((char *)&right, sizeof(right));
 }
 
-void inFolderCompressFile(const fs::path &file_path, const ofstream &output)
+void inFolderCompressFile(const fs::path &file_path, ofstream &output)
 {
     ifstream input;
     input.open(file_path, ios::in | ios::binary);
@@ -288,12 +288,7 @@ void inFolderCompressFile(const fs::path &file_path, const ofstream &output)
     */
 
     // string post_fix = file_name.substr(file_name.rfind('.'));
-    string file_str_name = file_path.filename().string();
-    long str_bytes = file_str_name.size();
-
     output.write((char *)&file_size, sizeof(file_size));
-    output.write((char *)&str_bytes, sizeof(str_bytes));
-    output << file_str_name;
 
     HuffmanNode tempnode;
     long code_bytes = save_code.size();
@@ -343,9 +338,8 @@ void inFolderCompressFile(const fs::path &file_path, const ofstream &output)
     input.close();
 }
 
-void inFolderCompressDir(const fs::path &folder_path, const ofstream &output)
+void inFolderCompressDir(const fs::path &folder_path, ofstream &output)
 {
-
     for (const fs::directory_entry &entry : fs::directory_iterator(folder_path))
     {
         if (entry.is_directory())
@@ -357,7 +351,6 @@ void inFolderCompressDir(const fs::path &folder_path, const ofstream &output)
             inFolderCompressFile(entry.path(), output);
         }
     }
-    output << '[';
 }
 
 void FolderCompress(const fs::path &folder_path, const fs::path &zip_path)
@@ -375,114 +368,156 @@ void FolderCompress(const fs::path &folder_path, const fs::path &zip_path)
     output.close();
 }
 
-void FolderUncompress(const fs::path &zip_path, const fs::path &folder_path)
+void inFolderUncompressTravelDir(ifstream &input, const fs::path &folder_path)
 {
-    ifstream input;
-     ofstream output;
+    static int file_str_bytes = 0;
+    static unsigned char tempch = 0;
+    static int folder_tag = 0;
 
-    string zip_str_name = zip_path.filename().string();
-    string post_fix = zip_str_name.substr(zip_str_name.rfind('.'));
-    if (post_fix == ".hby")
+    input.read((char *)&folder_tag, sizeof(folder_tag));
+
+    while (folder_tag != -1)
     {
-        input.open(zip_path, ios::in | ios::binary);
-        long file_size = 0;
-        string file_name;
-        unsigned char file_ch = 0;
-        long str_bytes;
-        input.read((char *)&file_size, sizeof(file_size));
-        input.read((char *)&str_bytes, sizeof(str_bytes));
-        for (int i = 0; i < str_bytes; i++)
+        if (folder_tag == 0)
         {
-            input.read((char *)&file_ch, sizeof(file_ch));
-            ;
-            file_name += file_ch;
-        }
-        file_name = "(1)" + file_name;
-        fs::path file_path = folder_path / file_name;
-        output.open(file_path, ios::out | ios::binary);
-
-        long code_bytes;
-        unsigned char ch = 0;
-        long num = 0;
-        long array[MaxCharNum] = {0};
-        HuffmanNode temp;
-        priority_queue<HuffmanNode, vector<HuffmanNode>, greater<HuffmanNode>> p_queue;
-
-        input.read((char *)&code_bytes, sizeof(code_bytes));
-        for (long i = 0; i < code_bytes; i++)
-        {
-            input.read((char *)&ch, sizeof(ch));
-            input.read((char *)&num, sizeof(num));
-            array[ch] = num;
-        }
-        for (unsigned int i = 0; i < MaxCharNum; i++)
-        {
-            if (array[i] != 0)
+            string file_str;
+            input.read((char *)&file_str_bytes, sizeof(file_str_bytes));
+            for (int i = 0; i < file_str_bytes; i++)
             {
-                temp.ch = i;
-                temp.num = array[i];
-                temp.Isleaf = true;
-                temp.Lnode = nullptr;
-                temp.Rnode = nullptr;
-                p_queue.push(temp);
+                input.read((char *)&tempch, sizeof(tempch));
+                file_str += tempch;
             }
+            fs::path new_file(folder_path / file_str);
+            fstream file(new_file, ios::out | ios::trunc);
+            file.close();
         }
-
-        HuffmanTree tree = HuffmanTree(p_queue);
-        unsigned char bit_ch = 0;
-        unsigned char first_bit = 128; // 0b10000000
-        int bit_count = 0;
-        long bytes_count = 0;
-        HuffmanNode *find_leaf = tree.GetRoot();
-        while (1)
+        else if (folder_tag == 1)
         {
-            input.read((char *)&bit_ch, sizeof(bit_ch));
-            if (input.eof())
+            string folder_str;
+            input.read((char *)&file_str_bytes, sizeof(file_str_bytes));
+            for (int i = 0; i < file_str_bytes; i++)
             {
-                break;
+                input.read((char *)&tempch, sizeof(tempch));
+                folder_str += tempch;
             }
-            while (bit_count < 8)
+            fs::path new_folder(folder_path / folder_str);
+            fs::create_directory(new_folder);
+            inFolderUncompressTravelDir(input, new_folder);
+        }
+        input.read((char *)&folder_tag, sizeof(folder_tag));
+    }
+}
+
+void inFolderUncompressFile(ifstream &input, const fs::path &file_path)
+{
+    ofstream output;
+    output.open(file_path, ios::out | ios::binary);
+
+    long file_size = 0;
+    input.read((char *)&file_size, sizeof(file_size));
+
+    long code_bytes;
+    unsigned char ch = 0;
+    long num = 0;
+    long array[MaxCharNum] = {0};
+    HuffmanNode temp;
+    priority_queue<HuffmanNode, vector<HuffmanNode>, greater<HuffmanNode>> p_queue;
+
+    input.read((char *)&code_bytes, sizeof(code_bytes));
+    for (long i = 0; i < code_bytes; i++)
+    {
+        input.read((char *)&ch, sizeof(ch));
+        input.read((char *)&num, sizeof(num));
+        array[ch] = num;
+    }
+    for (unsigned int i = 0; i < MaxCharNum; i++)
+    {
+        if (array[i] != 0)
+        {
+            temp.ch = i;
+            temp.num = array[i];
+            temp.Isleaf = true;
+            temp.Lnode = nullptr;
+            temp.Rnode = nullptr;
+            p_queue.push(temp);
+        }
+    }
+
+    HuffmanTree tree = HuffmanTree(p_queue);
+    unsigned char bit_ch = 0;
+    unsigned char first_bit = 128; // 0b10000000
+    int bit_count = 0;
+    long bytes_count = 0;
+    HuffmanNode *find_leaf = tree.GetRoot();
+
+    while (1)
+    {
+        input.read((char *)&bit_ch, sizeof(bit_ch));
+        while (bit_count < 8)
+        {
+            while ((!(find_leaf->Isleaf)) && (bit_count < 8))
             {
-                while ((!(find_leaf->Isleaf)) && (bit_count < 8))
+                if ((first_bit & bit_ch) == first_bit)
                 {
-                    if ((first_bit & bit_ch) == first_bit)
-                    {
-                        find_leaf = find_leaf->Rnode;
-                        bit_ch <<= 1;
-                        bit_count++;
-                    }
-                    else
-                    {
-                        find_leaf = find_leaf->Lnode;
-                        bit_ch <<= 1;
-                        bit_count++;
-                    }
-                    if (find_leaf == nullptr)
-                    {
-                        break;
-                    }
+                    find_leaf = find_leaf->Rnode;
+                    bit_ch <<= 1;
+                    bit_count++;
                 }
-                if (find_leaf == nullptr || file_size == bytes_count)
+                else
+                {
+                    find_leaf = find_leaf->Lnode;
+                    bit_ch <<= 1;
+                    bit_count++;
+                }
+                if (find_leaf == nullptr)
                 {
                     break;
                 }
-                if ((find_leaf->Isleaf) && (file_size != bytes_count))
-                {
-                    output << find_leaf->ch;
-                    bytes_count++;
-                    find_leaf = tree.GetRoot();
-                }
             }
-            bit_count = 0;
+            if (find_leaf == nullptr || file_size == bytes_count)
+            {
+                break;
+            }
+            if ((find_leaf->Isleaf) && (file_size != bytes_count))
+            {
+                output << find_leaf->ch;
+                bytes_count++;
+                find_leaf = tree.GetRoot();
+            }
         }
-        input.close();
-        output.close();
+        bit_count = 0;
     }
-    else
+    output.close();
+}
+
+void inFolderUncompressDir(ifstream &input, const fs::path &folder_path)
+{
+    for (const fs::directory_entry &entry : fs::directory_iterator(folder_path))
     {
-        cout << zip_path << " is not the right file." << endl;
-        system("pause");
+        if (entry.is_directory())
+        {
+            inFolderUncompressDir(input, entry.path());
+        }
+        else
+        {
+            inFolderUncompressFile(input, entry.path());
+        }
     }
+}
+
+void FolderUncompress(const fs::path &zip_path, const fs::path &folder_path)
+{
+    ifstream input;
+    input.open(zip_path);
+
+    long FolderTag = 0;
+    input.read((char *)&FolderTag, sizeof(FolderTag));
+
+    inFolderUncompressTravelDir(input, folder_path);
+
+    inFolderUncompressDir(input, folder_path);
+
+    input.close();
 }
 
 void initEditBox(sys_edit *editBox, int x, int y, int width, int height)
