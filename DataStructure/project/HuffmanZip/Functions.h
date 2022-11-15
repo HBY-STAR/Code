@@ -23,7 +23,7 @@ void inFolderUncompressFile(ifstream &input, const fs::path &file_path);
 void inFolderUncompressDir(ifstream &input, const fs::path &folder_path);
 void FolderUncompress(const fs::path &zip_path, const fs::path &folder_path);
 void Uncompress(const fs::path &zip_path, const fs::path &folder_path);
-void zipPreview(const fs::path &zip_path);
+void zipPreview(const fs::path &zip_path, string &preview_graph);
 void initEditBox(sys_edit *editBox, int x, int y, int width, int height);
 void loadImages(PIMAGE *images, int num);
 void releaseImages(PIMAGE *images, int num);

@@ -551,9 +551,96 @@ void Uncompress(const fs::path &zip_path, const fs::path &folder_path)
     }
 }
 
-void zipPreview(const fs::path &zip_path)
+void inFolderPreviewTravel(ifstream &input, string &preview_graph)
 {
-    ;
+    static int file_str_bytes = 0;
+    static unsigned char tempch = 0;
+    static int folder_tag = 0;
+    static int level = 0;
+    static bool first = true;
+
+    input.read((char *)&folder_tag, sizeof(folder_tag));
+
+    while (folder_tag != -1)
+    {
+        if (folder_tag == 0)
+        {
+            string file_str;
+            input.read((char *)&file_str_bytes, sizeof(file_str_bytes));
+            for (int i = 0; i < file_str_bytes; i++)
+            {
+                input.read((char *)&tempch, sizeof(tempch));
+                file_str += tempch;
+            }
+            for (int i = 0; i < level - 1; i++)
+            {
+                preview_graph += "  |";
+                preview_graph += '\t';
+            }
+            preview_graph += "  |";
+
+            preview_graph += "----";
+
+            preview_graph += file_str;
+            preview_graph += '\n';
+        }
+        else if (folder_tag == 1)
+        {
+            string folder_str;
+            input.read((char *)&file_str_bytes, sizeof(file_str_bytes));
+            for (int i = 0; i < file_str_bytes; i++)
+            {
+                input.read((char *)&tempch, sizeof(tempch));
+                folder_str += tempch;
+            }
+            for (int i = 0; i < level - 1; i++)
+            {
+                preview_graph += "  |";
+                preview_graph += '\t';
+            }
+            if (first)
+            {
+                first = false;
+            }
+            else
+            {
+                preview_graph += "  |";
+                preview_graph += "----";
+            }
+            preview_graph += folder_str;
+            preview_graph += '\n';
+            level++;
+            inFolderPreviewTravel(input, preview_graph);
+            level--;
+        }
+        input.read((char *)&folder_tag, sizeof(folder_tag));
+    }
+}
+
+void zipPreview(const fs::path &zip_path, string &preview_graph)
+{
+    ifstream input;
+    input.open(zip_path);
+    long FolderTag = 0;
+    input.read((char *)&FolderTag, sizeof(FolderTag));
+    if (FolderTag == -1)
+    {
+        inFolderPreviewTravel(input, preview_graph);
+    }
+    else
+    {
+        string file_name = "";
+        unsigned char file_ch = 0;
+        long str_bytes;
+        input.read((char *)&str_bytes, sizeof(str_bytes));
+        for (int i = 0; i < str_bytes; i++)
+        {
+            input.read((char *)&file_ch, sizeof(file_ch));
+            file_name += file_ch;
+        }
+        preview_graph = file_name;
+    }
+    input.close();
 }
 
 void initEditBox(sys_edit *editBox, int x, int y, int width, int height)

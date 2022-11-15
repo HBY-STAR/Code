@@ -189,11 +189,14 @@ int main()
 
                 const int buffSize = 100;
                 wchar_t strBuffer1[100] = L"";
+                string PrevieaGraph_str = "";
                 wstring state_str = L"";
+                wchar_t *state = state_str.data();
+                char *PreviewGraph = PrevieaGraph_str.data();
 
                 for (; is_run(); delay_fps(60))
                 {
-                    const wchar_t *state = state_str.data();
+                    editBox2.settext("此输入框会不断闪烁,请在 cmd 中查看");
                     editBox3.settext(state);
                     editBox1.gettext(buffSize, strBuffer1);
 
@@ -227,8 +230,11 @@ int main()
                                 zip_path_str = zip_path_str.replace(zip_path_str.find('\\'), 1, 1, '/');
                             }
                             fs::path zip_path = zip_path_str;
-                            zipPreview(zip_path);
+                            zipPreview(zip_path, PrevieaGraph_str);
+                            cout << PrevieaGraph_str << endl;
                             state_str = L"预览图绘制完成！";
+                            state = state_str.data();
+                            PreviewGraph = PrevieaGraph_str.data();
                         }
                     }
                 }
