@@ -493,7 +493,6 @@ void inFolderUncompressFile(ifstream &input, const fs::path &file_path)
 
 void inFolderUncompressDir(ifstream &input, const fs::path &folder_path)
 {
-    cout << folder_path.string();
     for (const fs::directory_entry &entry : fs::directory_iterator(folder_path))
     {
         if (entry.is_directory())
