@@ -122,14 +122,14 @@ int main()
                 const int buffSize = 100;
                 wchar_t strBuffer1[100] = L"";
                 wchar_t strBuffer2[100] = L"";
-                editBox1.gettext(buffSize, strBuffer1);
-                editBox2.gettext(buffSize, strBuffer2);
                 wstring state_str = L"";
 
                 for (; is_run(); delay_fps(60))
                 {
                     const wchar_t *state = state_str.data();
                     editBox3.settext(state);
+                    editBox1.gettext(buffSize, strBuffer1);
+                    editBox2.gettext(buffSize, strBuffer2);
 
                     cleardevice();
                     drawFolderCompressInterface(images);
@@ -189,13 +189,13 @@ int main()
 
                 const int buffSize = 100;
                 wchar_t strBuffer1[100] = L"";
-                editBox1.gettext(buffSize, strBuffer1);
                 wstring state_str = L"";
 
                 for (; is_run(); delay_fps(60))
                 {
                     const wchar_t *state = state_str.data();
                     editBox3.settext(state);
+                    editBox1.gettext(buffSize, strBuffer1);
 
                     cleardevice();
                     drawPreviewInterface(images);
@@ -227,7 +227,7 @@ int main()
                                 zip_path_str = zip_path_str.replace(zip_path_str.find('\\'), 1, 1, '/');
                             }
                             fs::path zip_path = zip_path_str;
-                            FileCompress(zip_path, zip_path);
+                            zipPreview(zip_path);
                             state_str = L"预览图绘制完成！";
                         }
                     }
@@ -249,14 +249,14 @@ int main()
                 const int buffSize = 100;
                 wchar_t strBuffer1[100] = L"";
                 wchar_t strBuffer2[100] = L"";
-                editBox1.gettext(buffSize, strBuffer1);
-                editBox1.gettext(buffSize, strBuffer2);
                 wstring state_str = L"";
 
                 for (; is_run(); delay_fps(60))
                 {
                     const wchar_t *state = state_str.data();
                     editBox3.settext(state);
+                    editBox1.gettext(buffSize, strBuffer1);
+                    editBox2.gettext(buffSize, strBuffer2);
 
                     cleardevice();
                     drawUncompressInterface(images);
@@ -294,7 +294,7 @@ int main()
                             }
                             fs::path folder_path = folder_path_str;
                             fs::path zip_path = zip_path_str;
-                            FolderUncompress(zip_path, folder_path);
+                            Uncompress(zip_path, folder_path);
                             state_str = L"解压缩完成！";
                         }
                     }

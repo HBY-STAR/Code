@@ -71,7 +71,6 @@ void FileCompress(const fs::path &file_path, const fs::path &zip_path)
     }
     */
 
-    // string post_fix = file_name.substr(file_name.rfind('.'));
     string file_str_name = file_path.filename().string();
     long str_bytes = file_str_name.size();
     output.write((char *)&file_size, sizeof(file_size));
@@ -134,7 +133,7 @@ void FileUncompress(const fs::path &zip_path, const fs::path &folder_path)
     {
         input.open(zip_path, ios::in | ios::binary);
         long file_size = 0;
-        string file_name;
+        string file_name = "";
         unsigned char file_ch = 0;
         long str_bytes;
         input.read((char *)&file_size, sizeof(file_size));
@@ -142,11 +141,10 @@ void FileUncompress(const fs::path &zip_path, const fs::path &folder_path)
         for (int i = 0; i < str_bytes; i++)
         {
             input.read((char *)&file_ch, sizeof(file_ch));
-            ;
             file_name += file_ch;
         }
-        file_name = "(1)" + file_name;
-        fs::path file_path = folder_path / file_name;
+        fs::path file_path = folder_path.string() + '/' + file_name;
+        cout << file_path.string();
         output.open(file_path, ios::out | ios::binary);
 
         long code_bytes;
@@ -363,6 +361,9 @@ void FolderCompress(const fs::path &folder_path, const fs::path &zip_path)
 
     inFolderCompressTravelDir(folder_path, output);
 
+    int right = -1;
+    output.write((char *)&right, sizeof(right));
+
     inFolderCompressDir(folder_path, output);
 
     output.close();
@@ -450,7 +451,7 @@ void inFolderUncompressFile(ifstream &input, const fs::path &file_path)
     long bytes_count = 0;
     HuffmanNode *find_leaf = tree.GetRoot();
 
-    while (1)
+    while (file_size != bytes_count)
     {
         input.read((char *)&bit_ch, sizeof(bit_ch));
         while (bit_count < 8)
@@ -492,6 +493,7 @@ void inFolderUncompressFile(ifstream &input, const fs::path &file_path)
 
 void inFolderUncompressDir(ifstream &input, const fs::path &folder_path)
 {
+    cout << folder_path.string();
     for (const fs::directory_entry &entry : fs::directory_iterator(folder_path))
     {
         if (entry.is_directory())
@@ -510,14 +512,49 @@ void FolderUncompress(const fs::path &zip_path, const fs::path &folder_path)
     ifstream input;
     input.open(zip_path);
 
-    long FolderTag = 0;
-    input.read((char *)&FolderTag, sizeof(FolderTag));
+    string new_folder = "";
+    unsigned char tempch;
+    int new_folder_str_bytes;
+
+    input.seekg(sizeof(long) + sizeof(int), ios::beg);
+
+    input.read((char *)&new_folder_str_bytes, sizeof(new_folder_str_bytes));
+    for (int i = 0; i < new_folder_str_bytes; i++)
+    {
+        input.read((char *)&tempch, sizeof(tempch));
+        new_folder += tempch;
+    }
+    fs::path new_folder_path(folder_path / new_folder);
+
+    input.seekg(sizeof(long), ios::beg);
 
     inFolderUncompressTravelDir(input, folder_path);
 
-    inFolderUncompressDir(input, folder_path);
+    inFolderUncompressDir(input, new_folder_path);
 
     input.close();
+}
+
+void Uncompress(const fs::path &zip_path, const fs::path &folder_path)
+{
+    ifstream input;
+    input.open(zip_path);
+    long FolderTag = 0;
+    input.read((char *)&FolderTag, sizeof(FolderTag));
+    input.close();
+    if (FolderTag == -1)
+    {
+        FolderUncompress(zip_path, folder_path);
+    }
+    else
+    {
+        FileUncompress(zip_path, folder_path);
+    }
+}
+
+void zipPreview(const fs::path &zip_path)
+{
+    ;
 }
 
 void initEditBox(sys_edit *editBox, int x, int y, int width, int height)
@@ -576,7 +613,7 @@ void drawFileCompressInterface(PIMAGE *images)
     setfont(30, 0, "方正启功行楷 简", 0, 0, 6, false, false, false, DEFAULT_CHARSET, OUT_DEFAULT_PRECIS, CLIP_DEFAULT_PRECIS, ANTIALIASED_QUALITY, DEFAULT_PITCH);
     outtextxy(30, 20, "文件压缩:");
     outtextxy(70, 60, "请输入要压缩的文件路径");
-    outtextxy(70, 210, "请输入压缩包的文件路径(后缀为.hby)");
+    outtextxy(70, 210, "请输入压缩包的路径(后缀为.hby)");
     setfont(20, 0, "等线", 0, 0, 6, false, false, false, DEFAULT_CHARSET, OUT_DEFAULT_PRECIS, CLIP_DEFAULT_PRECIS, ANTIALIASED_QUALITY, DEFAULT_PITCH);
     outtextxy(180, 360, "程序状态:(read only)");
 }
@@ -588,7 +625,7 @@ void drawFolderCompressInterface(PIMAGE *images)
     setfont(30, 0, "方正启功行楷 简", 0, 0, 6, false, false, false, DEFAULT_CHARSET, OUT_DEFAULT_PRECIS, CLIP_DEFAULT_PRECIS, ANTIALIASED_QUALITY, DEFAULT_PITCH);
     outtextxy(30, 20, "文件夹压缩:");
     outtextxy(70, 60, "请输入要压缩的文件夹路径");
-    outtextxy(70, 210, "请输入存储压缩包的文件夹路径");
+    outtextxy(70, 210, "请输入压缩包的路径(后缀为.hby)");
     setfont(20, 0, "等线", 0, 0, 6, false, false, false, DEFAULT_CHARSET, OUT_DEFAULT_PRECIS, CLIP_DEFAULT_PRECIS, ANTIALIASED_QUALITY, DEFAULT_PITCH);
     outtextxy(180, 360, "程序状态:(read only)");
 }
@@ -599,7 +636,7 @@ void drawUncompressInterface(PIMAGE *images)
     putimage_withalpha(NULL, images[6], 40, 380);
     setfont(30, 0, "方正启功行楷 简", 0, 0, 6, false, false, false, DEFAULT_CHARSET, OUT_DEFAULT_PRECIS, CLIP_DEFAULT_PRECIS, ANTIALIASED_QUALITY, DEFAULT_PITCH);
     outtextxy(30, 20, "解压缩:");
-    outtextxy(70, 60, "请输入压缩包的路径");
+    outtextxy(70, 60, "请输入压缩包的路径(后缀为.hby)");
     outtextxy(70, 210, "请输入存储解压文件的文件夹路径");
     setfont(20, 0, "等线", 0, 0, 6, false, false, false, DEFAULT_CHARSET, OUT_DEFAULT_PRECIS, CLIP_DEFAULT_PRECIS, ANTIALIASED_QUALITY, DEFAULT_PITCH);
     outtextxy(180, 360, "程序状态:(read only)");
