@@ -1,0 +1,3 @@
+file(REMOVE_RECURSE
+  "libDS2022_LAB07_STU.a"
+)

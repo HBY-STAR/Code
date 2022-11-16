@@ -1,0 +1,32 @@
+[
+{
+  "directory": "C:/Users/21714/Desktop/Code/DataStructure/lab/lab7/Lab7/Lab7/DS2022_LAB07_STU/build",
+  "command": "D:\\mingw64\\bin\\g++.exe  @CMakeFiles/DS2022_LAB07_STU.dir/includes_CXX.rsp -g -o CMakeFiles\\DS2022_LAB07_STU.dir\\src\\MaxTransmissionProbaProblem.cpp.obj -c C:\\Users\\21714\\Desktop\\Code\\DataStructure\\lab\\lab7\\Lab7\\Lab7\\DS2022_LAB07_STU\\src\\MaxTransmissionProbaProblem.cpp",
+  "file": "C:/Users/21714/Desktop/Code/DataStructure/lab/lab7/Lab7/Lab7/DS2022_LAB07_STU/src/MaxTransmissionProbaProblem.cpp"
+},
+{
+  "directory": "C:/Users/21714/Desktop/Code/DataStructure/lab/lab7/Lab7/Lab7/DS2022_LAB07_STU/build",
+  "command": "D:\\mingw64\\bin\\g++.exe  @CMakeFiles/DS2022_LAB07_STU_TEST.dir/includes_CXX.rsp -g -o CMakeFiles\\DS2022_LAB07_STU_TEST.dir\\tests\\MaxTransmissionProbaProblemTest.cpp.obj -c C:\\Users\\21714\\Desktop\\Code\\DataStructure\\lab\\lab7\\Lab7\\Lab7\\DS2022_LAB07_STU\\tests\\MaxTransmissionProbaProblemTest.cpp",
+  "file": "C:/Users/21714/Desktop/Code/DataStructure/lab/lab7/Lab7/Lab7/DS2022_LAB07_STU/tests/MaxTransmissionProbaProblemTest.cpp"
+},
+{
+  "directory": "C:/Users/21714/Desktop/Code/DataStructure/lab/lab7/Lab7/Lab7/DS2022_LAB07_STU/build/googletest/googlemock",
+  "command": "D:\\mingw64\\bin\\g++.exe  @CMakeFiles/gmock.dir/includes_CXX.rsp -g -Wall -Wshadow -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=0 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -o CMakeFiles\\gmock.dir\\src\\gmock-all.cc.obj -c C:\\Users\\21714\\Desktop\\Code\\DataStructure\\lab\\lab7\\Lab7\\Lab7\\DS2022_LAB07_STU\\googletest\\googlemock\\src\\gmock-all.cc",
+  "file": "C:/Users/21714/Desktop/Code/DataStructure/lab/lab7/Lab7/Lab7/DS2022_LAB07_STU/googletest/googlemock/src/gmock-all.cc"
+},
+{
+  "directory": "C:/Users/21714/Desktop/Code/DataStructure/lab/lab7/Lab7/Lab7/DS2022_LAB07_STU/build/googletest/googlemock",
+  "command": "D:\\mingw64\\bin\\g++.exe  @CMakeFiles/gmock_main.dir/includes_CXX.rsp -g -Wall -Wshadow -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=0 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -o CMakeFiles\\gmock_main.dir\\src\\gmock_main.cc.obj -c C:\\Users\\21714\\Desktop\\Code\\DataStructure\\lab\\lab7\\Lab7\\Lab7\\DS2022_LAB07_STU\\googletest\\googlemock\\src\\gmock_main.cc",
+  "file": "C:/Users/21714/Desktop/Code/DataStructure/lab/lab7/Lab7/Lab7/DS2022_LAB07_STU/googletest/googlemock/src/gmock_main.cc"
+},
+{
+  "directory": "C:/Users/21714/Desktop/Code/DataStructure/lab/lab7/Lab7/Lab7/DS2022_LAB07_STU/build/googletest/googletest",
+  "command": "D:\\mingw64\\bin\\g++.exe  @CMakeFiles/gtest.dir/includes_CXX.rsp -g -Wall -Wshadow -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=0 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -o CMakeFiles\\gtest.dir\\src\\gtest-all.cc.obj -c C:\\Users\\21714\\Desktop\\Code\\DataStructure\\lab\\lab7\\Lab7\\Lab7\\DS2022_LAB07_STU\\googletest\\googletest\\src\\gtest-all.cc",
+  "file": "C:/Users/21714/Desktop/Code/DataStructure/lab/lab7/Lab7/Lab7/DS2022_LAB07_STU/googletest/googletest/src/gtest-all.cc"
+},
+{
+  "directory": "C:/Users/21714/Desktop/Code/DataStructure/lab/lab7/Lab7/Lab7/DS2022_LAB07_STU/build/googletest/googletest",
+  "command": "D:\\mingw64\\bin\\g++.exe  @CMakeFiles/gtest_main.dir/includes_CXX.rsp -g -Wall -Wshadow -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=0 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -o CMakeFiles\\gtest_main.dir\\src\\gtest_main.cc.obj -c C:\\Users\\21714\\Desktop\\Code\\DataStructure\\lab\\lab7\\Lab7\\Lab7\\DS2022_LAB07_STU\\googletest\\googletest\\src\\gtest_main.cc",
+  "file": "C:/Users/21714/Desktop/Code/DataStructure/lab/lab7/Lab7/Lab7/DS2022_LAB07_STU/googletest/googletest/src/gtest_main.cc"
+}
+]

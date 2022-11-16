@@ -1,0 +1,2 @@
+D:\mingw64\bin\ar.exe qc libDS2022_LAB07_STU.a CMakeFiles/DS2022_LAB07_STU.dir/src/MaxTransmissionProbaProblem.cpp.obj
+D:\mingw64\bin\ranlib.exe libDS2022_LAB07_STU.a
