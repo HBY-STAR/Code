@@ -9,8 +9,8 @@ double maxTransmissionProba(int n,
                             int start,
                             int end)
 {
-    //这里定义最大顶点数为100
-    const int MaxVer = 3;
+    //这里定义最大顶点数为50,与缓冲区大小有关
+    const int MaxVer = 50;
     std::vector<int> marked;
     double prob[MaxVer][MaxVer] = {0};
     double result[MaxVer] = {0};
