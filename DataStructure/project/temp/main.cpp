@@ -6,8 +6,8 @@
 int main()
 {
     priority_queue<HuffmanNode, vector<HuffmanNode>, greater<HuffmanNode>> queue;
-    HuffmanNode letter[26];
-    for (int i = 0; i < 26; i++)
+    HuffmanNode letter[8];
+    for (int i = 0; i < 8; i++)
     {
         cin >> letter[i].ch;
         cin >> letter[i].num;
