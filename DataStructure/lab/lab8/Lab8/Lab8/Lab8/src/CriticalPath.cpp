@@ -125,7 +125,53 @@ public:
     vector<int> nodesLatestTime()
     {
         auto result = vector<int>(nodeCount);
+        vector<int> lastnode = nodesEarliestTime();
 
+        const int maxNode = 100;
+        stack<int> outdegreeZero;
+        int tempV = 0;
+        int outdegree[maxNode] = {0};
+        int minTime = 9999;
+        for (int i = 0; i < graph.size(); i++)
+        {
+            outdegree[graph[i].getStart()]++;
+        }
+        for (int i = 0; i < nodeCount; i++)
+        {
+            if (outdegree[i] == 0)
+            {
+                outdegreeZero.push(i);
+                result[i] = lastnode[i];
+            }
+        }
+        while (!outdegreeZero.empty())
+        {
+            tempV = outdegreeZero.top();
+            outdegreeZero.pop();
+            for (int i = 0; i < graph.size(); i++)
+            {
+                if (graph[i].getEnd() == tempV)
+                {
+                    outdegree[graph[i].getStart()]--;
+                    if (outdegree[graph[i].getStart()] == 0)
+                    {
+                        outdegreeZero.push(graph[i].getStart());
+                        for (int j = 0; j < graph.size(); j++)
+                        {
+                            if (graph[j].getStart() == graph[i].getStart())
+                            {
+                                if (result[graph[j].getEnd()] - graph[j].getWeight() < minTime)
+                                {
+                                    minTime = result[graph[j].getEnd()] - graph[j].getWeight();
+                                }
+                                result[graph[i].getStart()] = minTime;
+                            }
+                        }
+                        minTime = 9999;
+                    }
+                }
+            }
+        }
         return result;
     }
 
@@ -182,8 +228,17 @@ public:
     vector<Edge> getCriticalPath()
     {
         auto result = vector<Edge>();
-        
-
+        vector<int> LeftTimeZero = timeDifference();
+        for (int i = 0; i < nodeCount; i++)
+        {
+            for (int j = 0; j < graph.size(); j++)
+            {
+                if (graph[j].getStart() == i && LeftTimeZero[graph[j].getId()] == 0)
+                {
+                    result.push_back(graph[j]);
+                }
+            }
+        }
         return result;
     }
 };
