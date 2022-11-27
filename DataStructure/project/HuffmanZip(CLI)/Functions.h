@@ -30,22 +30,22 @@ void inFolderCompressDir(const fs::path &folder_path, ofstream &output);
 //文件夹压缩操作
 void FolderCompress(const fs::path &folder_path, const fs::path &zip_path);
 
-//
+//文件夹解压缩操作内部的遍历目录递归函数
 void inFolderUncompressTravelDir(ifstream &input, const fs::path &folder_path);
 
-//
+//文件夹解压缩操作内部的对单个文件压缩的操作
 void inFolderUncompressFile(ifstream &input, const fs::path &file_path);
 
-//
+//文件夹解压缩操作的内部递归函数
 void inFolderUncompressDir(ifstream &input, const fs::path &folder_path);
 
-//
+//文件夹解压缩操作
 void FolderUncompress(const fs::path &zip_path, const fs::path &folder_path);
 
-//
+//解压缩，自动识别压缩包为文件还是文件夹
 void Uncompress(const fs::path &zip_path, const fs::path &folder_path);
 
-//
+//压缩包预览
 void zipPreview(const fs::path &zip_path, string &preview_graph);
 
 #endif

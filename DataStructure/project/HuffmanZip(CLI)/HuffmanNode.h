@@ -1,8 +1,10 @@
 #ifndef HUFFMANNODE_H
 #define HUFFMANNODE_H
 
+//定义字符集最大种类数为256
 const int MaxCharNum = 256;
 
+//定义哈夫曼树的节点
 struct HuffmanNode
 {
     long num;
