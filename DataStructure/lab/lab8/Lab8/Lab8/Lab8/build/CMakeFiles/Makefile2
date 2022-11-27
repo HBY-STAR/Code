@@ -130,8 +130,8 @@ lib/googletest-release-1.12.1/googletest/clean: lib/googletest-release-1.12.1/go
 # Target rules for target CMakeFiles/gtest01.dir
 
 # All Build rule for target.
-CMakeFiles/gtest01.dir/all: lib/googletest-release-1.12.1/googletest/CMakeFiles/gtest.dir/all
 CMakeFiles/gtest01.dir/all: lib/googletest-release-1.12.1/googletest/CMakeFiles/gtest_main.dir/all
+CMakeFiles/gtest01.dir/all: lib/googletest-release-1.12.1/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\gtest01.dir\build.make CMakeFiles/gtest01.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\gtest01.dir\build.make CMakeFiles/gtest01.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\21714\Desktop\Code\DataStructure\lab\lab8\Lab8\Lab8\Lab8\build\CMakeFiles --progress-num=7,8,9,10 "Built target gtest01"
