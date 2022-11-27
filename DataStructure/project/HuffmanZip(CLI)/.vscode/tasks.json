@@ -3,9 +3,9 @@
     "command": "g++",
     "args": [
         "-g",
-        "${fileDirname}\\*.cpp",
+        "${workspaceFolder}\\*.cpp",
         "-o",
-        "${fileDirname}/${fileBasenameNoExtension}.exe"
+        "${workspaceFolder}\\${workspaceRootFolderName}.exe"
     ],
     "problemMatcher": {
         "owner": "cpp",
@@ -40,10 +40,10 @@
                 "-g",
                 "${file}",
                 "-o",
-                "${fileDirname}\\${fileBasenameNoExtension}.exe"
+                "${workspaceFolder}\\${workspaceRootFolderName}.exe"
             ],
             "options": {
-                "cwd": "${fileDirname}"
+                "cwd": "${workspaceFolder}"
             },
             "problemMatcher": [
                 "$gcc"
