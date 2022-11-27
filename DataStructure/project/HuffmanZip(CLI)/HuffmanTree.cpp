@@ -47,7 +47,6 @@ HuffmanTree &HuffmanTree::operator=(const HuffmanTree &rhs)
     root = PostOrderCopy(rhs.root);
     return *this;
 }
-
 void HuffmanTree::PostOrderDel(HuffmanNode *node)
 {
     if (node != nullptr)
@@ -57,7 +56,6 @@ void HuffmanTree::PostOrderDel(HuffmanNode *node)
         delete node;
     }
 }
-
 HuffmanNode *HuffmanTree::PostOrderCopy(const HuffmanNode *rhs_node)
 {
     if (rhs_node != nullptr)
@@ -73,7 +71,6 @@ HuffmanNode *HuffmanTree::PostOrderCopy(const HuffmanNode *rhs_node)
         return nullptr;
     }
 }
-
 void HuffmanTree::PostOrderTravel(HuffmanNode *node, vector<HuffmanCode> &result)
 {
     static string s;
@@ -91,7 +88,6 @@ void HuffmanTree::PostOrderTravel(HuffmanNode *node, vector<HuffmanCode> &result
         }
     }
 }
-
 vector<HuffmanCode> HuffmanTree::GetHuffmanCode()
 {
     vector<HuffmanCode> result(MaxCharNum);

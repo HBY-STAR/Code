@@ -643,6 +643,16 @@ void zipPreview(const fs::path &zip_path, string &preview_graph)
     input.close();
 }
 
+void HelpPage()
+{
+    cout << "-----------------------Help-----------------------" << endl;
+    cout << "| Compress: zip_hby  Anyname.hby   filename      |" << endl;
+    cout << "| Compress: zip_hby  Anyname.hby   foldername    |" << endl;
+    cout << "| Uncompress:  unzip_hby   zip_hby_name          |" << endl;
+    cout << "| Preview:     prev_hby    zip_hby_name          |" << endl;
+    cout << "|----------------------End-----------------------|" << endl;
+}
+
 /*
 void FolderCompress(const fs::path &folder_path, const fs::path &zip_path)
 {

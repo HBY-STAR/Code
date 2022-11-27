@@ -45,7 +45,12 @@ void FolderUncompress(const fs::path &zip_path, const fs::path &folder_path);
 //解压缩，自动识别压缩包为文件还是文件夹
 void Uncompress(const fs::path &zip_path, const fs::path &folder_path);
 
+//压缩包预览的内部函数
+void inFolderPreviewTravel(ifstream &input, string &preview_graph);
+
 //压缩包预览
 void zipPreview(const fs::path &zip_path, string &preview_graph);
 
+//帮助界面
+void HelpPage();
 #endif

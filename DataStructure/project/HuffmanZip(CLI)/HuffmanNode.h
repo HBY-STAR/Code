@@ -7,12 +7,13 @@ const int MaxCharNum = 256;
 //定义哈夫曼树的节点
 struct HuffmanNode
 {
-    long num;
-    unsigned char ch;
-    bool Isleaf;
-    HuffmanNode *Lnode;
-    HuffmanNode *Rnode;
+    long num;           //节点字符的频率
+    unsigned char ch;   //节点字符
+    bool Isleaf;        //节点是否为叶节点
+    HuffmanNode *Lnode; //节点的左子节点
+    HuffmanNode *Rnode; //节点的右子节点
 
+    //构造函数以及重载比较运算符的声明
     HuffmanNode()
         : ch{0}, num{0}, Isleaf{false}, Lnode{nullptr}, Rnode{nullptr} {}
     HuffmanNode(unsigned char Ch, long Num, bool isleaf, HuffmanNode *lnode, HuffmanNode *rnode)

@@ -15,14 +15,10 @@ struct HuffmanCode
 {
     unsigned char ch; //字符
     string code;      //对应的哈夫曼编码
-    HuffmanCode()     //默认构造函数
-        : ch{0}, code{}
-    {
-    }
-    HuffmanCode(unsigned char Ch, string Code) //构造函数
-        : ch{Ch}, code{Code}
-    {
-    }
+    HuffmanCode()
+        : ch{0}, code{} {}
+    HuffmanCode(unsigned char Ch, string Code)
+        : ch{Ch}, code{Code} {}
 };
 
 //定义哈夫曼树
@@ -35,7 +31,7 @@ private:
 public:
     HuffmanTree(); //默认构造函数
 
-    //通过存储哈夫曼节点的优先队列构造哈夫曼树的函数
+    //通过存储哈夫曼树节点的优先队列构造哈夫曼树的函数
     HuffmanTree(priority_queue<HuffmanNode, vector<HuffmanNode>, greater<HuffmanNode>> &queue);
 
     ~HuffmanTree();                                                       //析构函数
