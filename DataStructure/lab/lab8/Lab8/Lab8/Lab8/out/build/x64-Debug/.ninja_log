@@ -1,0 +1,16 @@
+# ninja log v5
+54	1314	6913539248969733	CMakeFiles/gtest01.dir/src/Edge.cpp.obj	d64e6a0ab9bf115d
+26	2399	6913539258641954	CMakeFiles/gtest01.dir/src/CriticalPath.cpp.obj	bfc4e5454981df7d
+7	3173	6913539267970342	CMakeFiles/gtest01.dir/tests/CriticalPathTest.cpp.obj	bdb7493d4cc48f17
+236	3180	6913539267996517	lib/googletest-release-1.12.1/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.obj	e2f72265714d6c1
+421	3183	6913539268070478	lib/googletest-release-1.12.1/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.obj	827fc7da837417dc
+158	3668	6913539273239984	lib/googletest-release-1.12.1/googlemock/CMakeFiles/gmock_main.dir/src/gmock-all.cc.obj	9663628fa84b86a4
+86	3684	6913539273390799	lib/googletest-release-1.12.1/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.obj	ddb0237a2fdbceec
+116	4692	6913539283409569	lib/googletest-release-1.12.1/googlemock/CMakeFiles/gmock.dir/__/googletest/src/gtest-all.cc.obj	75086ddd534f8742
+204	4707	6913539283382482	lib/googletest-release-1.12.1/googlemock/CMakeFiles/gmock_main.dir/__/googletest/src/gtest-all.cc.obj	b24f2038eda68a2
+307	4779	6913539284239412	lib/googletest-release-1.12.1/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.obj	a1b8dd0f103095df
+4708	5005	6913539286144539	lib/gmock_main.lib	c2a7fbc7f1a3234
+4695	5008	6913539286139273	lib/gmock.lib	c24e2150e96cae2a
+4783	5113	6913539287250281	lib/gtest.lib	be85e5adf98bfa8b
+5114	5312	6913539289679064	lib/gtest_main.lib	761aa3a4ccf0ef1c
+5313	6390	6913539300326551	gtest01.exe	12b0dd859dc5e083

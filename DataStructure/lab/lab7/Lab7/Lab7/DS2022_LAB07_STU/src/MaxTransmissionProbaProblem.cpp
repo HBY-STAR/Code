@@ -9,8 +9,8 @@ double maxTransmissionProba(int n,
                             int start,
                             int end)
 {
-    //这里定义最大顶点数为50,与缓冲区大小有关
-    const int MaxVer = 50;
+    //这里定义最大顶点数为20,与缓冲区大小有关
+    const int MaxVer = 20;
     std::vector<int> marked;
     double prob[MaxVer][MaxVer] = {0};
     double result[MaxVer] = {0};
@@ -48,9 +48,12 @@ double maxTransmissionProba(int n,
                 }
             }
         }
-        result[maxTag[1]] = maxProb;
-        marked.push_back(maxTag[1]);
-        prob[maxTag[1]][maxTag[1]] = 1;
+        if (maxTag[1] != -1)
+        {
+            result[maxTag[1]] = maxProb;
+            marked.push_back(maxTag[1]);
+            prob[maxTag[1]][maxTag[1]] = 1;
+        }
         maxProb = 0;
         maxTag[0] = -1;
         maxTag[1] = -1;
